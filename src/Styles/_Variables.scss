@@ -1,0 +1,34 @@
+$WhiteLight: #dfeafe;
+$WhiteGrey: #cad5e6;
+$BlackMap: #454545;
+$WhiteShadow: #ffffff;
+
+//
+
+$TintColor: #85abd8;
+$TintShadow: #09091c44;
+$WideTintShadow: #252c3d66;
+
+// d6dfee
+
+//
+
+@mixin OuterNeuMorph($Outersize) {
+  box-shadow: 5px 5px $Outersize #00000044, -5px -5px $Outersize $WhiteShadow;
+}
+@mixin InnerNeuMorph($Innersize) {
+  box-shadow: inset 5px 5px $Innersize #00000044,
+    inset -5px -5px $Innersize $WhiteShadow;
+}
+
+@mixin WideOuterNeuMorph($WideSize) {
+  box-shadow: 15px 15px $WideSize $WideTintShadow,
+    -15px -15px $WideSize $WhiteShadow;
+}
+
+@mixin FlexCenter($direction) {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: $direction;
+}

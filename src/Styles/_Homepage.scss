@@ -1,0 +1,286 @@
+@import "./Variables";
+
+#Header,
+#Works,
+#AboutPage {
+  width: 100vw;
+  padding-left: 7vw;
+  padding-right: 7vw;
+  padding-top: 10vh;
+  @include FlexCenter(column);
+  position: relative;
+  color: $BlackMap;
+}
+#Works {
+  padding-top: 20vh;
+}
+
+.HeaderHolder,
+.WorksHolder,
+.AboutHolder {
+  width: 100%;
+  @include FlexCenter(column);
+  box-shadow: 2vw 2vw 5vw $TintShadow;
+  border-radius: 3vw;
+  background: $WhiteLight;
+  overflow: hidden;
+}
+
+.HeaderHolder {
+  padding-bottom: 10vh;
+
+  #topRow {
+    margin-top: 50px;
+
+    h2 {
+      pointer-events: none;
+    }
+
+    h2 span {
+      display: inline-block;
+      font-size: 0.8rem;
+      transform: translateY(-1rem);
+    }
+  }
+  #MainContents {
+    padding-right: 0;
+  }
+
+  .HeaderRow {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .Contents {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: -15vw;
+    margin-top: 10vh;
+
+    h1 {
+      font-size: 3.81rem;
+      line-height: 4rem;
+      white-space: nowrap;
+      margin-left: -3px;
+    }
+    h4 {
+      font-size: 1rem;
+      white-space: nowrap;
+      font-weight: 500;
+    }
+    h5 {
+      font-size: 1rem;
+      white-space: nowrap;
+      font-weight: 700;
+      span {
+        font-weight: 400;
+      }
+    }
+    p {
+      margin-top: 50px;
+      max-width: 25vw;
+      margin-bottom: 50px;
+    }
+
+    .HeaderButton {
+      gap: 3vw;
+    }
+  }
+  .HeaderImage {
+    background-image: url(../Assets/Header.UX.Illustration.png);
+    background-size: cover;
+    width: 57vw;
+    height: 53.32vw;
+    margin-top: -5vh;
+    margin-bottom: -15vh;
+    pointer-events: none;
+  }
+
+  #Socials {
+    margin-top: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+
+    .Row {
+      gap: 2vw;
+    }
+
+    p {
+      margin: 0;
+      margin-bottom: 20px;
+    }
+
+    .Social {
+      width: 2vw;
+      height: 2vw;
+      position: relative;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        overflow: visible;
+        position: absolute;
+        cursor: pointer;
+      }
+    }
+    .Behance {
+      width: 2.3vw;
+    }
+  }
+}
+
+.beh,
+.fcb,
+.ast {
+  fill: $BlackMap;
+  transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.Social:hover {
+  .beh,
+  .fcb,
+  .ast {
+    fill: #757575;
+  }
+}
+
+.ExpandButton {
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  div {
+    position: absolute;
+    height: 5px;
+    background: $BlackMap;
+    width: inherit;
+    border-radius: 5vw;
+    transform-origin: center center;
+    transition: all 1.3s cubic-bezier(0.25, 0, 0, 1);
+  }
+
+  .Upper {
+    transform: translateY(-10px) rotate(0);
+  }
+  .Lower {
+    transform: translateY(10px) rotate(0);
+  }
+}
+.ExpandActive {
+  .Upper {
+    transform: translateY(0) rotate(225deg);
+  }
+  .Lower {
+    transform: translateY(0) rotate(-225deg);
+  }
+}
+
+//
+
+.WorksHolder {
+  padding-bottom: 50px;
+
+  .WorkHeading {
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    position: relative;
+    font-size: 3.81rem;
+    @include FlexCenter(column);
+
+    span {
+      display: inline-block;
+      font-size: 0.8rem;
+      transform: translateY(-1rem);
+    }
+  }
+
+  .WorkHeading::after {
+    position: absolute;
+    width: 38vw;
+    height: 1px;
+    background: $BlackMap;
+    content: "";
+    bottom: 0;
+  }
+  .MainBlock {
+    width: 100%;
+    position: relative;
+    height: 50vh;
+  }
+  // .MainBlock::before {
+  //   content: "";
+  //   position: absolute;
+  //   bottom: 0;
+  //   background: #ebf2ff;
+  //   width: 100%;
+  //   height: 14vh;
+  // }
+
+  .Row {
+    padding-left: 5vw;
+    background: #ebf2ff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100%;
+    justify-content: start;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    gap: 5vw;
+    position: absolute;
+  }
+  .WorkImage {
+    height: 38vh;
+    width: 38vh;
+    background-image: url(../Assets/Render7.jpg);
+    background-size: cover;
+    border-radius: 50%;
+
+    border: solid 6px $WhiteLight;
+    @include WideOuterNeuMorph(30px);
+  }
+
+  .Contents {
+    h3 {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+#AboutPage {
+  padding-top: 20vh;
+}
+
+.AboutHolder {
+  padding-bottom: 50px;
+  position: relative;
+
+  .AboutHeading {
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+    position: relative;
+    font-size: 3.81rem;
+    @include FlexCenter(column);
+  }
+  .AboutHeading::after {
+    position: absolute;
+    width: 38vw;
+    height: 1px;
+    background: $BlackMap;
+    content: "";
+    bottom: 0;
+  }
+}

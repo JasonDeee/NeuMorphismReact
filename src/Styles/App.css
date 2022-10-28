@@ -1,0 +1,522 @@
+body {
+  width: 100vw;
+  overflow: overlay;
+}
+
+a {
+  color: inherit;
+}
+
+div,
+p,
+li {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+div {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+section {
+  width: 100vw;
+  position: relative;
+}
+
+.link {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  z-index: 10;
+}
+
+.App {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.Scroller {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.NeumorphButton {
+  padding: 0 70px 0 70px;
+  background: #dfeafe;
+  -webkit-box-shadow: 5px 5px 16px #00000044, -5px -5px 16px #ffffff;
+          box-shadow: 5px 5px 16px #00000044, -5px -5px 16px #ffffff;
+  min-width: 150px;
+  height: 70px;
+  border: solid 3px #dfeafe;
+  border-radius: 45px;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+}
+
+.NeumorphButton span {
+  position: absolute;
+}
+
+.NeumorphButton:hover::before {
+  opacity: 1;
+}
+
+.CTA {
+  border-color: #85abd8;
+}
+
+.NeumorphButton::before {
+  width: 100%;
+  height: 100%;
+  background: #dfeafe;
+  opacity: 0;
+  -webkit-transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+  content: "";
+  position: absolute;
+  -webkit-box-shadow: inset 5px 5px 16px #00000044, inset -5px -5px 16px #ffffff;
+          box-shadow: inset 5px 5px 16px #00000044, inset -5px -5px 16px #ffffff;
+  border-radius: 45px;
+}
+
+.Homepage {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #cad5e6;
+  padding-bottom: 30vh;
+}
+
+.Homepage #Header,
+.Homepage #Works,
+.Homepage #AboutPage {
+  width: 100vw;
+  padding-left: 7vw;
+  padding-right: 7vw;
+  padding-top: 10vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  color: #454545;
+}
+
+.Homepage #Works {
+  padding-top: 20vh;
+}
+
+.Homepage .HeaderHolder,
+.Homepage .WorksHolder,
+.Homepage .AboutHolder {
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 2vw 2vw 5vw #09091c44;
+          box-shadow: 2vw 2vw 5vw #09091c44;
+  border-radius: 3vw;
+  background: #dfeafe;
+  overflow: hidden;
+}
+
+.Homepage .HeaderHolder {
+  padding-bottom: 10vh;
+}
+
+.Homepage .HeaderHolder #topRow {
+  margin-top: 50px;
+}
+
+.Homepage .HeaderHolder #topRow h2 {
+  pointer-events: none;
+}
+
+.Homepage .HeaderHolder #topRow h2 span {
+  display: inline-block;
+  font-size: 0.8rem;
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+}
+
+.Homepage .HeaderHolder #MainContents {
+  padding-right: 0;
+}
+
+.Homepage .HeaderHolder .HeaderRow {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  padding-left: 5vw;
+  padding-right: 5vw;
+}
+
+.Homepage .HeaderHolder .Contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-right: -15vw;
+  margin-top: 10vh;
+}
+
+.Homepage .HeaderHolder .Contents h1 {
+  font-size: 3.81rem;
+  line-height: 4rem;
+  white-space: nowrap;
+  margin-left: -3px;
+}
+
+.Homepage .HeaderHolder .Contents h4 {
+  font-size: 1rem;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.Homepage .HeaderHolder .Contents h5 {
+  font-size: 1rem;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.Homepage .HeaderHolder .Contents h5 span {
+  font-weight: 400;
+}
+
+.Homepage .HeaderHolder .Contents p {
+  margin-top: 50px;
+  max-width: 25vw;
+  margin-bottom: 50px;
+}
+
+.Homepage .HeaderHolder .Contents .HeaderButton {
+  gap: 3vw;
+}
+
+.Homepage .HeaderHolder .HeaderImage {
+  background-image: url(../Assets/Header.UX.Illustration.png);
+  background-size: cover;
+  width: 57vw;
+  height: 53.32vw;
+  margin-top: -5vh;
+  margin-bottom: -15vh;
+  pointer-events: none;
+}
+
+.Homepage .HeaderHolder #Socials {
+  margin-top: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.Homepage .HeaderHolder #Socials .Row {
+  gap: 2vw;
+}
+
+.Homepage .HeaderHolder #Socials p {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.Homepage .HeaderHolder #Socials .Social {
+  width: 2vw;
+  height: 2vw;
+  position: relative;
+}
+
+.Homepage .HeaderHolder #Socials .Social svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  position: absolute;
+  cursor: pointer;
+}
+
+.Homepage .HeaderHolder #Socials .Behance {
+  width: 2.3vw;
+}
+
+.Homepage .beh,
+.Homepage .fcb,
+.Homepage .ast {
+  fill: #454545;
+  -webkit-transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.Homepage .Social:hover .beh,
+.Homepage .Social:hover .fcb,
+.Homepage .Social:hover .ast {
+  fill: #757575;
+}
+
+.Homepage .ExpandButton {
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Homepage .ExpandButton div {
+  position: absolute;
+  height: 5px;
+  background: #454545;
+  width: inherit;
+  border-radius: 5vw;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transition: all 1.3s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 1.3s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.Homepage .ExpandButton .Upper {
+  -webkit-transform: translateY(-10px) rotate(0);
+          transform: translateY(-10px) rotate(0);
+}
+
+.Homepage .ExpandButton .Lower {
+  -webkit-transform: translateY(10px) rotate(0);
+          transform: translateY(10px) rotate(0);
+}
+
+.Homepage .ExpandActive .Upper {
+  -webkit-transform: translateY(0) rotate(225deg);
+          transform: translateY(0) rotate(225deg);
+}
+
+.Homepage .ExpandActive .Lower {
+  -webkit-transform: translateY(0) rotate(-225deg);
+          transform: translateY(0) rotate(-225deg);
+}
+
+.Homepage .WorksHolder {
+  padding-bottom: 50px;
+}
+
+.Homepage .WorksHolder .WorkHeading {
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+  position: relative;
+  font-size: 3.81rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Homepage .WorksHolder .WorkHeading span {
+  display: inline-block;
+  font-size: 0.8rem;
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+}
+
+.Homepage .WorksHolder .WorkHeading::after {
+  position: absolute;
+  width: 38vw;
+  height: 1px;
+  background: #454545;
+  content: "";
+  bottom: 0;
+}
+
+.Homepage .WorksHolder .MainBlock {
+  width: 100%;
+  position: relative;
+  height: 50vh;
+}
+
+.Homepage .WorksHolder .Row {
+  padding-left: 5vw;
+  background: #ebf2ff;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 100%;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  gap: 5vw;
+  position: absolute;
+}
+
+.Homepage .WorksHolder .WorkImage {
+  height: 38vh;
+  width: 38vh;
+  background-image: url(../Assets/Render7.jpg);
+  background-size: cover;
+  border-radius: 50%;
+  border: solid 6px #dfeafe;
+  -webkit-box-shadow: 15px 15px 30px #252c3d66, -15px -15px 30px #ffffff;
+          box-shadow: 15px 15px 30px #252c3d66, -15px -15px 30px #ffffff;
+}
+
+.Homepage .WorksHolder .Contents h3 {
+  font-size: 1.25rem;
+}
+
+.Homepage #AboutPage {
+  padding-top: 20vh;
+}
+
+.Homepage .AboutHolder {
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.Homepage .AboutHolder .AboutHeading {
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+  position: relative;
+  font-size: 3.81rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Homepage .AboutHolder .AboutHeading::after {
+  position: absolute;
+  width: 38vw;
+  height: 1px;
+  background: #454545;
+  content: "";
+  bottom: 0;
+}
+/*# sourceMappingURL=App.css.map */
