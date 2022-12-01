@@ -40,7 +40,7 @@ const Homepage = () => {
               </p>
               <div className="Row HeaderButton">
                 <div className="NeumorphButton CTA">
-                  <span> My Works</span>
+                  <span>My Works</span>
                 </div>
                 <div className="NeumorphButton">
                   <span>Contact</span>

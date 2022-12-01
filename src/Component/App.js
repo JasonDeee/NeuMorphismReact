@@ -5,8 +5,14 @@ import {
   Route,
 } from "react-router-dom";
 //
+//
 import { useEffect, useState, Fragment } from "react";
+import NavBar from "./Nav";
+import TrueHeader from "./TrueHeader";
 import Homepage from "./Homepage";
+
+//
+//
 
 function App() {
   const ScrollUpdate = () => {
@@ -46,6 +52,12 @@ function App() {
     <Router basename="" hashType="slash">
       <Fragment>
         <div className="App">
+          {/*  */}
+          <NavBar />
+          {/*  */}
+          {/*  */}
+          <TrueHeader />
+          {/*  */}
           <div className="Scroller">
             <Switch>
               <Route exact path="/" element={<Homepage />} />

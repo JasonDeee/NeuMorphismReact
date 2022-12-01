@@ -33,6 +33,10 @@ section {
   position: relative;
 }
 
+svg {
+  overflow: visible;
+}
+
 .link {
   position: absolute;
   width: inherit;
@@ -43,11 +47,15 @@ section {
 .App {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: start;
+
   width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
+  background: $WhiteGrey;
 }
 
 .Scroller {
@@ -55,7 +63,7 @@ section {
   position: fixed;
   top: 0;
   @include FlexCenter(column);
-  transition: transform 0.88s cubic-bezier(0.1, 0.55, 0.66, 1);
+  transition: transform 1.33s cubic-bezier(0.1, 0.55, 0.44, 1);
 }
 .Row {
   display: flex;
@@ -84,6 +92,14 @@ section {
 }
 .CTA {
   border-color: $TintColor;
+
+  background: $TintColor;
+  color: white;
+
+  transition: all 0.8s cubic-bezier(0.25, 0, 0, 1);
+}
+.CTA:hover {
+  color: $BlackMap;
 }
 .NeumorphButton::before {
   width: 100%;
@@ -98,11 +114,43 @@ section {
   @include InnerNeuMorph(16px);
   border-radius: 45px;
 }
+.NavBars {
+  height: 90px;
+  width: 86vw;
+
+  position: relative;
+
+  padding-left: 32px;
+  padding-right: 32px;
+
+  background: $WhiteLight;
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+  box-shadow: 2vw 2vw 5vw $TintShadow;
+  z-index: 99;
+
+  align-items: center;
+  justify-content: space-between;
+
+  @import "./Navbar";
+}
+
+.TrueHeader {
+  height: 80vh;
+  width: 100vw;
+  position: relative;
+  @import "./TrueHeader";
+
+  align-items: center;
+  justify-content: space-between;
+
+  padding-left: 7vw;
+  padding-right: 7vw;
+}
 
 .Homepage {
   @include FlexCenter(column);
 
-  background: $WhiteGrey;
   @import "./Homepage";
 
   padding-bottom: 30vh;

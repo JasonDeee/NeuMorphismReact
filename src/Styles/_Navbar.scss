@@ -1,0 +1,17 @@
+@import "./Variables";
+
+.LogoHolder {
+  width: 128px;
+}
+.jsonlogo1 {
+  fill: $BlackMap;
+}
+
+.NeumorphButton {
+  height: 48px;
+}
+.NavRightColumn,
+.NavLeftColumn {
+  width: 38vw;
+  height: 100%;
+}
