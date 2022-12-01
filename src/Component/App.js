@@ -33,39 +33,12 @@ function App() {
     //
     // Constances
     const main = document.querySelector(".Scroller");
-    //
-    // Variables
-    var // sx = 0, // For scroll positions
-      sy = 0;
-    var // dx = sx, // For container positions And Force (Percentage 70% Recommended)
-      dy = sy,
-      Force = 70;
-    function easeScroll() {
-      // sx = window.pageXOffset;
-      sy = window.pageYOffset;
-    }
-    window.addEventListener("scroll", easeScroll);
-    //
-    // Linear Method
-    function li(a, b, n) {
-      return (1 - n) * a + n * b;
-    }
-    //
+    // //
 
-    // Frame Request
-    function renderScroll() {
-      //We calculate our container position by linear interpolation method
-      // dx = li(dx, sx, Force / 1000);
-      dy = li(dy, sy, Force / 1000);
-
-      // dx = Math.floor(dx * 100) / 100;
-      dy = Math.floor(dy * 100) / 100;
-
-      main.style.transform = `translateY(-${dy}px)`;
-
-      window.requestAnimationFrame(renderScroll);
-    }
-    window.requestAnimationFrame(renderScroll);
+    const ScrollFunc = () => {
+      main.style.transform = `translateY(-${window.pageYOffset}px)`;
+    };
+    window.addEventListener("scroll", ScrollFunc);
   };
 
   useEffect(EffectInit, []);
