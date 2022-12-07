@@ -798,8 +798,6 @@ svg {
 }
 
 .TrueHeader .cat-watching {
-  -webkit-filter: drop-shadow(-1vw 1vw 1vw #29292959);
-          filter: drop-shadow(-1vw 1vw 1vw #29292959);
   border-radius: 50%;
 }
 
