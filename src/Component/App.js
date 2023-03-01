@@ -15,30 +15,44 @@ import Homepage from "./Homepage";
 //
 
 function App() {
+  // Define Users
+  const userAgent = navigator.userAgent;
+  const isMobile = /iPhone|iPad|iPod|Windows Phone|Android/i.test(userAgent);
+  const isEdge = userAgent.includes("Edg");
+
+  // Init States
+  const [FloaterClass, setFoatClassName] = useState("Float");
+
+  // Init Constances
+
+  const body = document.body;
+  // const main = document.querySelector(".Float");
+  //
   const ScrollUpdate = () => {
     //
-    let body = document.body,
-      main = document.querySelector(".Scroller"),
-      ScrollReszieTimer = setTimeout(() => {
-        body.style.height = Math.round(main.clientHeight) + "px";
+    let ScrollReszieTimer = setTimeout(() => {
+      body.style.height = Math.round(main.clientHeight) + "px";
 
-        clearTimeout(ScrollReszieTimer);
-      }, 1111);
+      clearTimeout(ScrollReszieTimer);
+    }, 1111);
     body.style.height = Math.round(main.clientHeight) + "px";
 
     console.log("got the Height");
   };
 
   const EffectInit = () => {
+    // Constances
+    const main = document.querySelector(FloaterClass);
     // Update The Scroll Height
-    ScrollUpdate();
-
+    if (!isEdge) {
+      setFoatClassName("Float_Active");
+      ScrollUpdate();
+    }
     window.addEventListener("resize", ScrollUpdate);
     window.addEventListener("mousedown", ScrollUpdate);
     window.addEventListener("touchstart", ScrollUpdate);
     //
-    // Constances
-    const main = document.querySelector(".Scroller");
+
     // //
 
     const ScrollFunc = () => {
@@ -52,17 +66,18 @@ function App() {
     <Router basename="" hashType="slash">
       <Fragment>
         <div className="App">
-          {/*  */}
-          <NavBar />
-          {/*  */}
-          {/*  */}
-          <TrueHeader />
-          {/*  */}
-          <div className="Scroller">
+          {/*  */}{" "}
+          <div className={FloaterClass}>
             <Switch>
               <Route exact path="/" element={<Homepage />} />
+            </Switch>{" "}
+          </div>
+          <div className="Static">
+            <Switch>
+              <Route exact path="/" />
             </Switch>
           </div>
+          {/*  */}
         </div>
       </Fragment>
     </Router>

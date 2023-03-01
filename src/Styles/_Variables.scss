@@ -1,7 +1,7 @@
 $WhiteLight: #dfeafe;
 $WhiteGrey: #cad5e6;
 $BlackMap: #454545;
-$WhiteShadow: #ffffff;
+$white: #ffffff;
 
 //
 
@@ -14,16 +14,15 @@ $WideTintShadow: #252c3d66;
 //
 
 @mixin OuterNeuMorph($Outersize) {
-  box-shadow: 5px 5px $Outersize #00000044, -5px -5px $Outersize $WhiteShadow;
+  box-shadow: 5px 5px $Outersize #00000044, -5px -5px $Outersize $white;
 }
 @mixin InnerNeuMorph($Innersize) {
   box-shadow: inset 5px 5px $Innersize #00000044,
-    inset -5px -5px $Innersize $WhiteShadow;
+    inset -5px -5px $Innersize $white;
 }
 
 @mixin WideOuterNeuMorph($WideSize) {
-  box-shadow: 15px 15px $WideSize $WideTintShadow,
-    -15px -15px $WideSize $WhiteShadow;
+  box-shadow: 15px 15px $WideSize $WideTintShadow, -15px -15px $WideSize $white;
 }
 
 @mixin FlexCenter($direction) {
