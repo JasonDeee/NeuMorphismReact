@@ -1,0 +1,56 @@
+@import "./Variables";
+@mixin FlexCenter($direction) {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: $direction;
+}
+
+.ButtonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  gap: 0;
+
+  background: linear-gradient(340deg, $TintColor 32%, $SecondTint 100%);
+  //   background: $TintColor;
+  padding: 16px;
+  transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
+
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  .Button_Icon {
+    width: 32px;
+    height: 32px;
+  }
+  label {
+    pointer-events: none;
+    white-space: nowrap;
+
+    font-size: 1.2rem;
+    font-weight: 300;
+
+    margin-right: 0;
+    height: 1.46rem;
+    width: auto;
+    max-width: 0;
+    transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
+
+    transform: translate(2px, 50%);
+  }
+  color: $BlackMap;
+  border-radius: 128px;
+}
+.ButtonContainer:hover {
+  gap: 16px;
+  label {
+    margin-right: 8px;
+
+    max-width: 96px;
+    transform: translate(0, 0);
+    color: white;
+  }
+}

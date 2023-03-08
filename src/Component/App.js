@@ -7,9 +7,8 @@ import {
 //
 //
 import { useEffect, useState, Fragment } from "react";
-import NavBar from "./Nav";
-import TrueHeader from "./TrueHeader";
-import Homepage from "./Homepage";
+
+import { HomepageFloat, HomePageFixed } from "./Homepage";
 
 //
 //
@@ -22,32 +21,38 @@ function App() {
 
   // Init States
   const [FloaterClass, setFoatClassName] = useState("Float");
+  const [Type, SetType] = useState("App");
 
   // Init Constances
 
-  const body = document.body;
-  // const main = document.querySelector(".Float");
   //
-  const ScrollUpdate = () => {
-    //
-    let ScrollReszieTimer = setTimeout(() => {
-      body.style.height = Math.round(main.clientHeight) + "px";
-
-      clearTimeout(ScrollReszieTimer);
-    }, 1111);
-    body.style.height = Math.round(main.clientHeight) + "px";
-
-    console.log("got the Height");
-  };
 
   const EffectInit = () => {
-    // Constances
-    const main = document.querySelector(FloaterClass);
-    // Update The Scroll Height
+    if (isMobile) {
+      SetType("Mobile");
+    }
+
     if (!isEdge) {
       setFoatClassName("Float_Active");
-      ScrollUpdate();
     }
+
+    // Constances
+    // Update The Scroll Height
+    const body = document.body;
+    const main = document.querySelector(".main");
+    const ScrollUpdate = () => {
+      //
+      let ScrollReszieTimer = setTimeout(() => {
+        body.style.height = main.Math.round(main.clientHeight) + "px";
+
+        clearTimeout(ScrollReszieTimer);
+      }, 1111);
+
+      body.style.height = main.Math.round(main.clientHeight) + "px";
+
+      console.log("got the Height");
+    };
+
     window.addEventListener("resize", ScrollUpdate);
     window.addEventListener("mousedown", ScrollUpdate);
     window.addEventListener("touchstart", ScrollUpdate);
@@ -65,16 +70,16 @@ function App() {
   return (
     <Router basename="" hashType="slash">
       <Fragment>
-        <div className="App">
+        <div className={Type}>
           {/*  */}{" "}
-          <div className={FloaterClass}>
+          <div className={FloaterClass + " main"}>
             <Switch>
-              <Route exact path="/" element={<Homepage />} />
+              <Route exact path="/" element={<HomepageFloat></HomepageFloat>} />
             </Switch>{" "}
           </div>
           <div className="Static">
             <Switch>
-              <Route exact path="/" />
+              <Route exact path="/" element={<HomePageFixed></HomePageFixed>} />
             </Switch>
           </div>
           {/*  */}
