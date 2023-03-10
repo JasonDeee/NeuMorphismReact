@@ -69,18 +69,33 @@ svg {
       -ms-flex-pack: start;
           justify-content: start;
   gap: 0;
-  background: linear-gradient(340deg, #8e724b 32%, #663b00 100%);
-  padding: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  background: none;
+  height: 64px;
   -webkit-transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
   transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
   outline: none;
   border: none;
   cursor: pointer;
   color: #151515;
+}
+
+.ButtonContainer .Button_Overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 64px;
+  width: 64px;
+  background: linear-gradient(340deg, #8e724b 32%, #663b00 100%);
+  -webkit-transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
   border-radius: 128px;
 }
 
 .ButtonContainer .Button_Icon {
+  position: relative;
   width: 32px;
   height: 32px;
 }
@@ -93,22 +108,94 @@ svg {
   margin-right: 0;
   height: 1.46rem;
   width: auto;
-  max-width: 0;
   -webkit-transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
   transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
   -webkit-transform: translate(2px, 50%);
           transform: translate(2px, 50%);
 }
 
+.Button_Slider {
+  gap: 8px;
+}
+
+.Button_Slider .Button_Arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  overflow: visible;
+  -webkit-transform: translateY(16px);
+          transform: translateY(16px);
+}
+
+.Button_Slider .Button_Arrow::before,
+.Button_Slider .Button_Arrow::after {
+  content: "";
+  position: absolute;
+}
+
+.Button_Slider #Next {
+  width: 64px;
+}
+
+.Button_Slider #Prev::before {
+  right: 0;
+}
+
+.Button_Slider #Next::before {
+  left: 0;
+}
+
+.Button_Slider #Prev::after {
+  border-width: 2px 0 0 2px;
+  left: 0;
+}
+
+.Button_Slider #Next::after {
+  right: 0;
+  border-width: 0 2px 2px 0;
+}
+
+.Button_Slider .Button_Arrow::after {
+  width: 8px;
+  height: 8px;
+  border: solid #151515;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.Button_Slider .Button_Arrow::before {
+  height: 2px;
+  width: 100%;
+  background: #151515;
+}
+
 .ButtonContainer:hover {
   gap: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .ButtonContainer:hover label {
   margin-right: 8px;
-  max-width: 96px;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
   color: white;
+}
+
+.ButtonContainer:hover .Button_Overlay {
+  width: 100%;
 }
 /*# sourceMappingURL=App.css.map */

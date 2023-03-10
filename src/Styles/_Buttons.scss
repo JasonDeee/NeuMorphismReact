@@ -13,16 +13,33 @@
   justify-content: start;
   gap: 0;
 
-  background: linear-gradient(340deg, $TintColor 32%, $SecondTint 100%);
   //   background: $TintColor;
-  padding: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  position: relative;
+  background: none;
+
+  height: 64px;
   transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
 
   outline: none;
   border: none;
   cursor: pointer;
 
+  .Button_Overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 64px;
+    width: 64px;
+    background: linear-gradient(340deg, $TintColor 32%, $SecondTint 100%);
+    transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
+    border-radius: 128px;
+  }
+
   .Button_Icon {
+    position: relative;
     width: 32px;
     height: 32px;
   }
@@ -36,21 +53,84 @@
     margin-right: 0;
     height: 1.46rem;
     width: auto;
-    max-width: 0;
     transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
 
     transform: translate(2px, 50%);
   }
+
+  //
   color: $BlackMap;
-  border-radius: 128px;
 }
+
+.Button_Slider {
+  gap: 8px;
+  .Button_Arrow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    // max-width: 0;
+    width: 32px;
+    height: 32px;
+    overflow: visible;
+
+    transform: translateY(16px);
+  }
+
+  .Button_Arrow::before,
+  .Button_Arrow::after {
+    content: "";
+
+    position: absolute;
+  }
+
+  //
+  #Next {
+    width: 64px;
+  }
+  //
+  #Prev::before {
+    right: 0;
+  }
+  #Next::before {
+    left: 0;
+  }
+
+  #Prev::after {
+    border-width: 2px 0 0 2px;
+    left: 0;
+  }
+  #Next::after {
+    right: 0;
+    border-width: 0 2px 2px 0;
+  }
+  //
+  .Button_Arrow::after {
+    width: 8px;
+    height: 8px;
+    border: solid $BlackMap;
+    transform: rotate(-45deg);
+  }
+  .Button_Arrow::before {
+    height: 2px;
+    width: 100%;
+    background: $BlackMap;
+  }
+}
+
 .ButtonContainer:hover {
   gap: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
   label {
     margin-right: 8px;
-
-    max-width: 96px;
     transform: translate(0, 0);
     color: white;
+  }
+
+  .Button_Overlay {
+    width: 100%;
   }
 }
