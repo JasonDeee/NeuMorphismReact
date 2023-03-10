@@ -31,6 +31,7 @@
     position: absolute;
     left: 0;
     top: 0;
+    margin: auto;
     height: 64px;
     width: 64px;
     background: linear-gradient(340deg, $TintColor 32%, $SecondTint 100%);
@@ -62,9 +63,37 @@
   color: $BlackMap;
 }
 
+.ButtonContainer:hover {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.Button_Full:hover {
+  gap: 16px;
+
+  label {
+    margin-right: 8px;
+    transform: translate(0, 0);
+    color: white;
+  }
+
+  .Button_Overlay {
+    width: 100%;
+  }
+}
+
 .Button_Slider {
-  gap: 8px;
+  gap: 0;
+  padding: 0;
+
+  .Button_Overlay {
+    pointer-events: none;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+  }
   .Button_Arrow {
+    z-index: 99;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -72,16 +101,18 @@
 
     position: relative;
     // max-width: 0;
-    width: 32px;
-    height: 32px;
+    height: 64px;
     overflow: visible;
 
     transform: translateY(16px);
+    transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
+    border-color: $BlackMap;
   }
 
   .Button_Arrow::before,
   .Button_Arrow::after {
     content: "";
+    transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
 
     position: absolute;
   }
@@ -90,27 +121,31 @@
   #Next {
     width: 64px;
   }
+  #Prev {
+    width: 32px;
+  }
   //
   #Prev::before {
-    right: 0;
+    right: 4px;
   }
   #Next::before {
-    left: 0;
+    left: 4px;
   }
 
   #Prev::after {
     border-width: 2px 0 0 2px;
-    left: 0;
+    left: -4px;
   }
   #Next::after {
-    right: 0;
+    right: -4px;
     border-width: 0 2px 2px 0;
   }
   //
   .Button_Arrow::after {
     width: 8px;
     height: 8px;
-    border: solid $BlackMap;
+    border: solid;
+    border-color: inherit;
     transform: rotate(-45deg);
   }
   .Button_Arrow::before {
@@ -120,17 +155,39 @@
   }
 }
 
-.ButtonContainer:hover {
-  gap: 16px;
-  padding-left: 24px;
-  padding-right: 24px;
-  label {
-    margin-right: 8px;
-    transform: translate(0, 0);
-    color: white;
+.Button_Slider:hover {
+  .Button_Arrow {
+    transform: translateY(0);
   }
+}
 
-  .Button_Overlay {
-    width: 100%;
+#Next:hover {
+  width: 86px;
+
+  ~ .Button_Overlay {
+    right: 0;
+    left: 40px;
+    width: 128px;
+  }
+}
+
+#Next:hover::after,
+#Prev:hover::after {
+  border-color: $WhiteLight;
+}
+#Next:hover::before,
+#Prev:hover::before {
+  background: $WhiteLight;
+}
+#Prev:hover {
+  width: 86px;
+  margin-right: 8px;
+  ~ #Next {
+    width: 32px;
+  }
+  ~ .Button_Overlay {
+    right: 40px;
+    left: 0;
+    width: 128px;
   }
 }

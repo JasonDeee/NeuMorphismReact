@@ -16,9 +16,9 @@ const ButtonFull = (Props) => {
 const ButtonSlider = (Props) => {
   return (
     <button className="ButtonContainer Button_Slider">
+      <div className="Button_Arrow" id="Prev" onClick={Props.PrevFunc}></div>
+      <div className="Button_Arrow" id="Next" onClick={Props.NextFunc}></div>
       <div className="Button_Overlay"></div>
-      <div className="Button_Arrow" id="Prev"></div>
-      <div className="Button_Arrow" id="Next"></div>
     </button>
   );
 };

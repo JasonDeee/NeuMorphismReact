@@ -5,13 +5,22 @@ import { ButtonFull, ButtonSlider } from "./Buttons";
 import Copy_Logo from "../Assets/Copy_Logo.svg";
 
 const HomepageFloat = () => {
+  const TestPrevFunct = () => {
+    console.log("Prev");
+  };
+  const TestNextFunct = () => {
+    console.log("Next");
+  };
   return (
     <main className="HomepageFloat">
       <section className="Section" id="Sec1Float">
         <ButtonFull IconURL={Copy_Logo} Label="Khám phá"></ButtonFull>
       </section>
       <section className="Section" id="Sec2Float">
-        <ButtonSlider></ButtonSlider>
+        <ButtonSlider
+          PrevFunc={TestPrevFunct}
+          NextFunc={TestNextFunct}
+        ></ButtonSlider>
       </section>{" "}
       <section className="Section" id="Sec3Float"></section>{" "}
       <section className="Section" id="Sec5Float"></section>

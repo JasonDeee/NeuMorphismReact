@@ -43,12 +43,12 @@ function App() {
     const ScrollUpdate = () => {
       //
       let ScrollReszieTimer = setTimeout(() => {
-        body.style.height = main.Math.round(main.clientHeight) + "px";
+        body.style.height = Math.round(main.clientHeight) + "px";
 
         clearTimeout(ScrollReszieTimer);
       }, 1111);
 
-      body.style.height = main.Math.round(main.clientHeight) + "px";
+      body.style.height = Math.round(main.clientHeight) + "px";
 
       console.log("got the Height");
     };
