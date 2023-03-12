@@ -21,7 +21,7 @@
   background: none;
 
   height: 64px;
-  transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
+  transition: $SmoothBezier;
 
   outline: none;
   border: none;
@@ -35,7 +35,7 @@
     height: 64px;
     width: 64px;
     background: linear-gradient(340deg, $TintColor 32%, $SecondTint 100%);
-    transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
+    transition: $SmoothBezier;
     border-radius: 128px;
   }
 
@@ -54,7 +54,7 @@
     margin-right: 0;
     height: 1.46rem;
     width: auto;
-    transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
+    transition: $SmoothBezier;
 
     transform: translate(2px, 50%);
   }
@@ -82,6 +82,22 @@
   }
 }
 
+.Button_Text_Only {
+  label {
+    transform: translate(24px, 50%);
+  }
+}
+
+.Button_Text_Only:hover {
+  .Button_Overlay {
+    width: 100%;
+  }
+  label {
+    transform: translate(0, 0);
+    color: white;
+  }
+}
+
 .Button_Slider {
   gap: 0;
   padding: 0;
@@ -105,14 +121,14 @@
     overflow: visible;
 
     transform: translateY(16px);
-    transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
+    transition: $SmoothBezier;
     border-color: $BlackMap;
   }
 
   .Button_Arrow::before,
   .Button_Arrow::after {
     content: "";
-    transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
+    transition: $SmoothBezier;
 
     position: absolute;
   }
@@ -173,11 +189,11 @@
 
 #Next:hover::after,
 #Prev:hover::after {
-  border-color: $WhiteLight;
+  border-color: $PureWhite;
 }
 #Next:hover::before,
 #Prev:hover::before {
-  background: $WhiteLight;
+  background: $PureWhite;
 }
 #Prev:hover {
   width: 86px;

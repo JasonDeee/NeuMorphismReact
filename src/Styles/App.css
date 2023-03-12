@@ -26,8 +26,131 @@ section {
 
 svg {
   overflow: visible;
-  width: 100vw;
+  width: 100%;
   height: 100%;
+}
+
+.ScrollBar_Observer {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 80vh;
+  right: 0;
+  pointer-events: none;
+}
+
+.Stylized_Scroll_Bar {
+  height: 62vh;
+  position: fixed;
+  top: 31vh;
+  padding: 0;
+  right: 0;
+  margin: auto;
+  width: 128px;
+  z-index: 999;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Stylized_Scroll_Bar .ScrollBar_Track {
+  width: 2px;
+  height: 38vh;
+  background: #e9e7e7;
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+}
+
+.Stylized_Scroll_Bar .ScrollBar_Thumb {
+  width: 8px;
+  height: 24px;
+  border-radius: 16px;
+  background: #353535;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99);
+  transition: -webkit-transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99);
+  transition: transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99);
+  transition: transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99), -webkit-transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99);
+  top: 0;
+  cursor: ns-resize;
+}
+
+.Stylized_Scroll_Bar .Direction_Button {
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+}
+
+.Stylized_Scroll_Bar .Direction_Button .Direction_Button_Icon-1 {
+  fill: none;
+  stroke: #151515;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.Stylized_Scroll_Bar .Direction_Button_Active {
+  pointer-events: all !important;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  background: #8e724b;
+}
+
+.Stylized_Scroll_Bar .Direction_Button_Active .Direction_Button_Icon-1 {
+  stroke: #ffffff;
+}
+
+.Stylized_Scroll_Bar .Direction_Button_Active:hover {
+  opacity: 0.62;
+}
+
+@media screen and (min-width: 768px) {
+  .Stylized_Scroll_Bar {
+    width: 128px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .Stylized_Scroll_Bar {
+    width: 128px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .Stylized_Scroll_Bar {
+    width: 128px;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .Stylized_Scroll_Bar {
+    width: 128px;
+  }
+}
+
+@media screen and (min-width: 2200px) {
+  .Stylized_Scroll_Bar {
+    width: 128px;
+  }
 }
 
 .Section {
@@ -74,8 +197,8 @@ svg {
   position: relative;
   background: none;
   height: 64px;
-  -webkit-transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
-  transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
   outline: none;
   border: none;
   cursor: pointer;
@@ -90,8 +213,8 @@ svg {
   height: 64px;
   width: 64px;
   background: linear-gradient(340deg, #8e724b 32%, #663b00 100%);
-  -webkit-transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
-  transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
   border-radius: 128px;
 }
 
@@ -109,8 +232,8 @@ svg {
   margin-right: 0;
   height: 1.46rem;
   width: auto;
-  -webkit-transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
-  transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
   -webkit-transform: translate(2px, 50%);
           transform: translate(2px, 50%);
 }
@@ -133,6 +256,21 @@ svg {
 
 .Button_Full:hover .Button_Overlay {
   width: 100%;
+}
+
+.Button_Text_Only label {
+  -webkit-transform: translate(24px, 50%);
+          transform: translate(24px, 50%);
+}
+
+.Button_Text_Only:hover .Button_Overlay {
+  width: 100%;
+}
+
+.Button_Text_Only:hover label {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  color: white;
 }
 
 .Button_Slider {
@@ -167,16 +305,16 @@ svg {
   overflow: visible;
   -webkit-transform: translateY(16px);
           transform: translateY(16px);
-  -webkit-transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
-  transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
   border-color: #151515;
 }
 
 .Button_Slider .Button_Arrow::before,
 .Button_Slider .Button_Arrow::after {
   content: "";
-  -webkit-transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
-  transition: all 1.11s cubic-bezier(0.25, 0, 0, 1);
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
   position: absolute;
 }
 
@@ -259,5 +397,215 @@ svg {
   right: 40px;
   left: 0;
   width: 128px;
+}
+
+.HomepageFloat {
+  width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.HomepageFloat .Header_Logo {
+  position: absolute;
+  margin: auto;
+  height: 36px;
+}
+
+.HomepageFloat .Header_Logo svg {
+  width: 100%;
+}
+
+.HomepageFloat .Header_Logo .JasonD-Logo--1 {
+  fill: #151515;
+}
+
+.HomepageFloat .Section {
+  width: calc(100vw - 128px);
+  padding-left: 64px;
+}
+
+.HomepageFloat #Header_Section {
+  height: 100vh;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.HomepageFloat #Header_Section .Header_BG_Overlay {
+  background: #e9e7e7;
+  width: 100%;
+  height: 38vh;
+  position: absolute;
+  left: 0;
+}
+
+.HomepageFloat #Header_Section .Header_Contents {
+  position: relative;
+  height: 38vh;
+  max-width: 62%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  color: #353535;
+}
+
+.HomepageFloat #Header_Section .Header_Contents h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 3rem;
+  margin-top: -2rem;
+  margin-bottom: 8vh;
+  white-space: nowrap;
+}
+
+.HomepageFloat #Header_Section .Header_Contents p {
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 300;
+  width: 1024px;
+  max-width: 54vw;
+}
+
+.HomepageFloat #Header_Section .Header_Contents .Header_CTA_Button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate(0, 50%);
+          transform: translate(0, 50%);
+}
+
+.HomepageFloat #Header_Section .Header_Image {
+  position: absolute;
+  width: 42vh;
+  height: 38vh;
+  margin-top: -6rem;
+}
+
+.HomepageFloat #Header_Section .Header_Image img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: drop-shadow(12px 12px 32px #00000056);
+          filter: drop-shadow(12px 12px 32px #00000056);
+}
+
+.HomePageFixed {
+  pointer-events: none;
+}
+
+.HomepageFloat .Section {
+  padding-left: 32px;
+}
+
+.HomepageFloat .Header_Image {
+  right: calc(16px * 2);
+}
+
+.Header_Logo {
+  top: 32px;
+  width: 78px;
+  left: 0;
+  right: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .HomepageFloat .Section {
+    padding-left: 16px;
+  }
+  .Header_Image {
+    right: 16px;
+  }
+  .Header_Logo {
+    top: 16px;
+    width: 96px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .HomepageFloat .Section {
+    padding-left: 48px;
+  }
+  .Header_Image {
+    right: 32px;
+  }
+  .Header_Logo {
+    top: 32px;
+    width: 96px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .HomepageFloat .Section {
+    padding-left: 64px;
+  }
+  .Header_Image {
+    right: 32px;
+  }
+  .Header_Logo {
+    top: 32px;
+    width: 128px;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .HomepageFloat .Section {
+    padding-left: 64px;
+  }
+  .Header_Image {
+    right: 42px;
+  }
+  .Header_Logo {
+    top: 42px;
+    width: 128px;
+  }
+}
+
+@media screen and (min-width: 2200px) {
+  .HomepageFloat .Section {
+    padding-left: 64px;
+  }
+  .Header_Image {
+    right: 48px;
+  }
+  .Header_Logo {
+    top: 48px;
+    width: 128px;
+  }
 }
 /*# sourceMappingURL=App.css.map */

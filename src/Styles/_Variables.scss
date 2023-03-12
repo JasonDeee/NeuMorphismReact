@@ -1,6 +1,10 @@
-$WhiteLight: #ffffff;
+$PureWhite: #ffffff;
 $WhiteGrey: #e9e7e7;
+$DarkGray: #656565;
 $BlackMap: #151515;
+$BlackText: #353535;
+$PureBlack: #000000;
+
 $white: #ffffff;
 
 //
@@ -12,9 +16,36 @@ $LightTint: #cdb99d;
 $SecondTint: #663b00;
 $TintShadow: #09091c44;
 $WideTintShadow: #252c3d66;
+$LightShadow: #00000056;
+
+//
+// Transition
+$SmoothBezier: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+$ScrollBezier: transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99);
 
 // d6dfee
 
+// 12 Columns
+$LeftMargin: 64px;
+$RightMargin: 128px;
+$Gutter: 48px;
+
+@media screen and (max-width: 960px) {
+  $Gutter: 32px;
+  $LeftMargin: 32px;
+}
+
+@media screen and (max-width: 1024px) {
+  $Gutter: 32px;
+  $LeftMargin: 48px;
+}
+@media screen and (max-width: 1728px) {
+  $Gutter: 42px;
+}
+@media screen and (max-width: 2200px) {
+  $Gutter: 48px;
+  $LeftMargin: 64px;
+}
 //
 
 @mixin OuterNeuMorph($Outersize) {

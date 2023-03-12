@@ -34,8 +34,133 @@ section {
 
 svg {
   overflow: visible;
-  width: 100vw;
+  width: 100%;
   height: 100%;
+}
+$Gutter: 16px;
+$LeftMargin: 32px;
+
+.ScrollBar_Observer {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 80vh;
+  right: 0;
+  pointer-events: none;
+}
+
+.Stylized_Scroll_Bar {
+  height: 62vh;
+  position: fixed;
+  top: 31vh;
+  padding: 0;
+  right: 0;
+  margin: auto;
+  width: $RightMargin;
+  z-index: 999;
+
+  @include FlexCenter(column);
+
+  .ScrollBar_Track {
+    width: 2px;
+    height: 38vh;
+    background: $WhiteGrey;
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+  }
+  .ScrollBar_Thumb {
+    width: 8px;
+    height: 24px;
+    border-radius: 16px;
+    background: $BlackText;
+    position: absolute;
+    transition: $ScrollBezier;
+    top: 0;
+    cursor: ns-resize;
+  }
+  .Direction_Button {
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+
+    cursor: pointer;
+    pointer-events: none;
+    transition: $SmoothBezier;
+    border-radius: 50%;
+
+    position: absolute;
+    bottom: 0;
+
+    .Direction_Button_Icon-1 {
+      fill: none;
+      stroke: $BlackMap;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      transition: $SmoothBezier;
+    }
+  }
+  .Direction_Button_Active {
+    pointer-events: all !important;
+    transform: rotate(180deg);
+    background: $TintColor;
+    .Direction_Button_Icon-1 {
+      stroke: $PureWhite;
+    }
+  }
+  .Direction_Button_Active:hover {
+    opacity: 0.62;
+  }
+}
+
+//
+//
+
+@media screen and (min-width: 768px) {
+  $Gutter: 16px;
+  $LeftMargin: 16px;
+  //
+  //
+  .Stylized_Scroll_Bar {
+    width: $RightMargin;
+  }
+}
+@media screen and (min-width: 960px) {
+  $Gutter: 32px;
+  $LeftMargin: 48px;
+  //
+  //
+  .Stylized_Scroll_Bar {
+    width: $RightMargin;
+  }
+}
+@media screen and (min-width: 1024px) {
+  $Gutter: 32px;
+  $LeftMargin: 64px;
+  //
+  //
+  .Stylized_Scroll_Bar {
+    width: $RightMargin;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  $Gutter: 42px;
+  $LeftMargin: 64px;
+  //
+  //
+  .Stylized_Scroll_Bar {
+    width: $RightMargin;
+  }
+}
+@media screen and (min-width: 2200px) {
+  $Gutter: 48px;
+  $LeftMargin: 64px;
+  //
+  //
+  .Stylized_Scroll_Bar {
+    width: $RightMargin;
+  }
 }
 
 .Section {
@@ -50,7 +175,9 @@ svg {
 .Float_Active {
   position: fixed;
   right: 0;
-  transition: transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99);
+  transition: $ScrollBezier;
 }
 
 @import "./Buttons";
+
+@import "./Homepage";

@@ -23,4 +23,12 @@ const ButtonSlider = (Props) => {
   );
 };
 
-export { ButtonFull, ButtonSlider };
+const ButtonTextOnly = (Props) => {
+  return (
+    <button className="ButtonContainer Button_Text_Only">
+      <div className="Button_Overlay"></div>
+      <label>{Props.Label}</label>
+    </button>
+  );
+};
+export { ButtonFull, ButtonSlider, ButtonTextOnly };
