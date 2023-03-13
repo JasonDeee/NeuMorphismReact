@@ -21,6 +21,11 @@ li {
   font-size: 1rem;
   font-weight: 500;
 }
+h1,
+h2,
+h3 {
+  font-family: "Barlow Condensed", sans-serif;
+}
 
 div {
   background-position: center;
@@ -92,6 +97,9 @@ $LeftMargin: 32px;
     position: absolute;
     bottom: 0;
 
+    svg {
+      transition: $SmoothBezier;
+    }
     .Direction_Button_Icon-1 {
       fill: none;
       stroke: $BlackMap;
@@ -102,14 +110,19 @@ $LeftMargin: 32px;
   }
   .Direction_Button_Active {
     pointer-events: all !important;
-    transform: rotate(180deg);
     background: $TintColor;
+    transform: rotate(180deg) scale(1.11);
+
     .Direction_Button_Icon-1 {
       stroke: $PureWhite;
     }
   }
   .Direction_Button_Active:hover {
     opacity: 0.62;
+
+    svg {
+      transform: scale(0.66);
+    }
   }
 }
 

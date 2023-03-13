@@ -23,6 +23,11 @@ function App() {
   const [FloaterClass, setFoatClassName] = useState("Float");
   const [Type, SetType] = useState("App");
 
+  const ScrollToTop = () => {
+    //
+    window.scrollTo(0, 0);
+  };
+
   // Init Constances
 
   //
@@ -104,7 +109,7 @@ function App() {
           <div className="Stylized_Scroll_Bar">
             <div className="ScrollBar_Track"></div>
             <div className="ScrollBar_Thumb"></div>
-            <div className="Direction_Button">
+            <div className="Direction_Button" onClick={ScrollToTop}>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10.02 12.22">
                 <line
                   className="Direction_Button_Icon-1"

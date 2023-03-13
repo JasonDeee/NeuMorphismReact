@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   width: 100vw;
   overflow: hidden;
@@ -12,6 +13,12 @@ p,
 li {
   font-size: 1rem;
   font-weight: 500;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Barlow Condensed", sans-serif;
 }
 
 div {
@@ -99,6 +106,11 @@ svg {
   bottom: 0;
 }
 
+.Stylized_Scroll_Bar .Direction_Button svg {
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+}
+
 .Stylized_Scroll_Bar .Direction_Button .Direction_Button_Icon-1 {
   fill: none;
   stroke: #151515;
@@ -110,9 +122,9 @@ svg {
 
 .Stylized_Scroll_Bar .Direction_Button_Active {
   pointer-events: all !important;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
   background: #8e724b;
+  -webkit-transform: rotate(180deg) scale(1.11);
+          transform: rotate(180deg) scale(1.11);
 }
 
 .Stylized_Scroll_Bar .Direction_Button_Active .Direction_Button_Icon-1 {
@@ -121,6 +133,11 @@ svg {
 
 .Stylized_Scroll_Bar .Direction_Button_Active:hover {
   opacity: 0.62;
+}
+
+.Stylized_Scroll_Bar .Direction_Button_Active:hover svg {
+  -webkit-transform: scale(0.66);
+          transform: scale(0.66);
 }
 
 @media screen and (min-width: 768px) {
@@ -430,7 +447,7 @@ svg {
 }
 
 .HomepageFloat .Header_Logo .JasonD-Logo--1 {
-  fill: #151515;
+  fill: #656565;
 }
 
 .HomepageFloat .Section {
@@ -455,6 +472,20 @@ svg {
   height: 38vh;
   position: absolute;
   left: 0;
+}
+
+.HomepageFloat #Header_Section .Header_BG_Overlay::after {
+  content: "Một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến” như In-house team, Agency, Production House và Freelancer.";
+  display: block;
+  position: absolute;
+  right: 0;
+  bottom: -0.76rem;
+  font-size: 0.76rem;
+  font-weight: 300;
+  font-style: italic;
+  text-align: right;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
 }
 
 .HomepageFloat #Header_Section .Header_Contents {
@@ -483,13 +514,47 @@ svg {
   color: #353535;
 }
 
+.HomepageFloat #Header_Section .Header_Contents .Location_Tag {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  gap: 8px;
+  margin-bottom: 4vh;
+}
+
+.HomepageFloat #Header_Section .Header_Contents .Location_Tag img {
+  height: 1fr;
+  width: 12px;
+}
+
+.HomepageFloat #Header_Section .Header_Contents .Location_Tag p {
+  font-size: 0.76rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .HomepageFloat #Header_Section .Header_Contents h1 {
-  font-size: 4rem;
+  font-size: 6rem;
   text-transform: uppercase;
   font-weight: 700;
   line-height: 3rem;
   margin-top: -2rem;
-  margin-bottom: 8vh;
+  margin-bottom: 4vh;
   white-space: nowrap;
 }
 
@@ -498,7 +563,7 @@ svg {
   font-size: 1rem;
   font-weight: 300;
   width: 1024px;
-  max-width: 54vw;
+  max-width: 48vw;
 }
 
 .HomepageFloat #Header_Section .Header_Contents .Header_CTA_Button {
@@ -539,9 +604,13 @@ svg {
 
 .Header_Logo {
   top: 32px;
-  width: 78px;
+  width: 64px;
   left: 0;
   right: 0;
+}
+
+.Header_BG_Overlay::after {
+  max-width: calc((100vw - 336px) / 3);
 }
 
 @media screen and (min-width: 768px) {
@@ -553,7 +622,10 @@ svg {
   }
   .Header_Logo {
     top: 16px;
-    width: 96px;
+    width: 64px;
+  }
+  .Header_BG_Overlay::after {
+    max-width: calc((100vw - 320px) / 3);
   }
 }
 
@@ -566,7 +638,10 @@ svg {
   }
   .Header_Logo {
     top: 32px;
-    width: 96px;
+    width: 78px;
+  }
+  .Header_BG_Overlay::after {
+    max-width: calc((100vw - 528px) / 3);
   }
 }
 
@@ -579,7 +654,10 @@ svg {
   }
   .Header_Logo {
     top: 32px;
-    width: 128px;
+    width: 96px;
+  }
+  .Header_BG_Overlay::after {
+    max-width: calc((100vw - 544px) / 3);
   }
 }
 
@@ -592,7 +670,10 @@ svg {
   }
   .Header_Logo {
     top: 42px;
-    width: 128px;
+    width: 112px;
+  }
+  .Header_BG_Overlay::after {
+    max-width: calc((100vw - 654px) / 3);
   }
 }
 
@@ -606,6 +687,9 @@ svg {
   .Header_Logo {
     top: 48px;
     width: 128px;
+  }
+  .Header_BG_Overlay::after {
+    max-width: calc((100vw - 720px) / 3);
   }
 }
 /*# sourceMappingURL=App.css.map */

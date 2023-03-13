@@ -5,6 +5,7 @@ import { ButtonFull, ButtonSlider, ButtonTextOnly } from "./Buttons";
 import Copy_Logo from "../Assets/Copy_Logo.svg";
 import WatchOut from "../Assets/WatchOut.gif";
 import Magnify from "../Assets/Magnify.svg";
+import Location from "../Assets/Location.svg";
 
 const HomepageFloat = () => {
   const TestPrevFunct = () => {
@@ -27,6 +28,10 @@ const HomepageFloat = () => {
         <div className="Header_BG_Overlay"></div>
         <div className="Header_Contents">
           <h1>V!sual designer</h1>
+          <div className="Location_Tag">
+            <img src={Location}></img>
+            <p>Hà Nội, VN</p>
+          </div>
           <p>
             Là một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến” như
             In-house team, Agency, Production House và Freelancer, tôi cảm thấy
