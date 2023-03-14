@@ -106,6 +106,18 @@ function App() {
       <Fragment>
         <div className={Type}>
           <div className="ScrollBar_Observer"></div>
+          {/*  */}{" "}
+          <div className={FloaterClass + " main"}>
+            <Switch>
+              <Route exact path="/" element={<HomepageFloat></HomepageFloat>} />
+            </Switch>{" "}
+          </div>
+          <div className="Static">
+            <Switch>
+              <Route exact path="/" element={<HomePageFixed></HomePageFixed>} />
+            </Switch>
+          </div>
+          {/*  */}
           <div className="Stylized_Scroll_Bar">
             <div className="ScrollBar_Track"></div>
             <div className="ScrollBar_Thumb"></div>
@@ -125,18 +137,6 @@ function App() {
               </svg>
             </div>
           </div>
-          {/*  */}{" "}
-          <div className={FloaterClass + " main"}>
-            <Switch>
-              <Route exact path="/" element={<HomepageFloat></HomepageFloat>} />
-            </Switch>{" "}
-          </div>
-          <div className="Static">
-            <Switch>
-              <Route exact path="/" element={<HomePageFixed></HomePageFixed>} />
-            </Switch>
-          </div>
-          {/*  */}
         </div>
       </Fragment>
     </Router>

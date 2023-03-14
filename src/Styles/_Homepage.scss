@@ -6,6 +6,12 @@
   flex-direction: $direction;
 }
 
+$Gutter: 16px;
+$LeftMargin: 32px;
+$RightMargin: 128px;
+//
+//
+//
 .HomepageFloat {
   width: 100vw;
   height: fit-content;
@@ -15,6 +21,7 @@
   align-items: start;
   justify-content: start;
   .Header_Logo {
+    @include FlexCenter(column);
     position: absolute;
     margin: auto;
     height: 36px;
@@ -30,13 +37,13 @@
 
   .Section {
     width: calc(100vw - 128px);
-    padding-left: $LeftMargin;
   }
 
   #Header_Section {
     height: 100vh;
-    flex-direction: row;
-    justify-content: start;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: start;
 
     //
     //
@@ -44,11 +51,10 @@
 
     .Header_BG_Overlay {
       background: $WhiteGrey;
-      width: 100%;
-      height: 38vh;
+      width: auto;
+      height: auto;
 
       position: absolute;
-      left: 0;
     }
 
     .Header_BG_Overlay::after {
@@ -72,8 +78,10 @@
       max-width: 62%;
 
       @include FlexCenter(column);
-      align-items: start;
-      justify-content: start;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
 
       color: $BlackText;
 
@@ -106,6 +114,7 @@
         text-transform: uppercase;
         font-weight: 700;
         line-height: 3rem;
+        width: 100%;
 
         margin-top: -2rem;
         margin-bottom: 4vh;
@@ -120,22 +129,40 @@
         max-width: 48vw;
       }
       .Header_CTA_Button {
-        position: absolute;
+        position: relative;
         right: 0;
         bottom: 0;
         transform: translate(0, 50%);
+
+        .Header_Button_Add_Overlay {
+          background: $white;
+          height: 96px;
+          width: 96px;
+          border-radius: 50%;
+          position: absolute;
+          left: -64px;
+          top: -64px;
+        }
       }
     }
     .Header_Image {
-      position: absolute;
-      width: 42vh;
-      height: 38vh;
+      position: relative;
+      width: 32vh;
+      height: 32vh;
 
-      margin-top: -6rem;
-      img {
+      background: $white;
+      border-radius: 50%;
+
+      @include FlexCenter(column);
+
+      margin-bottom: 4vh;
+      img,
+      svg {
         object-fit: contain;
-        width: 100%;
-        height: 100%;
+        width: 80%;
+        height: 80%;
+
+        transform: translate(-5%, 0);
 
         filter: drop-shadow(12px 12px 32px $LightShadow);
       }
@@ -152,29 +179,28 @@
 //
 // Respone
 
-$Gutter: 16px;
-$LeftMargin: 32px;
-$RightMargin: 128px;
-
 //
 //
 .HomepageFloat {
   .Section {
     padding-left: $LeftMargin;
   }
-  .Header_Image {
-    right: calc(#{$Gutter} * 2);
-  }
 }
 .Header_Logo {
   top: 32px;
   width: 64px;
-  left: 0;
-  right: 0;
+  left: $LeftMargin;
+  right: $RightMargin;
 }
 
 .Header_BG_Overlay::after {
   max-width: calc((100vw - #{$LeftMargin + $RightMargin + 11 * $Gutter}) / 3);
+}
+.Header_BG_Overlay {
+  left: $LeftMargin;
+  right: 0;
+  top: #{1.5 * $Gutter};
+  bottom: 7vh;
 }
 
 @media screen and (min-width: 768px) {
@@ -187,15 +213,21 @@ $RightMargin: 128px;
       padding-left: $LeftMargin;
     }
   }
-  .Header_Image {
-    right: $Gutter;
-  }
+
   .Header_Logo {
     top: $Gutter;
     width: 64px;
+    left: $LeftMargin;
+    right: $RightMargin;
   }
   .Header_BG_Overlay::after {
     max-width: calc((100vw - #{$LeftMargin + $RightMargin + 11 * $Gutter}) / 3);
+  }
+  .Header_BG_Overlay {
+    left: $LeftMargin;
+    right: 0;
+    top: #{1.5 * $Gutter};
+    bottom: 7vh;
   }
 }
 @media screen and (min-width: 960px) {
@@ -208,15 +240,21 @@ $RightMargin: 128px;
       padding-left: $LeftMargin;
     }
   }
-  .Header_Image {
-    right: $Gutter;
-  }
+
   .Header_Logo {
     top: $Gutter;
     width: 78px;
+    left: $LeftMargin;
+    right: $RightMargin;
   }
   .Header_BG_Overlay::after {
     max-width: calc((100vw - #{$LeftMargin + $RightMargin + 11 * $Gutter}) / 3);
+  }
+  .Header_BG_Overlay {
+    left: $LeftMargin;
+    right: 0;
+    top: #{1.5 * $Gutter};
+    bottom: 7vh;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -229,15 +267,21 @@ $RightMargin: 128px;
       padding-left: $LeftMargin;
     }
   }
-  .Header_Image {
-    right: $Gutter;
-  }
+
   .Header_Logo {
     top: $Gutter;
     width: 96px;
+    left: $LeftMargin;
+    right: $RightMargin;
   }
   .Header_BG_Overlay::after {
     max-width: calc((100vw - #{$LeftMargin + $RightMargin + 11 * $Gutter}) / 3);
+  }
+  .Header_BG_Overlay {
+    left: $LeftMargin;
+    right: 0;
+    top: #{1.5 * $Gutter};
+    bottom: 7vh;
   }
 }
 
@@ -251,15 +295,21 @@ $RightMargin: 128px;
       padding-left: $LeftMargin;
     }
   }
-  .Header_Image {
-    right: $Gutter;
-  }
+
   .Header_Logo {
     top: $Gutter;
     width: 112px;
+    left: $LeftMargin;
+    right: $RightMargin;
   }
   .Header_BG_Overlay::after {
     max-width: calc((100vw - #{$LeftMargin + $RightMargin + 11 * $Gutter}) / 3);
+  }
+  .Header_BG_Overlay {
+    left: $LeftMargin;
+    right: 0;
+    top: #{1.5 * $Gutter};
+    bottom: 7vh;
   }
 }
 @media screen and (min-width: 2200px) {
@@ -272,14 +322,20 @@ $RightMargin: 128px;
       padding-left: $LeftMargin;
     }
   }
-  .Header_Image {
-    right: $Gutter;
-  }
+
   .Header_Logo {
     top: $Gutter;
     width: 128px;
+    left: $LeftMargin;
+    right: $RightMargin;
   }
   .Header_BG_Overlay::after {
     max-width: calc((100vw - #{$LeftMargin + $RightMargin + 11 * $Gutter}) / 3);
+  }
+  .Header_BG_Overlay {
+    left: $LeftMargin;
+    right: 0;
+    top: #{1.5 * $Gutter};
+    bottom: 7vh;
   }
 }

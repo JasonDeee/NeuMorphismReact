@@ -6,21 +6,23 @@
   flex-direction: $direction;
 }
 
+$ButtonOverAllSize: 54px;
+
 .ButtonContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   gap: 0;
 
   //   background: $TintColor;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: #{$ButtonOverAllSize/4};
+  padding-right: #{$ButtonOverAllSize/4};
 
   position: relative;
   background: none;
 
-  height: 64px;
+  height: $ButtonOverAllSize;
   transition: $SmoothBezier;
 
   outline: none;
@@ -32,8 +34,8 @@
     left: 0;
     top: 0;
     margin: auto;
-    height: 64px;
-    width: 64px;
+    height: $ButtonOverAllSize;
+    width: $ButtonOverAllSize;
     background: linear-gradient(340deg, $TintColor 32%, $SecondTint 100%);
     transition: $SmoothBezier;
     border-radius: 128px;
@@ -41,8 +43,8 @@
 
   .Button_Icon {
     position: relative;
-    width: 32px;
-    height: 32px;
+    width: #{$ButtonOverAllSize/2};
+    height: #{$ButtonOverAllSize/2};
   }
   label {
     pointer-events: none;
@@ -68,8 +70,14 @@
   padding-right: 24px;
 }
 
+.Button_Full {
+  transform: translateX(38%);
+}
+
 .Button_Full:hover {
   gap: 16px;
+
+  transform: translateX(0);
 
   label {
     margin-right: 8px;
@@ -120,7 +128,7 @@
     height: 64px;
     overflow: visible;
 
-    transform: translateY(16px);
+    transform: translateY(#{$ButtonOverAllSize / 5});
     transition: $SmoothBezier;
     border-color: $BlackMap;
   }
@@ -135,10 +143,10 @@
 
   //
   #Next {
-    width: 64px;
+    width: $ButtonOverAllSize;
   }
   #Prev {
-    width: 32px;
+    width: #{$ButtonOverAllSize/2};
   }
   //
   #Prev::before {
