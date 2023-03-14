@@ -12,6 +12,10 @@ $RightMargin: 128px;
 //
 //
 //
+.Overlay {
+  background: $WhiteGrey;
+}
+
 .HomepageFloat {
   width: 100vw;
   height: fit-content;
@@ -36,7 +40,7 @@ $RightMargin: 128px;
   }
 
   .Section {
-    width: calc(100vw - 128px);
+    width: calc(100vw - #{$RightMargin});
   }
 
   #Header_Section {
@@ -50,7 +54,6 @@ $RightMargin: 128px;
     //
 
     .Header_BG_Overlay {
-      background: $WhiteGrey;
       width: auto;
       height: auto;
 
@@ -170,6 +173,16 @@ $RightMargin: 128px;
       }
     }
   }
+
+  #Works_Showreel_Section {
+    min-height: 100vh;
+
+    .Work_Overlay {
+      height: 100%;
+      position: absolute;
+      top: 0;
+    }
+  }
 }
 .HomePageFixed {
   pointer-events: none;
@@ -203,6 +216,17 @@ $RightMargin: 128px;
   right: 0;
   top: #{1.5 * $Gutter};
   bottom: 7vh;
+}
+.Work_Overlay {
+  width: calc(
+    (7 / 12) *
+      (100vw - #{$LeftMargin + $RightMargin + $Gutter * (10 * 7 + 1) / 12})
+  );
+  // width: calc(
+  //   ((7 / 12) * (100vw - #{$LeftMargin + $RightMargin + 11 * $Gutter})) + #{$Gutter} *
+  //     (6 / 12)
+  // );
+  left: 0;
 }
 
 @media screen and (min-width: 768px) {

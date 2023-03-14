@@ -37,6 +37,40 @@ svg {
   height: 100%;
 }
 
+.Language_Switch {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 8px;
+  width: 128px;
+  position: fixed;
+  top: 24px;
+  right: 0;
+  font-weight: 300;
+  font-size: 0.76rem;
+  color: #e9e7e7;
+  cursor: pointer;
+}
+
+.Language_Switch div {
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.Language_Switch .Lang_Active {
+  color: #353535;
+}
+
 .ScrollBar_Observer {
   width: 48px;
   height: 48px;
@@ -144,11 +178,17 @@ svg {
   .Stylized_Scroll_Bar {
     width: 128px;
   }
+  .Language_Switch {
+    top: 24px;
+  }
 }
 
 @media screen and (min-width: 960px) {
   .Stylized_Scroll_Bar {
     width: 128px;
+  }
+  .Language_Switch {
+    top: 48px;
   }
 }
 
@@ -156,17 +196,26 @@ svg {
   .Stylized_Scroll_Bar {
     width: 128px;
   }
+  .Language_Switch {
+    top: 48px;
+  }
 }
 
 @media screen and (min-width: 1728px) {
   .Stylized_Scroll_Bar {
     width: 128px;
   }
+  .Language_Switch {
+    top: 63px;
+  }
 }
 
 @media screen and (min-width: 2200px) {
   .Stylized_Scroll_Bar {
     width: 128px;
+  }
+  .Language_Switch {
+    top: 72px;
   }
 }
 
@@ -423,6 +472,10 @@ svg {
   width: 128px;
 }
 
+.Overlay {
+  background: #e9e7e7;
+}
+
 .HomepageFloat {
   width: 100vw;
   height: -webkit-fit-content;
@@ -487,7 +540,6 @@ svg {
 }
 
 .HomepageFloat #Header_Section .Header_BG_Overlay {
-  background: #e9e7e7;
   width: auto;
   height: auto;
   position: absolute;
@@ -638,6 +690,16 @@ svg {
           filter: drop-shadow(12px 12px 32px #00000056);
 }
 
+.HomepageFloat #Works_Showreel_Section {
+  min-height: 100vh;
+}
+
+.HomepageFloat #Works_Showreel_Section .Work_Overlay {
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
 .HomePageFixed {
   pointer-events: none;
 }
@@ -662,6 +724,11 @@ svg {
   right: 0;
   top: 24px;
   bottom: 7vh;
+}
+
+.Work_Overlay {
+  width: calc( (7 / 12) * (100vw - 254.66667px));
+  left: 0;
 }
 
 @media screen and (min-width: 768px) {

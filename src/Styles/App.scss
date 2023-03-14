@@ -42,8 +42,33 @@ svg {
   width: 100%;
   height: 100%;
 }
+
 $Gutter: 16px;
 $LeftMargin: 32px;
+
+.Language_Switch {
+  @include FlexCenter(row);
+  gap: 8px;
+
+  width: $RightMargin;
+  position: fixed;
+  top: #{1.5 * $Gutter};
+  right: 0;
+
+  font-weight: 300;
+  font-size: 0.76rem;
+
+  color: $WhiteGrey;
+  cursor: pointer;
+
+  div {
+    transition: $SmoothBezier;
+  }
+
+  .Lang_Active {
+    color: $BlackText;
+  }
+}
 
 .ScrollBar_Observer {
   width: 48px;
@@ -137,6 +162,10 @@ $LeftMargin: 32px;
   .Stylized_Scroll_Bar {
     width: $RightMargin;
   }
+
+  .Language_Switch {
+    top: #{1.5 * $Gutter};
+  }
 }
 @media screen and (min-width: 960px) {
   $Gutter: 32px;
@@ -146,6 +175,9 @@ $LeftMargin: 32px;
   .Stylized_Scroll_Bar {
     width: $RightMargin;
   }
+  .Language_Switch {
+    top: #{1.5 * $Gutter};
+  }
 }
 @media screen and (min-width: 1024px) {
   $Gutter: 32px;
@@ -154,6 +186,9 @@ $LeftMargin: 32px;
   //
   .Stylized_Scroll_Bar {
     width: $RightMargin;
+  }
+  .Language_Switch {
+    top: #{1.5 * $Gutter};
   }
 }
 
@@ -165,6 +200,9 @@ $LeftMargin: 32px;
   .Stylized_Scroll_Bar {
     width: $RightMargin;
   }
+  .Language_Switch {
+    top: #{1.5 * $Gutter};
+  }
 }
 @media screen and (min-width: 2200px) {
   $Gutter: 48px;
@@ -173,6 +211,9 @@ $LeftMargin: 32px;
   //
   .Stylized_Scroll_Bar {
     width: $RightMargin;
+  }
+  .Language_Switch {
+    top: #{1.5 * $Gutter};
   }
 }
 

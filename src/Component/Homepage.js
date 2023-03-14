@@ -17,7 +17,7 @@ const HomepageFloat = () => {
   return (
     <main className="HomepageFloat">
       <section className="Section" id="Header_Section">
-        <div className="Header_BG_Overlay"></div>{" "}
+        <div className="Header_BG_Overlay Overlay"></div>{" "}
         <div className="Header_Image">
           <img src={WatchOut}></img>
         </div>
@@ -52,6 +52,9 @@ const HomepageFloat = () => {
           />
         </svg>
       </div>
+      <section className="Section" id="Works_Showreel_Section">
+        <div className="Work_Overlay Overlay"></div>
+      </section>
       <section className="Section" id="Sec1Float">
         <ButtonFull IconURL={Copy_Logo} Label="Khám phá"></ButtonFull>
       </section>

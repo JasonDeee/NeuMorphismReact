@@ -20,6 +20,8 @@ function App() {
   const isEdge = userAgent.includes("Edg");
 
   // Init States
+  var IsVietnamese = true; // Language Changer
+
   const [FloaterClass, setFoatClassName] = useState("Float");
   const [Type, SetType] = useState("App");
 
@@ -65,7 +67,22 @@ function App() {
     //
 
     // //
+    // Language SW
+    const Language_Switch = document.querySelector(".Language_Switch");
+    Language_Switch.addEventListener("click", () => {
+      IsVietnamese = !IsVietnamese;
 
+      //
+      Language_Switch.firstChild.classList.toggle("Lang_Active", !IsVietnamese); // First Child Refer to the English Button
+
+      // Second Child - Refer to Vietnamese
+      Language_Switch.getElementsByTagName("div")[1].classList.toggle(
+        "Lang_Active",
+        IsVietnamese
+      );
+    });
+    //
+    //
     // Scroll Bar
     const ScrollBar_Observer = document.querySelector(".ScrollBar_Observer");
     const ScrollBar_Thumb = document.querySelector(
@@ -118,6 +135,12 @@ function App() {
             </Switch>
           </div>
           {/*  */}
+          <div className="Language_Switch">
+            <div id="En">En</div>
+            <div className="Lang_Active" id="Vi">
+              Vi
+            </div>
+          </div>
           <div className="Stylized_Scroll_Bar">
             <div className="ScrollBar_Track"></div>
             <div className="ScrollBar_Thumb"></div>
