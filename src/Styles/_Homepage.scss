@@ -132,16 +132,18 @@ $RightMargin: 128px;
         position: relative;
         right: 0;
         bottom: 0;
+        margin-top: 4vh;
         transform: translate(0, 50%);
 
         .Header_Button_Add_Overlay {
           background: $white;
-          height: 96px;
-          width: 96px;
+          height: 64px;
+          width: 64px;
           border-radius: 50%;
           position: absolute;
-          left: -64px;
-          top: -64px;
+          left: 64px;
+          top: 0;
+          transform: translateY(-50%);
         }
       }
     }
