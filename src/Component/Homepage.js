@@ -52,8 +52,18 @@ const HomepageFloat = () => {
           />
         </svg>
       </div>
-      <section className="Section" id="Works_Showreel_Section">
+      <section className="Section Column_Grid" id="Works_Showreel_Section">
         <div className="Work_Overlay Overlay"></div>
+        <div className="Work_Contents Column_Grid">
+          <div className="Work Top_Work">
+            <div className="Image_Container Lazy_Image Work_Images">
+              <div className="Img_Scaler">
+                <img src="https://i.kym-cdn.com/entries/icons/original/000/037/158/thinkmarkthumbnail.PNG"></img>
+              </div>
+            </div>
+            <div className="Main_Work_Contents"></div>
+          </div>
+        </div>
       </section>
       <section className="Section" id="Sec1Float">
         <ButtonFull IconURL={Copy_Logo} Label="Khám phá"></ButtonFull>

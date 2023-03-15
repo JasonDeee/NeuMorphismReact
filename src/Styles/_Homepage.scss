@@ -179,8 +179,45 @@ $RightMargin: 128px;
 
     .Work_Overlay {
       height: 100%;
-      position: absolute;
+      // position: absolute;
       top: 0;
+      grid-column: 3/10;
+    }
+
+    .Work_Contents {
+      width: 100%;
+      position: absolute;
+      min-height: 100vh;
+      left: 0;
+      padding: inherit;
+
+      padding-top: 8rem;
+
+      .Work {
+        position: relative;
+        min-height: 256px;
+
+        display: flex;
+      }
+
+      .Top_Work {
+        grid-column: 1/11;
+
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+      }
+
+      .Work_Images {
+        height: 428px;
+        grid-column: 1/8;
+      }
+
+      .Main_Work_Contents {
+        height: 428px;
+        grid-column: 8/11;
+
+        background: $white;
+      }
     }
   }
 }
@@ -200,6 +237,9 @@ $RightMargin: 128px;
   .Section {
     padding-left: $LeftMargin;
   }
+  .Work {
+    gap: $Gutter;
+  }
 }
 .Header_Logo {
   top: 32px;
@@ -217,17 +257,17 @@ $RightMargin: 128px;
   top: #{1.5 * $Gutter};
   bottom: 7vh;
 }
-.Work_Overlay {
-  width: calc(
-    (7 / 12) *
-      (100vw - #{$LeftMargin + $RightMargin + $Gutter * (10 * 7 + 1) / 12})
-  );
-  // width: calc(
-  //   ((7 / 12) * (100vw - #{$LeftMargin + $RightMargin + 11 * $Gutter})) + #{$Gutter} *
-  //     (6 / 12)
-  // );
-  left: 0;
-}
+// .Work_Overlay {
+//   width: calc(
+//     (7 / 12) *
+//       (100vw - #{$LeftMargin + $RightMargin + $Gutter * (10 * 7 + 1) / 12})
+//   );
+//    width: calc(
+//      ((7 / 12) * (100vw - #{$LeftMargin + $RightMargin + 11 * $Gutter})) + #{$Gutter} *
+//        (6 / 12)
+//    );
+//   left: 0;
+// }
 
 @media screen and (min-width: 768px) {
   $Gutter: 16px;
@@ -237,6 +277,9 @@ $RightMargin: 128px;
   .HomepageFloat {
     .Section {
       padding-left: $LeftMargin;
+    }
+    .Work {
+      gap: $Gutter;
     }
   }
 
@@ -265,6 +308,9 @@ $RightMargin: 128px;
     .Section {
       padding-left: $LeftMargin;
     }
+    .Work {
+      gap: $Gutter;
+    }
   }
 
   .Header_Logo {
@@ -291,6 +337,9 @@ $RightMargin: 128px;
   .HomepageFloat {
     .Section {
       padding-left: $LeftMargin;
+    }
+    .Work {
+      gap: $Gutter;
     }
   }
 
@@ -320,6 +369,9 @@ $RightMargin: 128px;
     .Section {
       padding-left: $LeftMargin;
     }
+    .Work {
+      gap: $Gutter;
+    }
   }
 
   .Header_Logo {
@@ -346,6 +398,9 @@ $RightMargin: 128px;
   .HomepageFloat {
     .Section {
       padding-left: $LeftMargin;
+    }
+    .Work {
+      gap: $Gutter;
     }
   }
 
