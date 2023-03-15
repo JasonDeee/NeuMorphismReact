@@ -19,11 +19,9 @@ div,
 p,
 li {
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 300;
 }
-h1,
-h2,
-h3 {
+h1 {
   font-family: "Barlow Condensed", sans-serif;
 }
 
@@ -195,6 +193,7 @@ $LeftMargin: 32px;
 .Column_Grid {
   display: grid !important;
   grid-template-columns: repeat(12, 1fr);
+  height: auto;
   position: relative;
   column-gap: $Gutter;
 }

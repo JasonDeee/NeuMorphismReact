@@ -176,47 +176,108 @@ $RightMargin: 128px;
 
   #Works_Showreel_Section {
     min-height: 100vh;
+    margin-top: 64px;
+    height: auto;
 
     .Work_Overlay {
+      width: 100%;
+      position: absolute;
       height: 100%;
-      // position: absolute;
+      left: 0;
       top: 0;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      padding: inherit;
+    }
+    .Work_Overlay::after {
+      content: "";
+      background: $WhiteGrey;
       grid-column: 3/10;
     }
 
     .Work_Contents {
       width: 100%;
-      position: absolute;
-      min-height: 100vh;
-      left: 0;
-      padding: inherit;
+      // min-height: 100vh;
+      height: fit-content;
+      position: relative;
 
-      padding-top: 8rem;
+      padding-top: 6rem;
+      grid-column: 1/13;
 
       .Work {
         position: relative;
         min-height: 256px;
 
         display: flex;
+        flex-direction: column;
+
+        grid-column: span 4;
+      }
+
+      #work2 {
+        grid-column: 2 / span 4;
+        margin-top: 6rem;
+      }
+
+      #work3 {
+        grid-column: 7 / span 4;
+        .Work_Button_Holder {
+          width: 100% !important;
+        }
       }
 
       .Top_Work {
-        grid-column: 1/11;
+        grid-column: 1/12;
 
         display: grid;
-        grid-template-columns: repeat(10, 1fr);
+        grid-template-columns: repeat(11, 1fr);
+
+        margin-bottom: 64px;
+        .Work_Images {
+          height: 428px;
+        }
+
+        .Work_Button_Holder {
+          width: 85% !important;
+        }
       }
 
       .Work_Images {
-        height: 428px;
+        height: 256px;
         grid-column: 1/8;
       }
 
       .Main_Work_Contents {
-        height: 428px;
-        grid-column: 8/11;
+        padding-bottom: 3rem;
+        min-height: 256px;
+        grid-column: 8/12;
 
-        background: $white;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        color: $BlackText;
+
+        span {
+          color: $BlackText;
+
+          font-size: 0.76rem;
+          font-weight: 500;
+
+          margin-bottom: 2rem;
+        }
+
+        p {
+          margin-bottom: 3rem;
+          color: $PureBlack;
+        }
+
+        .Work_Button_Holder {
+          width: 50%;
+
+          @include FlexCenter(row);
+        }
       }
     }
   }
@@ -237,7 +298,8 @@ $RightMargin: 128px;
   .Section {
     padding-left: $LeftMargin;
   }
-  .Work {
+  .Work,
+  .Work_Overlay {
     gap: $Gutter;
   }
 }
@@ -278,7 +340,8 @@ $RightMargin: 128px;
     .Section {
       padding-left: $LeftMargin;
     }
-    .Work {
+    .Work,
+    .Work_Overlay {
       gap: $Gutter;
     }
   }
@@ -308,7 +371,8 @@ $RightMargin: 128px;
     .Section {
       padding-left: $LeftMargin;
     }
-    .Work {
+    .Work,
+    .Work_Overlay {
       gap: $Gutter;
     }
   }
@@ -338,7 +402,8 @@ $RightMargin: 128px;
     .Section {
       padding-left: $LeftMargin;
     }
-    .Work {
+    .Work,
+    .Work_Overlay {
       gap: $Gutter;
     }
   }
@@ -369,7 +434,8 @@ $RightMargin: 128px;
     .Section {
       padding-left: $LeftMargin;
     }
-    .Work {
+    .Work,
+    .Work_Overlay {
       gap: $Gutter;
     }
   }
@@ -399,7 +465,8 @@ $RightMargin: 128px;
     .Section {
       padding-left: $LeftMargin;
     }
-    .Work {
+    .Work,
+    .Work_Overlay {
       gap: $Gutter;
     }
   }

@@ -53,15 +53,76 @@ const HomepageFloat = () => {
         </svg>
       </div>
       <section className="Section Column_Grid" id="Works_Showreel_Section">
-        <div className="Work_Overlay Overlay"></div>
+        <div className="Work_Overlay"></div>
         <div className="Work_Contents Column_Grid">
-          <div className="Work Top_Work">
+          <div className="Work Top_Work" id="work1">
             <div className="Image_Container Lazy_Image Work_Images">
               <div className="Img_Scaler">
                 <img src="https://i.kym-cdn.com/entries/icons/original/000/037/158/thinkmarkthumbnail.PNG"></img>
               </div>
             </div>
-            <div className="Main_Work_Contents"></div>
+            <div className="Main_Work_Contents">
+              <h2>Là một Marketer</h2>
+              <span>Key Visual tết 2023</span>
+              <p>
+                Là một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến” như
+                In-house team, Agency, Production House và Freelancer, tôi cảm
+                thấy may mắn vì trong 5 năm đó được trải nghiệm công việc
+                Marketing ở nhiều ngành hàng: từ quen thuộc như các ngành Hàng
+                tiêu dùng (Kem đánh răng, Sữa tắm, Nước tăng lực…) cho tới những
+                ngành “ngách” hơn như Vận tải hành khách, Công nghệ, Nội thất
+                cao cấp…
+              </p>
+              <div className="Work_Button_Holder">
+                <ButtonFull IconURL={Copy_Logo} Label="Quy trình"></ButtonFull>
+              </div>
+            </div>
+          </div>
+          <div className="Work" id="work2">
+            <div className="Image_Container Lazy_Image Work_Images">
+              <div className="Img_Scaler">
+                <img src="https://i.kym-cdn.com/entries/icons/original/000/037/158/thinkmarkthumbnail.PNG"></img>
+              </div>
+            </div>
+            <div className="Main_Work_Contents">
+              <h2>Là một Marketer</h2>
+              <span>Key Visual tết 2023</span>
+              <p>
+                Là một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến” như
+                In-house team, Agency, Production House và Freelancer, tôi cảm
+                thấy may mắn vì trong 5 năm đó được trải nghiệm công việc
+                Marketing ở nhiều ngành hàng: từ quen thuộc như các ngành Hàng
+                tiêu dùng (Kem đánh răng, Sữa tắm, Nước tăng lực…) cho tới những
+                ngành “ngách” hơn như Vận tải hành khách, Công nghệ, Nội thất
+                cao cấp…
+              </p>
+              <div className="Work_Button_Holder">
+                <ButtonFull IconURL={Copy_Logo} Label="Quy trình"></ButtonFull>
+              </div>
+            </div>
+          </div>{" "}
+          <div className="Work" id="work3">
+            <div className="Image_Container Lazy_Image Work_Images">
+              <div className="Img_Scaler">
+                <img src="https://i.kym-cdn.com/entries/icons/original/000/037/158/thinkmarkthumbnail.PNG"></img>
+              </div>
+            </div>
+            <div className="Main_Work_Contents">
+              <h2>Là một Marketer</h2>
+              <span>Key Visual tết 2023</span>
+              <p>
+                Là một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến” như
+                In-house team, Agency, Production House và Freelancer, tôi cảm
+                thấy may mắn vì trong 5 năm đó được trải nghiệm công việc
+                Marketing ở nhiều ngành hàng: từ quen thuộc như các ngành Hàng
+                tiêu dùng (Kem đánh răng, Sữa tắm, Nước tăng lực…) cho tới những
+                ngành “ngách” hơn như Vận tải hành khách, Công nghệ, Nội thất
+                cao cấp…
+              </p>
+              <div className="Work_Button_Holder">
+                <ButtonFull IconURL={Copy_Logo} Label="Quy trình"></ButtonFull>
+              </div>
+            </div>
           </div>
         </div>
       </section>
