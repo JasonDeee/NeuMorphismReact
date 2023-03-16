@@ -19,6 +19,10 @@ h1 {
   font-family: "Barlow Condensed", sans-serif;
 }
 
+h2 {
+  font-size: 1.5rem;
+}
+
 div {
   background-position: center;
   background-repeat: no-repeat;
@@ -65,6 +69,11 @@ svg {
           transform-origin: center;
   -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
   transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.Full_Screen_Ready_Image {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
 }
 
 .Image_Container:hover .Img_Scaler {
@@ -762,13 +771,8 @@ svg {
           filter: drop-shadow(12px 12px 32px #00000056);
 }
 
-.HomepageFloat #Works_Showreel_Section {
-  min-height: 100vh;
-  margin-top: 64px;
-  height: auto;
-}
-
-.HomepageFloat #Works_Showreel_Section .Work_Overlay {
+.HomepageFloat .Work_Overlay,
+.HomepageFloat .About_Overlay {
   width: 100%;
   position: absolute;
   height: 100%;
@@ -779,14 +783,47 @@ svg {
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
   padding: inherit;
+  z-index: -1;
 }
 
-.HomepageFloat #Works_Showreel_Section .Work_Overlay::after {
+.HomepageFloat .Work_Overlay::after,
+.HomepageFloat .About_Overlay::after {
   content: "";
   background: #e9e7e7;
   -ms-grid-column: 3;
   -ms-grid-column-span: 7;
   grid-column: 3/10;
+}
+
+.HomepageFloat .Work_Overlay::after {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 7;
+  grid-column: 3/10;
+}
+
+.HomepageFloat .About_Overlay::after {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 5;
+  grid-column: 3/8;
+}
+
+.HomepageFloat #Works_Showreel_Section {
+  min-height: 100vh;
+  margin-top: 64px;
+  height: auto;
+}
+
+.HomepageFloat #Works_Showreel_Section h1 {
+  width: auto;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 7;
+  grid-column: 3/10;
+  text-align: center;
+  color: #353535;
+  height: auto;
+  font-size: 4rem;
+  margin-top: -2rem;
+  text-transform: uppercase;
 }
 
 .HomepageFloat #Works_Showreel_Section .Work_Contents {
@@ -795,7 +832,7 @@ svg {
   height: -moz-fit-content;
   height: fit-content;
   position: relative;
-  padding-top: 6rem;
+  padding-top: 4rem;
   -ms-grid-column: 1;
   -ms-grid-column-span: 12;
   grid-column: 1/13;
@@ -828,7 +865,10 @@ svg {
 }
 
 .HomepageFloat #Works_Showreel_Section .Work_Contents #work3 .Work_Button_Holder {
-  width: 100% !important;
+  width: 86% !important;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .HomepageFloat #Works_Showreel_Section .Work_Contents .Top_Work {
@@ -908,6 +948,88 @@ svg {
           flex-direction: row;
 }
 
+.HomepageFloat #About_Section {
+  margin-top: 256px;
+  height: auto;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.HomepageFloat #About_Section .About_Top_Content,
+.HomepageFloat #About_Section .About_Contents {
+  width: auto;
+  text-align: start;
+  color: #353535;
+}
+
+.HomepageFloat #About_Section .About_Top_Content h1,
+.HomepageFloat #About_Section .About_Contents h1 {
+  text-transform: uppercase;
+  height: auto;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.HomepageFloat #About_Section .About_Top_Content h2,
+.HomepageFloat #About_Section .About_Contents h2 {
+  text-transform: None;
+}
+
+.HomepageFloat #About_Section .About_Top_Content p,
+.HomepageFloat #About_Section .About_Contents p {
+  margin-bottom: 4rem;
+}
+
+.HomepageFloat #About_Section .About_Contents {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-column: 2/6;
+}
+
+.HomepageFloat #About_Section .About_Top_Content {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2/5;
+  margin-top: 4rem;
+}
+
+.HomepageFloat #About_Section .About_Images {
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 5;
+  grid-column: 7/12;
+  height: 1fr;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.HomepageFloat #About_Section .About_Top_Image {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 5;
+  grid-column: 6/11;
+}
+
+.HomepageFloat #Testimonial_Section {
+  margin-top: 256px;
+  height: auto;
+  min-height: 30vh;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Overlay::after {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 6;
+  grid-column: 3/9;
+}
+
 .HomePageFixed {
   pointer-events: none;
 }
@@ -944,7 +1066,8 @@ svg {
     padding-left: 16px;
   }
   .HomepageFloat .Work,
-  .HomepageFloat .Work_Overlay {
+  .HomepageFloat .Work_Overlay,
+  .HomepageFloat .About_Overlay {
     gap: 16px;
   }
   .Header_Logo {
@@ -969,7 +1092,8 @@ svg {
     padding-left: 48px;
   }
   .HomepageFloat .Work,
-  .HomepageFloat .Work_Overlay {
+  .HomepageFloat .Work_Overlay,
+  .HomepageFloat .About_Overlay {
     gap: 32px;
   }
   .Header_Logo {
@@ -994,7 +1118,8 @@ svg {
     padding-left: 64px;
   }
   .HomepageFloat .Work,
-  .HomepageFloat .Work_Overlay {
+  .HomepageFloat .Work_Overlay,
+  .HomepageFloat .About_Overlay {
     gap: 32px;
   }
   .Header_Logo {
@@ -1019,7 +1144,8 @@ svg {
     padding-left: 64px;
   }
   .HomepageFloat .Work,
-  .HomepageFloat .Work_Overlay {
+  .HomepageFloat .Work_Overlay,
+  .HomepageFloat .About_Overlay {
     gap: 42px;
   }
   .Header_Logo {
@@ -1044,7 +1170,8 @@ svg {
     padding-left: 64px;
   }
   .HomepageFloat .Work,
-  .HomepageFloat .Work_Overlay {
+  .HomepageFloat .Work_Overlay,
+  .HomepageFloat .About_Overlay {
     gap: 48px;
   }
   .Header_Logo {

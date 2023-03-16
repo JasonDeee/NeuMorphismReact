@@ -24,6 +24,9 @@ li {
 h1 {
   font-family: "Barlow Condensed", sans-serif;
 }
+h2 {
+  font-size: 1.5rem;
+}
 
 div {
   background-position: center;
@@ -70,6 +73,11 @@ svg {
     transition: $SmoothBezier;
   }
 }
+
+.Full_Screen_Ready_Image {
+  cursor: zoom-in;
+}
+
 .Image_Container:hover {
   .Img_Scaler {
     clip-path: polygon(3% 3%, 97% 3%, 97% 97%, 3% 97%);

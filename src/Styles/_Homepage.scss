@@ -173,26 +173,46 @@ $RightMargin: 128px;
       }
     }
   }
+  .Work_Overlay,
+  .About_Overlay {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: inherit;
+    z-index: -1;
+  }
+  .Work_Overlay::after,
+  .About_Overlay::after {
+    content: "";
+    background: $WhiteGrey;
+    grid-column: 3/10;
+  }
+  .Work_Overlay::after {
+    grid-column: 3/10;
+  }
+  .About_Overlay::after {
+    grid-column: 3/8;
+  }
 
   #Works_Showreel_Section {
     min-height: 100vh;
     margin-top: 64px;
     height: auto;
 
-    .Work_Overlay {
-      width: 100%;
-      position: absolute;
-      height: 100%;
-      left: 0;
-      top: 0;
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      padding: inherit;
-    }
-    .Work_Overlay::after {
-      content: "";
-      background: $WhiteGrey;
+    h1 {
+      width: auto;
       grid-column: 3/10;
+      text-align: center;
+      color: $BlackText;
+      height: auto;
+      font-size: 4rem;
+      margin-top: -2rem;
+
+      text-transform: uppercase;
     }
 
     .Work_Contents {
@@ -201,7 +221,7 @@ $RightMargin: 128px;
       height: fit-content;
       position: relative;
 
-      padding-top: 6rem;
+      padding-top: 4rem;
       grid-column: 1/13;
 
       .Work {
@@ -222,7 +242,8 @@ $RightMargin: 128px;
       #work3 {
         grid-column: 7 / span 4;
         .Work_Button_Holder {
-          width: 100% !important;
+          width: 86% !important;
+          justify-content: flex-end;
         }
       }
 
@@ -279,6 +300,68 @@ $RightMargin: 128px;
           @include FlexCenter(row);
         }
       }
+    }
+  }
+
+  #About_Section {
+    // min-height: 100vh;
+    margin-top: 256px;
+    height: auto;
+
+    align-items: start;
+    justify-content: start;
+    .About_Top_Content,
+    .About_Contents {
+      width: auto;
+      text-align: start;
+      color: $BlackText;
+
+      h1 {
+        text-transform: uppercase;
+        height: auto;
+        font-size: 4rem;
+        margin-bottom: 2rem;
+      }
+
+      h2 {
+        text-transform: None;
+      }
+      p {
+        margin-bottom: 4rem;
+      }
+    }
+
+    .About_Contents {
+      grid-column: 2/6;
+    }
+
+    .About_Top_Content {
+      grid-column: 2/5;
+      margin-top: 4rem;
+    }
+
+    .About_Images {
+      grid-column: 7/12;
+      height: 1fr;
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
+
+    .About_Top_Image {
+      grid-column: 6/11;
+    }
+  }
+
+  #Testimonial_Section {
+    margin-top: 256px;
+    height: auto;
+    min-height: 30vh;
+
+    align-items: start;
+    justify-content: start;
+
+    .Tes_Overlay::after {
+      grid-column: 3/9;
     }
   }
 }
@@ -341,7 +424,8 @@ $RightMargin: 128px;
       padding-left: $LeftMargin;
     }
     .Work,
-    .Work_Overlay {
+    .Work_Overlay,
+    .About_Overlay {
       gap: $Gutter;
     }
   }
@@ -372,7 +456,8 @@ $RightMargin: 128px;
       padding-left: $LeftMargin;
     }
     .Work,
-    .Work_Overlay {
+    .Work_Overlay,
+    .About_Overlay {
       gap: $Gutter;
     }
   }
@@ -403,7 +488,8 @@ $RightMargin: 128px;
       padding-left: $LeftMargin;
     }
     .Work,
-    .Work_Overlay {
+    .Work_Overlay,
+    .About_Overlay {
       gap: $Gutter;
     }
   }
@@ -435,7 +521,8 @@ $RightMargin: 128px;
       padding-left: $LeftMargin;
     }
     .Work,
-    .Work_Overlay {
+    .Work_Overlay,
+    .About_Overlay {
       gap: $Gutter;
     }
   }
@@ -466,7 +553,8 @@ $RightMargin: 128px;
       padding-left: $LeftMargin;
     }
     .Work,
-    .Work_Overlay {
+    .Work_Overlay,
+    .About_Overlay {
       gap: $Gutter;
     }
   }
