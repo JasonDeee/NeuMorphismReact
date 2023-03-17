@@ -1024,6 +1024,22 @@ svg {
           justify-content: start;
 }
 
+.HomepageFloat #Testimonial_Section .Double_Quotes {
+  position: absolute;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
+  height: 5vh;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: visible;
+}
+
+.HomepageFloat #Testimonial_Section .Double_Quotes .Double_Quotes_Vector-1 {
+  fill: url(#Main_Gradient);
+}
+
 .HomepageFloat #Testimonial_Section .Tes_Overlay::after {
   -ms-grid-column: 3;
   -ms-grid-column-span: 6;
@@ -1032,22 +1048,102 @@ svg {
 
 .HomepageFloat #Testimonial_Section .Tes_Content_Slider,
 .HomepageFloat #Testimonial_Section .Tes_Img_Slider {
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-bottom: 3rem;
   min-height: 256px;
-  background-color: brown;
 }
 
 .HomepageFloat #Testimonial_Section .Tes_Content_Slider {
   -ms-grid-column: 2;
   -ms-grid-column-span: 3;
   grid-column: 2/5;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  overflow-x: hidden;
 }
 
 .HomepageFloat #Testimonial_Section .Tes_Img_Slider {
   -ms-grid-column: 6;
   -ms-grid-column-span: 7;
   grid-column: 6/13;
+  margin-top: 4rem;
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Slider_El_Holder {
+  text-align: center;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  margin-top: 2rem;
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Slider_El_Holder .Tes_Slider_El {
+  min-width: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 64px 32px;
+  color: #ffffff;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  width: 100%;
+  background: #151515;
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Slider_El_Holder .Tes_Slider_El span,
+.HomepageFloat #Testimonial_Section .Tes_Slider_El_Holder .Tes_Slider_El img {
+  margin-bottom: 32px;
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Slider_El_Holder .Tes_Slider_El h2 {
+  text-transform: uppercase;
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Slider_El_Holder .Tes_Slider_El span {
+  font-size: 0.72rem;
+  font-weight: 500;
+  opacity: 0.78;
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Slider_El_Holder .Tes_Slider_El img {
+  width: 72%;
+  aspect-ratio: 1;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
 }
 
 .HomePageFixed {

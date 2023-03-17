@@ -14,6 +14,28 @@ const HomepageFloat = () => {
   const TestNextFunct = () => {
     console.log("Next");
   };
+
+  const [Tes_Content_Slider_Width, Tes_Content_Slider_WidthChange] =
+    useState(256);
+
+  const HomePageFuncAfterLoad = () => {
+    //
+    const Tes_Content_Slider = document.querySelector(".Tes_Content_Slider");
+
+    const ResetSize_Tes_Content_Slider = () => {
+      //
+      Tes_Content_Slider_WidthChange(Tes_Content_Slider.clientWidth);
+    };
+    ResetSize_Tes_Content_Slider();
+
+    window.addEventListener("resize", ResetSize_Tes_Content_Slider);
+
+    return () => {
+      window.removeEventListener("resize", ResetSize_Tes_Content_Slider);
+    };
+  };
+  useEffect(HomePageFuncAfterLoad, []);
+
   return (
     <main className="HomepageFloat">
       <section className="Section" id="Header_Section">
@@ -179,8 +201,89 @@ const HomepageFloat = () => {
       </section>
       <section className="Section Column_Grid" id="Testimonial_Section">
         <div className="Work_Overlay Tes_Overlay"></div>
-        <div className="Tes_Content_Slider"></div>
-        <div className="Tes_Img_Slider"></div>
+        <div className="Tes_Content_Slider">
+          <div
+            className="Tes_Slider_El_Holder"
+            style={{ minWidth: `${Tes_Content_Slider_Width + "px"}` }}
+          >
+            <div className="Tes_Slider_El">
+              <img src="https://i.kym-cdn.com/entries/icons/original/000/037/158/thinkmarkthumbnail.PNG"></img>
+              <h2>Là một Marketer</h2>
+              <span></span>
+              <p>
+                Là một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến” như
+                In-house team, Agency, Production House và Freelancer, tôi cảm
+                thấy may mắn vì trong 5 năm đó được trải nghiệm công việc
+                Marketing ở nhiều ngành hàng: từ quen thuộc như các ngành Hàng
+                tiêu dùng (Kem đánh răng, Sữa tắm, Nước tăng lực…) cho tới những
+                ngành “ngách” hơn như Vận tải hành khách, Công nghệ, Nội thất
+                cao cấp…
+              </p>
+            </div>
+            <div className="Tes_Slider_El">
+              <img src="https://i.kym-cdn.com/entries/icons/original/000/037/158/thinkmarkthumbnail.PNG"></img>
+              <h2>Là một Marketer</h2>
+              <span></span>
+              <p>
+                Là một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến” như
+                In-house team, Agency, Production House và Freelancer, tôi cảm
+                thấy may mắn vì trong 5 năm đó được trải nghiệm công việc
+                Marketing ở nhiều ngành hàng: từ quen thuộc như các ngành Hàng
+                tiêu dùng (Kem đánh răng, Sữa tắm, Nước tăng lực…) cho tới những
+                ngành “ngách” hơn như Vận tải hành khách, Công nghệ, Nội thất
+                cao cấp…
+              </p>
+            </div>
+            <div className="Tes_Slider_El">
+              <img src="https://i.kym-cdn.com/entries/icons/original/000/037/158/thinkmarkthumbnail.PNG"></img>
+              <h2>Là một Marketer</h2>
+              <span></span>
+              <p>
+                Là một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến” như
+                In-house team, Agency, Production House và Freelancer, tôi cảm
+                thấy may mắn vì trong 5 năm đó được trải nghiệm công việc
+                Marketing ở nhiều ngành hàng: từ quen thuộc như các ngành Hàng
+                tiêu dùng (Kem đánh răng, Sữa tắm, Nước tăng lực…) cho tới những
+                ngành “ngách” hơn như Vận tải hành khách, Công nghệ, Nội thất
+                cao cấp…
+              </p>
+            </div>
+          </div>{" "}
+          <svg
+            className="Double_Quotes"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 74 59"
+          >
+            <defs>
+              <linearGradient
+                id="Main_Gradient"
+                x1="22.7"
+                y1="1.88"
+                x2="57.62"
+                y2="62.36"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop offset="0" stopColor="#8e724b" />
+                <stop offset="1" stopColor="#cdb99d" />
+              </linearGradient>
+            </defs>
+            <path
+              className="Double_Quotes_Vector-1"
+              d="M16.62,59c-5.37,0-9.52-1.83-12.46-5.48-2.77-3.83-4.15-9.05-4.15-15.66,0-8.18,1.99-15.14,5.97-20.89C10.13,11.05,16.79,5.4,25.96,0l4.67,6.79c-4.85,2.96-8.57,6.09-11.16,9.4-2.6,3.31-3.89,6.79-3.89,10.44,0,2.09,.26,4,.78,5.74,.52,1.74,2.25,3.83,5.19,6.27,1.56,1.22,2.86,2.7,3.89,4.44,1.21,1.74,1.82,3.57,1.82,5.48,0,3.13-.95,5.66-2.86,7.57-1.9,1.91-4.5,2.87-7.79,2.87Zm43.36,0c-5.37,0-9.52-1.83-12.46-5.48-2.77-3.83-4.15-9.05-4.15-15.66,0-8.18,1.99-15.14,5.97-20.89,4.15-5.92,10.82-11.57,19.99-16.97l4.67,6.79c-4.85,2.96-8.57,6.09-11.16,9.4-2.6,3.31-3.89,6.79-3.89,10.44,0,2.09,.26,4,.78,5.74,.52,1.74,2.25,3.83,5.19,6.27,1.56,1.22,2.86,2.7,3.89,4.44,1.21,1.74,1.82,3.57,1.82,5.48,0,3.13-.95,5.66-2.86,7.57-1.9,1.91-4.5,2.87-7.79,2.87Z"
+            />
+          </svg>
+        </div>
+        <div className="Tes_Img_Slider">
+          <div className="Img_Slide_Holder">
+            <img
+              className="on_Active"
+              src="https://i.kym-cdn.com/entries/icons/original/000/037/158/thinkmarkthumbnail.PNG"
+            ></img>
+            <img src="https://i.kym-cdn.com/entries/icons/original/000/037/158/thinkmarkthumbnail.PNG"></img>
+            <img src="https://i.kym-cdn.com/entries/icons/original/000/037/158/thinkmarkthumbnail.PNG"></img>
+          </div>
+          <div className="Tes_Controllers"></div>
+        </div>
       </section>
       <section className="Section" id="Sec1Float">
         <ButtonFull IconURL={Copy_Logo} Label="Khám phá"></ButtonFull>
