@@ -247,26 +247,28 @@ $RightMargin: 128px;
           justify-content: flex-end;
         }
       }
+      .Work_Images {
+        min-height: auto;
+        aspect-ratio: 1;
+        grid-column: 1/8 !important;
+      }
 
       .Top_Work {
-        grid-column: 1/12;
+        grid-column: 1/12 !important;
 
         display: grid;
+        width: auto !important;
         grid-template-columns: repeat(11, 1fr);
 
         margin-bottom: 64px;
         .Work_Images {
-          height: 428px;
+          height: auto;
+          grid-column: 1/8 !important;
         }
 
         .Work_Button_Holder {
           width: 85% !important;
         }
-      }
-
-      .Work_Images {
-        height: 256px;
-        grid-column: 1/8;
       }
 
       .Main_Work_Contents {
@@ -309,7 +311,7 @@ $RightMargin: 128px;
     margin-top: 256px;
     height: auto;
 
-    align-items: start;
+    align-items: stretch;
     justify-content: start;
     .About_Top_Content,
     .About_Contents {
@@ -347,7 +349,10 @@ $RightMargin: 128px;
       margin-top: 4rem;
       margin-bottom: 4rem;
     }
-
+    .Work_Images {
+      height: 100%;
+      grid-column: 1/8;
+    }
     .About_Top_Image {
       grid-column: 6/11;
     }
@@ -392,10 +397,6 @@ $RightMargin: 128px;
       justify-content: stretch;
       overflow-x: hidden;
     }
-    .Tes_Img_Slider {
-      grid-column: 6/13;
-      margin-top: 4rem;
-    }
 
     .Tes_Slider_El_Holder {
       text-align: center;
@@ -406,7 +407,7 @@ $RightMargin: 128px;
       flex-direction: row;
       align-items: start;
       justify-content: start;
-      margin-top: 2rem;
+      margin-top: 2.5vh;
 
       transition: $SmoothBezier;
 
@@ -440,6 +441,31 @@ $RightMargin: 128px;
           height: auto;
           object-fit: cover;
           border-radius: 50%;
+        }
+      }
+    }
+    .Tes_Img_Slider {
+      grid-column: 5/13;
+      margin-top: 2rem;
+      padding-top: 2.5vh;
+      .Img_Slide_Holder {
+        width: 100%;
+
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: start;
+        gap: 64px;
+
+        img {
+          max-width: 50%;
+          height: auto;
+          object-fit: cover;
+          aspect-ratio: calc(4 / 3);
+          transition: $SmoothBezier;
+        }
+        .on_Active {
+          max-width: 100%;
         }
       }
     }
@@ -511,7 +537,7 @@ $RightMargin: 128px;
   }
 
   .Header_Logo {
-    top: $Gutter;
+    top: #{$Gutter * 3/4};
     width: 64px;
     left: $LeftMargin;
     right: $RightMargin;
@@ -543,7 +569,7 @@ $RightMargin: 128px;
   }
 
   .Header_Logo {
-    top: $Gutter;
+    top: #{$Gutter * 3/4};
     width: 78px;
     left: $LeftMargin;
     right: $RightMargin;
@@ -575,7 +601,7 @@ $RightMargin: 128px;
   }
 
   .Header_Logo {
-    top: $Gutter;
+    top: #{$Gutter * 3/4};
     width: 96px;
     left: $LeftMargin;
     right: $RightMargin;
@@ -588,6 +614,12 @@ $RightMargin: 128px;
     right: 0;
     top: #{1.5 * $Gutter};
     bottom: 7vh;
+  }
+}
+
+@media screen and (max-width: 1441px) {
+  .Tes_Content_Slider {
+    grid-column: 1/5 !important;
   }
 }
 
@@ -608,7 +640,7 @@ $RightMargin: 128px;
   }
 
   .Header_Logo {
-    top: $Gutter;
+    top: #{$Gutter * 3/4};
     width: 112px;
     left: $LeftMargin;
     right: $RightMargin;
@@ -640,7 +672,7 @@ $RightMargin: 128px;
   }
 
   .Header_Logo {
-    top: $Gutter;
+    top: #{$Gutter * 2/3};
     width: 128px;
     left: $LeftMargin;
     right: $RightMargin;

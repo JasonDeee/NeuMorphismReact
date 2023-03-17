@@ -871,30 +871,35 @@ svg {
           justify-content: flex-end;
 }
 
+.HomepageFloat #Works_Showreel_Section .Work_Contents .Work_Images {
+  min-height: auto;
+  aspect-ratio: 1;
+  -ms-grid-column: 1 !important;
+  -ms-grid-column-span: 7 !important;
+  grid-column: 1/8 !important;
+}
+
 .HomepageFloat #Works_Showreel_Section .Work_Contents .Top_Work {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 11;
-  grid-column: 1/12;
+  -ms-grid-column: 1 !important;
+  -ms-grid-column-span: 11 !important;
+  grid-column: 1/12 !important;
   display: -ms-grid;
   display: grid;
+  width: auto !important;
   -ms-grid-columns: (1fr)[11];
       grid-template-columns: repeat(11, 1fr);
   margin-bottom: 64px;
 }
 
 .HomepageFloat #Works_Showreel_Section .Work_Contents .Top_Work .Work_Images {
-  height: 428px;
+  height: auto;
+  -ms-grid-column: 1 !important;
+  -ms-grid-column-span: 7 !important;
+  grid-column: 1/8 !important;
 }
 
 .HomepageFloat #Works_Showreel_Section .Work_Contents .Top_Work .Work_Button_Holder {
   width: 85% !important;
-}
-
-.HomepageFloat #Works_Showreel_Section .Work_Contents .Work_Images {
-  height: 256px;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 7;
-  grid-column: 1/8;
 }
 
 .HomepageFloat #Works_Showreel_Section .Work_Contents .Main_Work_Contents {
@@ -951,9 +956,9 @@ svg {
 .HomepageFloat #About_Section {
   margin-top: 256px;
   height: auto;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
@@ -1004,6 +1009,13 @@ svg {
   height: 1fr;
   margin-top: 4rem;
   margin-bottom: 4rem;
+}
+
+.HomepageFloat #About_Section .Work_Images {
+  height: 100%;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
+  grid-column: 1/8;
 }
 
 .HomepageFloat #About_Section .About_Top_Image {
@@ -1070,13 +1082,6 @@ svg {
   overflow-x: hidden;
 }
 
-.HomepageFloat #Testimonial_Section .Tes_Img_Slider {
-  -ms-grid-column: 6;
-  -ms-grid-column-span: 7;
-  grid-column: 6/13;
-  margin-top: 4rem;
-}
-
 .HomepageFloat #Testimonial_Section .Tes_Slider_El_Holder {
   text-align: center;
   width: auto;
@@ -1093,7 +1098,7 @@ svg {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  margin-top: 2rem;
+  margin-top: 2.5vh;
   -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
   transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
 }
@@ -1146,6 +1151,46 @@ svg {
   border-radius: 50%;
 }
 
+.HomepageFloat #Testimonial_Section .Tes_Img_Slider {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 8;
+  grid-column: 5/13;
+  margin-top: 2rem;
+  padding-top: 2.5vh;
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Img_Slider .Img_Slide_Holder {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 64px;
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Img_Slider .Img_Slide_Holder img {
+  max-width: 50%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: calc(4 / 3);
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Img_Slider .Img_Slide_Holder .on_Active {
+  max-width: 100%;
+}
+
 .HomePageFixed {
   pointer-events: none;
 }
@@ -1187,7 +1232,7 @@ svg {
     gap: 16px;
   }
   .Header_Logo {
-    top: 16px;
+    top: 12px;
     width: 64px;
     left: 16px;
     right: 128px;
@@ -1213,7 +1258,7 @@ svg {
     gap: 32px;
   }
   .Header_Logo {
-    top: 32px;
+    top: 24px;
     width: 78px;
     left: 48px;
     right: 128px;
@@ -1239,7 +1284,7 @@ svg {
     gap: 32px;
   }
   .Header_Logo {
-    top: 32px;
+    top: 24px;
     width: 96px;
     left: 64px;
     right: 128px;
@@ -1255,6 +1300,14 @@ svg {
   }
 }
 
+@media screen and (max-width: 1441px) {
+  .Tes_Content_Slider {
+    -ms-grid-column: 1 !important;
+    -ms-grid-column-span: 4 !important;
+    grid-column: 1/5 !important;
+  }
+}
+
 @media screen and (min-width: 1728px) {
   .HomepageFloat .Section {
     padding-left: 64px;
@@ -1265,7 +1318,7 @@ svg {
     gap: 42px;
   }
   .Header_Logo {
-    top: 42px;
+    top: 31.5px;
     width: 112px;
     left: 64px;
     right: 128px;
@@ -1291,7 +1344,7 @@ svg {
     gap: 48px;
   }
   .Header_Logo {
-    top: 48px;
+    top: 32px;
     width: 128px;
     left: 64px;
     right: 128px;

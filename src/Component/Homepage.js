@@ -209,7 +209,7 @@ const HomepageFloat = () => {
             <div className="Tes_Slider_El">
               <img src="https://i.kym-cdn.com/entries/icons/original/000/037/158/thinkmarkthumbnail.PNG"></img>
               <h2>Là một Marketer</h2>
-              <span></span>
+              <span>Kem đánh răng</span>
               <p>
                 Là một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến” như
                 In-house team, Agency, Production House và Freelancer, tôi cảm
@@ -223,7 +223,7 @@ const HomepageFloat = () => {
             <div className="Tes_Slider_El">
               <img src="https://i.kym-cdn.com/entries/icons/original/000/037/158/thinkmarkthumbnail.PNG"></img>
               <h2>Là một Marketer</h2>
-              <span></span>
+              <span>Kem đánh răng</span>
               <p>
                 Là một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến” như
                 In-house team, Agency, Production House và Freelancer, tôi cảm
@@ -237,7 +237,7 @@ const HomepageFloat = () => {
             <div className="Tes_Slider_El">
               <img src="https://i.kym-cdn.com/entries/icons/original/000/037/158/thinkmarkthumbnail.PNG"></img>
               <h2>Là một Marketer</h2>
-              <span></span>
+              <span>Kem đánh răng</span>
               <p>
                 Là một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến” như
                 In-house team, Agency, Production House và Freelancer, tôi cảm
