@@ -179,6 +179,8 @@ const HomepageFloat = () => {
       </section>
       <section className="Section Column_Grid" id="Testimonial_Section">
         <div className="Work_Overlay Tes_Overlay"></div>
+        <div className="Tes_Content_Slider"></div>
+        <div className="Tes_Img_Slider"></div>
       </section>
       <section className="Section" id="Sec1Float">
         <ButtonFull IconURL={Copy_Logo} Label="Khám phá"></ButtonFull>

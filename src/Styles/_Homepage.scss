@@ -220,6 +220,7 @@ $RightMargin: 128px;
       // min-height: 100vh;
       height: fit-content;
       position: relative;
+      // justify-content: stretch;
 
       padding-top: 4rem;
       grid-column: 1/13;
@@ -362,6 +363,20 @@ $RightMargin: 128px;
 
     .Tes_Overlay::after {
       grid-column: 3/9;
+    }
+
+    .Tes_Content_Slider,
+    .Tes_Img_Slider {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      min-height: 256px;
+      background-color: brown;
+    }
+    .Tes_Content_Slider {
+      grid-column: 2/5;
+    }
+    .Tes_Img_Slider {
+      grid-column: 6/13;
     }
   }
 }

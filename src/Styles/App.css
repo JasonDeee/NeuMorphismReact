@@ -1030,6 +1030,26 @@ svg {
   grid-column: 3/9;
 }
 
+.HomepageFloat #Testimonial_Section .Tes_Content_Slider,
+.HomepageFloat #Testimonial_Section .Tes_Img_Slider {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  min-height: 256px;
+  background-color: brown;
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Content_Slider {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2/5;
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Img_Slider {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 7;
+  grid-column: 6/13;
+}
+
 .HomePageFixed {
   pointer-events: none;
 }
