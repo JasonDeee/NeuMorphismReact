@@ -1053,9 +1053,9 @@ svg {
 }
 
 .HomepageFloat #Testimonial_Section .Tes_Overlay::after {
-  -ms-grid-column: 3;
+  -ms-grid-column: 2;
   -ms-grid-column-span: 6;
-  grid-column: 3/9;
+  grid-column: 2/8;
 }
 
 .HomepageFloat #Testimonial_Section .Tes_Content_Slider,
@@ -1066,9 +1066,9 @@ svg {
 }
 
 .HomepageFloat #Testimonial_Section .Tes_Content_Slider {
-  -ms-grid-column: 2;
+  -ms-grid-column: 1;
   -ms-grid-column-span: 3;
-  grid-column: 2/5;
+  grid-column: 1/4;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1152,11 +1152,13 @@ svg {
 }
 
 .HomepageFloat #Testimonial_Section .Tes_Img_Slider {
-  -ms-grid-column: 5;
-  -ms-grid-column-span: 8;
-  grid-column: 5/13;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 9;
+  grid-column: 4/13;
   margin-top: 2rem;
   padding-top: 2.5vh;
+  position: relative;
+  overflow: hidden;
 }
 
 .HomepageFloat #Testimonial_Section .Tes_Img_Slider .Img_Slide_Holder {
@@ -1174,11 +1176,10 @@ svg {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  gap: 64px;
 }
 
 .HomepageFloat #Testimonial_Section .Tes_Img_Slider .Img_Slide_Holder img {
-  max-width: 50%;
+  max-width: 38%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1188,7 +1189,29 @@ svg {
 }
 
 .HomepageFloat #Testimonial_Section .Tes_Img_Slider .Img_Slide_Holder .on_Active {
-  max-width: 100%;
+  max-width: 62%;
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Img_Slider .Tes_Controllers {
+  position: absolute;
+  width: 38%;
+  bottom: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  gap: inherit;
+  padding-right: 8px;
 }
 
 .HomePageFixed {
@@ -1222,6 +1245,10 @@ svg {
   bottom: 7vh;
 }
 
+.Tes_Img_Slider .Img_Slide_Holder {
+  gap: 16px;
+}
+
 @media screen and (min-width: 768px) {
   .HomepageFloat .Section {
     padding-left: 16px;
@@ -1230,6 +1257,9 @@ svg {
   .HomepageFloat .Work_Overlay,
   .HomepageFloat .About_Overlay {
     gap: 16px;
+  }
+  .Tes_Img_Slider .Img_Slide_Holder {
+    gap: 16px !important;
   }
   .Header_Logo {
     top: 12px;
@@ -1257,6 +1287,9 @@ svg {
   .HomepageFloat .About_Overlay {
     gap: 32px;
   }
+  .Tes_Img_Slider .Img_Slide_Holder {
+    gap: 32px !important;
+  }
   .Header_Logo {
     top: 24px;
     width: 78px;
@@ -1283,6 +1316,9 @@ svg {
   .HomepageFloat .About_Overlay {
     gap: 32px;
   }
+  .Tes_Img_Slider .Img_Slide_Holder {
+    gap: 32px !important;
+  }
   .Header_Logo {
     top: 24px;
     width: 96px;
@@ -1300,14 +1336,6 @@ svg {
   }
 }
 
-@media screen and (max-width: 1441px) {
-  .Tes_Content_Slider {
-    -ms-grid-column: 1 !important;
-    -ms-grid-column-span: 4 !important;
-    grid-column: 1/5 !important;
-  }
-}
-
 @media screen and (min-width: 1728px) {
   .HomepageFloat .Section {
     padding-left: 64px;
@@ -1316,6 +1344,9 @@ svg {
   .HomepageFloat .Work_Overlay,
   .HomepageFloat .About_Overlay {
     gap: 42px;
+  }
+  .Tes_Img_Slider .Img_Slide_Holder {
+    gap: 42px !important;
   }
   .Header_Logo {
     top: 31.5px;
@@ -1342,6 +1373,9 @@ svg {
   .HomepageFloat .Work_Overlay,
   .HomepageFloat .About_Overlay {
     gap: 48px;
+  }
+  .Tes_Img_Slider .Img_Slide_Holder {
+    gap: 48px !important;
   }
   .Header_Logo {
     top: 32px;

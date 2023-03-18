@@ -380,7 +380,7 @@ $RightMargin: 128px;
     }
 
     .Tes_Overlay::after {
-      grid-column: 3/9;
+      grid-column: 2/8;
     }
 
     .Tes_Content_Slider,
@@ -390,7 +390,7 @@ $RightMargin: 128px;
       min-height: 256px;
     }
     .Tes_Content_Slider {
-      grid-column: 2/5;
+      grid-column: 1/4;
       position: relative;
       display: flex;
       align-items: stretch;
@@ -445,9 +445,14 @@ $RightMargin: 128px;
       }
     }
     .Tes_Img_Slider {
-      grid-column: 5/13;
+      grid-column: 4/13;
       margin-top: 2rem;
       padding-top: 2.5vh;
+
+      position: relative;
+
+      overflow: hidden;
+
       .Img_Slide_Holder {
         width: 100%;
 
@@ -455,18 +460,33 @@ $RightMargin: 128px;
         flex-direction: row;
         align-items: start;
         justify-content: start;
-        gap: 64px;
 
         img {
-          max-width: 50%;
+          max-width: 38%;
           height: auto;
           object-fit: cover;
           aspect-ratio: calc(4 / 3);
           transition: $SmoothBezier;
         }
         .on_Active {
-          max-width: 100%;
+          max-width: 62%;
         }
+      }
+
+      .Tes_Controllers {
+        position: absolute;
+        width: 38%;
+        bottom: 0;
+        right: 0;
+
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: end;
+
+        gap: inherit;
+
+        padding-right: 8px;
       }
     }
   }
@@ -508,6 +528,12 @@ $RightMargin: 128px;
   top: #{1.5 * $Gutter};
   bottom: 7vh;
 }
+.Tes_Img_Slider {
+  .Img_Slide_Holder {
+    gap: $Gutter;
+  }
+}
+
 // .Work_Overlay {
 //   width: calc(
 //     (7 / 12) *
@@ -533,6 +559,12 @@ $RightMargin: 128px;
     .Work_Overlay,
     .About_Overlay {
       gap: $Gutter;
+    }
+  }
+
+  .Tes_Img_Slider {
+    .Img_Slide_Holder {
+      gap: $Gutter !important;
     }
   }
 
@@ -567,7 +599,11 @@ $RightMargin: 128px;
       gap: $Gutter;
     }
   }
-
+  .Tes_Img_Slider {
+    .Img_Slide_Holder {
+      gap: $Gutter !important;
+    }
+  }
   .Header_Logo {
     top: #{$Gutter * 3/4};
     width: 78px;
@@ -599,7 +635,11 @@ $RightMargin: 128px;
       gap: $Gutter;
     }
   }
-
+  .Tes_Img_Slider {
+    .Img_Slide_Holder {
+      gap: $Gutter !important;
+    }
+  }
   .Header_Logo {
     top: #{$Gutter * 3/4};
     width: 96px;
@@ -617,11 +657,11 @@ $RightMargin: 128px;
   }
 }
 
-@media screen and (max-width: 1441px) {
-  .Tes_Content_Slider {
-    grid-column: 1/5 !important;
-  }
-}
+// @media screen and (max-width: 1441px) {
+//   .Tes_Content_Slider {
+//     grid-column: 1/5 !important;
+//   }
+// }
 
 @media screen and (min-width: 1728px) {
   $Gutter: 42px;
@@ -638,7 +678,11 @@ $RightMargin: 128px;
       gap: $Gutter;
     }
   }
-
+  .Tes_Img_Slider {
+    .Img_Slide_Holder {
+      gap: $Gutter !important;
+    }
+  }
   .Header_Logo {
     top: #{$Gutter * 3/4};
     width: 112px;
@@ -670,7 +714,11 @@ $RightMargin: 128px;
       gap: $Gutter;
     }
   }
-
+  .Tes_Img_Slider {
+    .Img_Slide_Holder {
+      gap: $Gutter !important;
+    }
+  }
   .Header_Logo {
     top: #{$Gutter * 2/3};
     width: 128px;

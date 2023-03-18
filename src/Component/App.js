@@ -48,6 +48,8 @@ function App() {
     const body = document.body;
     const main = document.querySelector(".main");
 
+    ScrollToTop();
+
     const ScrollUpdate = () => {
       //
       let ScrollReszieTimer = setTimeout(() => {
@@ -106,6 +108,7 @@ function App() {
     Direction_Button_Observer.observe(ScrollBar_Observer);
 
     ScrollUpdate();
+
     const ScrollFunc = () => {
       main.style.transform = `translateY(-${window.pageYOffset}px)`;
 

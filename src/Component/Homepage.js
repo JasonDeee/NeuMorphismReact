@@ -18,6 +18,12 @@ const HomepageFloat = () => {
   const [Tes_Content_Slider_Width, Tes_Content_Slider_WidthChange] =
     useState(256);
 
+  // Declare Pseudo Funtion for The Onclick At Testimonials Section
+
+  const [NextTes, setNextTes] = useState(() => () => {});
+  const [PrevTes, setPrevTes] = useState(() => () => {});
+
+  // This Funct Trigger After the Entire Homepage is Mounted
   const HomePageFuncAfterLoad = () => {
     //
     const Tes_Content_Slider = document.querySelector(".Tes_Content_Slider");
@@ -30,6 +36,46 @@ const HomepageFloat = () => {
 
     window.addEventListener("resize", ResetSize_Tes_Content_Slider);
 
+    // add the rest of the Testimonials Funtion
+    // // First Select the Els
+
+    // Text Holder
+    const Tes_Slider_El_Holder = document.querySelector(
+      "#Testimonial_Section .Tes_Slider_El_Holder"
+    );
+    // Images Holder & Images Img_Slide_Holder
+
+    const Img_Slide_Holder = document.querySelector(
+      "#Testimonial_Section .Img_Slide_Holder"
+    );
+
+    const Imgs_Slide = document.querySelectorAll(
+      "#Testimonial_Section .Img_Slide_Holder img"
+    );
+
+    // // Init Current State
+    var Tes_Slide_Index = 0;
+
+    //
+
+    NextTes = () => {
+      console.log("presssed Next");
+      //
+      if (Tes_Slide_Index < Imgs_Slide.length - 1) {
+        //
+
+        Imgs_Slide[Tes_Slide_Index].classList.remove("on_Active");
+        Tes_Slide_Index++;
+        Imgs_Slide[Tes_Slide_Index].classList.add("on_Active");
+
+        Tes_Slider_El_Holder.style.transform = `translateX(${
+          Tes_Slide_Index * 100
+        }%)`;
+      }
+    };
+
+    //
+    // Trigger Right Before the Homepage is Remove
     return () => {
       window.removeEventListener("resize", ResetSize_Tes_Content_Slider);
     };
@@ -282,7 +328,10 @@ const HomepageFloat = () => {
             <img src="https://i.kym-cdn.com/entries/icons/original/000/037/158/thinkmarkthumbnail.PNG"></img>
             <img src="https://i.kym-cdn.com/entries/icons/original/000/037/158/thinkmarkthumbnail.PNG"></img>
           </div>
-          <div className="Tes_Controllers"></div>
+          <div className="Tes_Controllers">
+            <div></div>
+            <ButtonSlider PrevFunc={PrevTes} NextFunc={NextTes}></ButtonSlider>
+          </div>
         </div>
       </section>
       <section className="Section" id="Sec1Float">
