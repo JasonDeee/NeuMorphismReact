@@ -394,6 +394,27 @@ const HomepageFloat = (Props) => {
             ></ButtonFull>
           </div>
         </form>
+        <div className="Email_Contact">
+          <h2>
+            {Props.IsVietnamese
+              ? "Hoặc gửi mail cho tôi."
+              : "Or give me an email."}
+          </h2>
+          <div className="Email_Holder">
+            <div className="Illustration_Holder">
+              <img src={WatchOut}></img>
+            </div>
+            <div className="Email_Content">
+              <p>Là một Marketer với 5 năm kinh nghiệm</p>
+              <a href="mailto:jdbl2k@hotmail.com">
+                <ButtonFull
+                  IconURL={Copy_Logo}
+                  Label="jdbl2k@hotmail.com"
+                ></ButtonFull>
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
       <footer className="Footer Column_Grid"></footer>
     </main>

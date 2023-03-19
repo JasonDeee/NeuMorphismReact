@@ -379,10 +379,11 @@ svg {
 .ButtonContainer label {
   pointer-events: none;
   white-space: nowrap;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 300;
+  line-height: 1rem;
   margin-right: 0;
-  height: 1.46rem;
+  height: 1rem;
   width: auto;
   -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
   transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
@@ -825,8 +826,8 @@ svg {
   height: 80%;
   -webkit-transform: translate(-5%, 0);
           transform: translate(-5%, 0);
-  -webkit-filter: drop-shadow(12px 12px 32px #00000056);
-          filter: drop-shadow(12px 12px 32px #00000056);
+  -webkit-filter: drop-shadow(12px 12px 32px #00000096);
+          filter: drop-shadow(12px 12px 32px #00000096);
 }
 
 .HomepageFloat .Work_Overlay,
@@ -1086,6 +1087,7 @@ svg {
   margin-top: 12vh;
   height: auto;
   min-height: 30vh;
+  margin-bottom: 0;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
@@ -1285,6 +1287,16 @@ svg {
   color: #353535;
   height: 80vh;
   min-height: unset;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  margin-bottom: 0;
+  margin-top: -4vh;
+  padding-bottom: 11vh;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .HomepageFloat #Form_Section h1 {
@@ -1295,10 +1307,14 @@ svg {
 }
 
 .HomepageFloat #Form_Section form {
-  height: 38vh;
   -ms-grid-column: 1;
   -ms-grid-column-span: 7;
   grid-column: 1/8;
+}
+
+.HomepageFloat #Form_Section .Email_Contact,
+.HomepageFloat #Form_Section form {
+  height: 38vh;
   background: #e9e7e7;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1318,6 +1334,7 @@ svg {
   padding-bottom: 4%;
 }
 
+.HomepageFloat #Form_Section .Email_Contact #Form_Label,
 .HomepageFloat #Form_Section form #Form_Label {
   position: absolute;
   top: 0;
@@ -1325,6 +1342,10 @@ svg {
           transform: translateY(-50%);
 }
 
+.HomepageFloat #Form_Section .Email_Contact input,
+.HomepageFloat #Form_Section .Email_Contact textarea,
+.HomepageFloat #Form_Section .Email_Contact #Email_Input:placeholder-shown,
+.HomepageFloat #Form_Section .Email_Contact #Message_Input:placeholder-shown,
 .HomepageFloat #Form_Section form input,
 .HomepageFloat #Form_Section form textarea,
 .HomepageFloat #Form_Section form #Email_Input:placeholder-shown,
@@ -1342,6 +1363,8 @@ svg {
   border-bottom: solid 1px #656565;
 }
 
+.HomepageFloat #Form_Section .Email_Contact input::-webkit-input-placeholder,
+.HomepageFloat #Form_Section .Email_Contact textarea::-webkit-input-placeholder,
 .HomepageFloat #Form_Section form input::-webkit-input-placeholder,
 .HomepageFloat #Form_Section form textarea::-webkit-input-placeholder {
   font-weight: 300;
@@ -1350,6 +1373,8 @@ svg {
   transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
 }
 
+.HomepageFloat #Form_Section .Email_Contact input:-ms-input-placeholder,
+.HomepageFloat #Form_Section .Email_Contact textarea:-ms-input-placeholder,
 .HomepageFloat #Form_Section form input:-ms-input-placeholder,
 .HomepageFloat #Form_Section form textarea:-ms-input-placeholder {
   font-weight: 300;
@@ -1358,6 +1383,8 @@ svg {
   transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
 }
 
+.HomepageFloat #Form_Section .Email_Contact input::-ms-input-placeholder,
+.HomepageFloat #Form_Section .Email_Contact textarea::-ms-input-placeholder,
 .HomepageFloat #Form_Section form input::-ms-input-placeholder,
 .HomepageFloat #Form_Section form textarea::-ms-input-placeholder {
   font-weight: 300;
@@ -1366,6 +1393,8 @@ svg {
   transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
 }
 
+.HomepageFloat #Form_Section .Email_Contact input::placeholder,
+.HomepageFloat #Form_Section .Email_Contact textarea::placeholder,
 .HomepageFloat #Form_Section form input::placeholder,
 .HomepageFloat #Form_Section form textarea::placeholder {
   font-weight: 300;
@@ -1374,24 +1403,30 @@ svg {
   transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
 }
 
+.HomepageFloat #Form_Section .Email_Contact textarea::-webkit-input-placeholder,
 .HomepageFloat #Form_Section form textarea::-webkit-input-placeholder {
   -webkit-transform: translateY(200%);
           transform: translateY(200%);
 }
 
+.HomepageFloat #Form_Section .Email_Contact textarea:-ms-input-placeholder,
 .HomepageFloat #Form_Section form textarea:-ms-input-placeholder {
   transform: translateY(200%);
 }
 
+.HomepageFloat #Form_Section .Email_Contact textarea::-ms-input-placeholder,
 .HomepageFloat #Form_Section form textarea::-ms-input-placeholder {
   transform: translateY(200%);
 }
 
+.HomepageFloat #Form_Section .Email_Contact textarea::placeholder,
 .HomepageFloat #Form_Section form textarea::placeholder {
   -webkit-transform: translateY(200%);
           transform: translateY(200%);
 }
 
+.HomepageFloat #Form_Section .Email_Contact input:focus,
+.HomepageFloat #Form_Section .Email_Contact textarea:focus,
 .HomepageFloat #Form_Section form input:focus,
 .HomepageFloat #Form_Section form textarea:focus {
   outline: none;
@@ -1399,40 +1434,50 @@ svg {
   background: #d9d7d7 !important;
 }
 
+.HomepageFloat #Form_Section .Email_Contact input:valid,
+.HomepageFloat #Form_Section .Email_Contact textarea:valid,
 .HomepageFloat #Form_Section form input:valid,
 .HomepageFloat #Form_Section form textarea:valid {
   border-color: #8e724b;
   border-width: 2px;
 }
 
+.HomepageFloat #Form_Section .Email_Contact input:invalid,
+.HomepageFloat #Form_Section .Email_Contact textarea:invalid,
 .HomepageFloat #Form_Section form input:invalid,
 .HomepageFloat #Form_Section form textarea:invalid {
   border-color: #ad1313;
   border-width: 2px;
 }
 
+.HomepageFloat #Form_Section .Email_Contact textarea:focus::-webkit-input-placeholder,
 .HomepageFloat #Form_Section form textarea:focus::-webkit-input-placeholder {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
+.HomepageFloat #Form_Section .Email_Contact textarea:focus:-ms-input-placeholder,
 .HomepageFloat #Form_Section form textarea:focus:-ms-input-placeholder {
   transform: translateY(0);
 }
 
+.HomepageFloat #Form_Section .Email_Contact textarea:focus::-ms-input-placeholder,
 .HomepageFloat #Form_Section form textarea:focus::-ms-input-placeholder {
   transform: translateY(0);
 }
 
+.HomepageFloat #Form_Section .Email_Contact textarea:focus::placeholder,
 .HomepageFloat #Form_Section form textarea:focus::placeholder {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
 
+.HomepageFloat #Form_Section .Email_Contact input,
 .HomepageFloat #Form_Section form input {
   height: 14%;
 }
 
+.HomepageFloat #Form_Section .Email_Contact textarea,
 .HomepageFloat #Form_Section form textarea {
   height: 32%;
 }
@@ -1456,6 +1501,101 @@ svg {
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 78%;
+}
+
+.HomepageFloat #Form_Section .Email_Contact {
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 5;
+  grid-column: 8/13;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 1.5rem;
+}
+
+.HomepageFloat #Form_Section .Email_Contact h2 {
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.HomepageFloat #Form_Section .Email_Contact .Email_Holder {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.HomepageFloat #Form_Section .Email_Contact .Email_Content {
+  position: relative;
+  width: 62%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 16px;
+  margin-left: -16px;
+}
+
+.HomepageFloat #Form_Section .Email_Contact .Email_Content button {
+  -webkit-transform: none !important;
+          transform: none !important;
+}
+
+.HomepageFloat #Form_Section .Email_Contact .Email_Content a,
+.HomepageFloat #Form_Section .Email_Contact .Email_Content a:link,
+.HomepageFloat #Form_Section .Email_Contact .Email_Content a:visited,
+.HomepageFloat #Form_Section .Email_Contact .Email_Content a:hover {
+  text-decoration: none;
+}
+
+.HomepageFloat #Form_Section .Email_Contact .Email_Content p {
+  font-size: 0.76rem;
+  font-weight: 400;
+}
+
+.HomepageFloat #Form_Section .Email_Contact .Illustration_Holder {
+  width: 38%;
+  aspect-ratio: 1;
+  height: auto;
+  background: #f9f7f7;
+  position: relative;
+  border-radius: 50%;
+  padding: 8%;
+}
+
+.HomepageFloat #Form_Section .Email_Contact .Illustration_Holder img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateX(-5%);
+          transform: translateX(-5%);
+  -webkit-filter: drop-shadow(18px 18px 32px #00000096);
+          filter: drop-shadow(18px 18px 32px #00000096);
 }
 
 .HomepageFloat footer {
@@ -1499,7 +1639,8 @@ svg {
   margin-right: 16px !important;
 }
 
-#Form_Section form {
+#Form_Section form,
+#Form_Section .Email_Contact {
   padding-left: 16px;
 }
 
@@ -1533,7 +1674,8 @@ svg {
     top: 24px;
     bottom: 7vh;
   }
-  #Form_Section form {
+  #Form_Section form,
+  #Form_Section .Email_Contact {
     padding-left: 32px;
   }
 }
@@ -1568,7 +1710,8 @@ svg {
     top: 48px;
     bottom: 7vh;
   }
-  #Form_Section form {
+  #Form_Section form,
+  #Form_Section .Email_Contact {
     padding-left: 64px;
   }
 }
@@ -1603,7 +1746,8 @@ svg {
     top: 48px;
     bottom: 7vh;
   }
-  #Form_Section form {
+  #Form_Section form,
+  #Form_Section .Email_Contact {
     padding-left: 64px;
   }
 }
@@ -1627,8 +1771,19 @@ svg {
   .HomepageFloat #Testimonial_Section .Tes_Slider_El_Holder .Tes_Slider_El img {
     width: 32% !important;
   }
-  #Form_Section form {
+  .HomepageFloat #Form_Section form,
+  .HomepageFloat #Form_Section .Email_Contact {
     padding-left: 32px;
+  }
+  .HomepageFloat #Form_Section form {
+    -ms-grid-column: 1 !important;
+    -ms-grid-column-span: 6 !important;
+    grid-column: 1/7 !important;
+  }
+  .HomepageFloat #Form_Section .Email_Contact {
+    -ms-grid-column: 7 !important;
+    -ms-grid-column-span: 6 !important;
+    grid-column: 7/13 !important;
   }
 }
 
@@ -1662,7 +1817,8 @@ svg {
     top: 63px;
     bottom: 7vh;
   }
-  #Form_Section form {
+  #Form_Section form,
+  #Form_Section .Email_Contact {
     padding-left: 84px;
   }
 }
@@ -1697,7 +1853,8 @@ svg {
     top: 72px;
     bottom: 7vh;
   }
-  #Form_Section form {
+  #Form_Section form,
+  #Form_Section .Email_Contact {
     padding-left: 96px;
   }
 }

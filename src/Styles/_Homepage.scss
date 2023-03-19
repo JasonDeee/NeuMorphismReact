@@ -364,6 +364,8 @@ $RightMargin: 128px;
     height: auto;
     min-height: 30vh;
 
+    margin-bottom: 0;
+
     align-items: stretch;
     justify-content: start;
 
@@ -507,6 +509,11 @@ $RightMargin: 128px;
 
     height: 80vh;
     min-height: unset;
+    align-items: end;
+    margin-bottom: 0;
+
+    margin-top: -4vh;
+    padding-bottom: 11vh;
 
     h1 {
       text-transform: uppercase;
@@ -514,8 +521,12 @@ $RightMargin: 128px;
     }
 
     form {
-      height: 38vh;
       grid-column: 1/8;
+    }
+
+    .Email_Contact,
+    form {
+      height: 38vh;
 
       background: $WhiteGrey;
 
@@ -618,6 +629,82 @@ $RightMargin: 128px;
 
       width: 78%;
     }
+    flex-direction: row;
+
+    .Email_Contact {
+      grid-column: 8/13;
+      align-items: start;
+      justify-content: center;
+
+      padding-top: 1.5rem;
+
+      h2 {
+        position: absolute;
+        top: 0;
+        transform: translateY(-50%);
+      }
+      .Email_Holder {
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+
+        display: flex;
+
+        height: 100%;
+      }
+
+      .Email_Content {
+        position: relative;
+        width: 62%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+
+        gap: 16px;
+
+        margin-left: -16px;
+
+        button {
+          transform: none !important;
+        }
+
+        a,
+        a:link,
+        a:visited,
+        a:hover {
+          text-decoration: none;
+        }
+
+        p {
+          font-size: 0.76rem;
+          font-weight: 400;
+        }
+      }
+
+      .Illustration_Holder {
+        width: 38%;
+        aspect-ratio: 1;
+
+        height: auto;
+        background: $white;
+        position: relative;
+
+        border-radius: 50%;
+        padding: 8%;
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+
+          transform: translateX(-5%);
+
+          filter: drop-shadow(18px 18px 32px $LightShadow);
+        }
+      }
+    }
   }
 
   footer {
@@ -673,7 +760,8 @@ $RightMargin: 128px;
 }
 
 #Form_Section {
-  form {
+  form,
+  .Email_Contact {
     padding-left: $Gutter;
   }
 }
@@ -734,7 +822,8 @@ $RightMargin: 128px;
   }
 
   #Form_Section {
-    form {
+    form,
+    .Email_Contact {
       padding-left: #{2 * $Gutter};
     }
   }
@@ -780,7 +869,8 @@ $RightMargin: 128px;
     bottom: 7vh;
   }
   #Form_Section {
-    form {
+    form,
+    .Email_Contact {
       padding-left: #{2 * $Gutter};
     }
   }
@@ -826,7 +916,8 @@ $RightMargin: 128px;
     bottom: 7vh;
   }
   #Form_Section {
-    form {
+    form,
+    .Email_Contact {
       padding-left: #{2 * $Gutter};
     }
   }
@@ -853,10 +944,17 @@ $RightMargin: 128px;
         }
       }
     }
-  }
-  #Form_Section {
-    form {
-      padding-left: #{2 * $Gutter};
+    #Form_Section {
+      form,
+      .Email_Contact {
+        padding-left: #{2 * $Gutter};
+      }
+      form {
+        grid-column: 1/7 !important;
+      }
+      .Email_Contact {
+        grid-column: 7/13 !important;
+      }
     }
   }
 }
@@ -902,7 +1000,8 @@ $RightMargin: 128px;
     bottom: 7vh;
   }
   #Form_Section {
-    form {
+    form,
+    .Email_Contact {
       padding-left: #{2 * $Gutter};
     }
   }
@@ -948,7 +1047,8 @@ $RightMargin: 128px;
     bottom: 7vh;
   }
   #Form_Section {
-    form {
+    form,
+    .Email_Contact {
       padding-left: #{2 * $Gutter};
     }
   }
