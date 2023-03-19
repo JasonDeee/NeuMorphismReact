@@ -20,8 +20,9 @@ function App() {
   const isEdge = userAgent.includes("Edg");
 
   // Init States
-  var IsVietnamese = true; // Language Changer
+  // var IsVietnamese = true; // Language Changer
 
+  const [IsVietnamese, SetVietNamese] = useState(true);
   const [FloaterClass, setFoatClassName] = useState("Float");
   const [Type, SetType] = useState("App");
 
@@ -69,20 +70,7 @@ function App() {
     //
 
     // //
-    // Language SW
-    const Language_Switch = document.querySelector(".Language_Switch");
-    Language_Switch.addEventListener("click", () => {
-      IsVietnamese = !IsVietnamese;
 
-      //
-      Language_Switch.firstChild.classList.toggle("Lang_Active", !IsVietnamese); // First Child Refer to the English Button
-
-      // Second Child - Refer to Vietnamese
-      Language_Switch.getElementsByTagName("div")[1].classList.toggle(
-        "Lang_Active",
-        IsVietnamese
-      );
-    });
     //
     //
     // Scroll Bar
@@ -129,7 +117,13 @@ function App() {
           {/*  */}{" "}
           <div className={FloaterClass + " main"}>
             <Switch>
-              <Route exact path="/" element={<HomepageFloat></HomepageFloat>} />
+              <Route
+                exact
+                path="/"
+                element={
+                  <HomepageFloat IsVietnamese={IsVietnamese}></HomepageFloat>
+                }
+              />
             </Switch>{" "}
           </div>
           <div className="Static">
@@ -138,9 +132,16 @@ function App() {
             </Switch>
           </div>
           {/*  */}
-          <div className="Language_Switch">
-            <div id="En">En</div>
-            <div className="Lang_Active" id="Vi">
+          <div
+            className="Language_Switch"
+            onClick={() => {
+              SetVietNamese((Prev) => !Prev);
+            }}
+          >
+            <div id="En" className={IsVietnamese ? "" : "Lang_Active"}>
+              En
+            </div>
+            <div className={IsVietnamese ? "Lang_Active" : ""} id="Vi">
               Vi
             </div>
           </div>

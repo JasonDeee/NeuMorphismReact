@@ -23,6 +23,37 @@ const ButtonSlider = (Props) => {
   );
 };
 
+//
+
+const SliderIndex = (Props) => {
+  //
+  const MaxIndexArray = Array.from(
+    { length: Props.FinalIndex },
+    (_, index) => index + 1
+  );
+
+  const spans = MaxIndexArray.map((number) => (
+    <span key={number}>{"0" + number}</span>
+  ));
+
+  return (
+    <div className="Slider_Indexes">
+      <div
+        className="Current_Index"
+        style={{ transform: `translateY(-${Props.Current_Index * 0.8}rem)` }}
+        // style={{ transform: `translateY(-2rem)` }}
+      >
+        {spans}
+      </div>
+      <hr></hr>
+      <span>{"0" + Props.FinalIndex}</span>
+    </div>
+  );
+};
+
+//
+// Button chỉ có text
+
 const ButtonTextOnly = (Props) => {
   return (
     <button className="ButtonContainer Button_Text_Only">
@@ -31,4 +62,4 @@ const ButtonTextOnly = (Props) => {
     </button>
   );
 };
-export { ButtonFull, ButtonSlider, ButtonTextOnly };
+export { ButtonFull, ButtonSlider, SliderIndex, ButtonTextOnly };

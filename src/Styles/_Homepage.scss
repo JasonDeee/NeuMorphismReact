@@ -210,7 +210,8 @@ $RightMargin: 128px;
       color: $BlackText;
       height: auto;
       font-size: 4rem;
-      margin-top: -2rem;
+
+      transform: translateY(-50%);
 
       text-transform: uppercase;
     }
@@ -222,7 +223,7 @@ $RightMargin: 128px;
       position: relative;
       // justify-content: stretch;
 
-      padding-top: 4rem;
+      // padding-top: 4rem;
       grid-column: 1/13;
 
       .Work {
@@ -308,7 +309,7 @@ $RightMargin: 128px;
 
   #About_Section {
     // min-height: 100vh;
-    margin-top: 256px;
+    margin-top: 12vh;
     height: auto;
 
     align-items: stretch;
@@ -359,11 +360,11 @@ $RightMargin: 128px;
   }
 
   #Testimonial_Section {
-    margin-top: 256px;
+    margin-top: 12vh;
     height: auto;
     min-height: 30vh;
 
-    align-items: start;
+    align-items: stretch;
     justify-content: start;
 
     .Double_Quotes {
@@ -385,8 +386,8 @@ $RightMargin: 128px;
 
     .Tes_Content_Slider,
     .Tes_Img_Slider {
-      margin-top: 2rem;
-      margin-bottom: 3rem;
+      margin-top: 12vh;
+      margin-bottom: 12vh;
       min-height: 256px;
     }
     .Tes_Content_Slider {
@@ -446,30 +447,40 @@ $RightMargin: 128px;
     }
     .Tes_Img_Slider {
       grid-column: 4/13;
-      margin-top: 2rem;
+      // margin-top: 2rem;
       padding-top: 2.5vh;
 
       position: relative;
 
       overflow: hidden;
 
+      .Slider_Indexes {
+        margin-bottom: 32%;
+        margin-right: -16px;
+      }
+
       .Img_Slide_Holder {
         width: 100%;
 
+        height: 100%;
         display: flex;
         flex-direction: row;
         align-items: start;
         justify-content: start;
+        transition: $SmoothBezier;
 
         img {
           max-width: 38%;
-          height: auto;
+          height: 62%;
           object-fit: cover;
-          aspect-ratio: calc(4 / 3);
+          // aspect-ratio: calc(4 / 3);
           transition: $SmoothBezier;
+          opacity: 0.38;
         }
         .on_Active {
           max-width: 62%;
+          opacity: 1;
+          height: 100%;
         }
       }
 
@@ -481,8 +492,8 @@ $RightMargin: 128px;
 
         display: flex;
         flex-direction: row;
-        align-items: start;
-        justify-content: end;
+        align-items: end;
+        justify-content: space-between;
 
         gap: inherit;
 
@@ -490,7 +501,132 @@ $RightMargin: 128px;
       }
     }
   }
+
+  #Form_Section {
+    color: $BlackText;
+
+    height: 80vh;
+    min-height: unset;
+
+    h1 {
+      text-transform: uppercase;
+      grid-column: 1/13;
+    }
+
+    form {
+      height: 38vh;
+      grid-column: 1/8;
+
+      background: $WhiteGrey;
+
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+
+      position: relative;
+      gap: 16px;
+      padding-bottom: 4%;
+
+      #Form_Label {
+        position: absolute;
+        top: 0;
+        transform: translateY(-50%);
+      }
+
+      input,
+      textarea,
+      #Email_Input:placeholder-shown,
+      #Message_Input:placeholder-shown {
+        background: none;
+        border: none;
+
+        position: relative;
+
+        transition: $SmoothBezier;
+
+        color: $BlackText;
+
+        width: 78%;
+
+        display: flex;
+
+        border-bottom: solid 1px $DarkGray;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        font-weight: 300;
+        color: $DarkGray;
+
+        transition: $SmoothBezier;
+      }
+
+      textarea::placeholder {
+        transform: translateY(200%);
+      }
+
+      input:focus,
+      textarea:focus {
+        outline: none;
+        padding: 8px;
+
+        background: $WhiteMoreGrey !important;
+        // color: $PureWhite;
+      }
+      // input:focus::placeholder,
+      // textarea:focus::placeholder {
+      //   color: $white;
+      //   opacity: 0.78;
+      // }
+
+      input:valid,
+      textarea:valid {
+        border-color: $TintColor;
+        border-width: 2px;
+      }
+      input:invalid,
+      textarea:invalid {
+        border-color: $RedWarinng;
+        border-width: 2px;
+      }
+
+      textarea:focus::placeholder {
+        transform: translateY(0);
+      }
+
+      input {
+        height: 14%;
+      }
+
+      textarea {
+        height: 32%;
+      }
+    }
+
+    .Contact_Form_Button_Holder {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      transform: translateY(50%);
+
+      display: flex;
+      flex-direction: row;
+      align-self: center;
+      justify-content: flex-end;
+
+      width: 78%;
+    }
+  }
+
+  footer {
+    background: $BlackMap;
+    height: 20vh;
+    width: 100vw;
+  }
 }
+
 .HomePageFixed {
   pointer-events: none;
 }
@@ -530,7 +666,15 @@ $RightMargin: 128px;
 }
 .Tes_Img_Slider {
   .Img_Slide_Holder {
-    gap: $Gutter;
+    .on_Active {
+      margin-right: $Gutter !important;
+    }
+  }
+}
+
+#Form_Section {
+  form {
+    padding-left: $Gutter;
   }
 }
 
@@ -564,7 +708,12 @@ $RightMargin: 128px;
 
   .Tes_Img_Slider {
     .Img_Slide_Holder {
-      gap: $Gutter !important;
+      .on_Active {
+        margin-right: $Gutter !important;
+      }
+    }
+    .Tes_Controllers {
+      padding-left: $Gutter;
     }
   }
 
@@ -582,6 +731,12 @@ $RightMargin: 128px;
     right: 0;
     top: #{1.5 * $Gutter};
     bottom: 7vh;
+  }
+
+  #Form_Section {
+    form {
+      padding-left: #{2 * $Gutter};
+    }
   }
 }
 @media screen and (min-width: 960px) {
@@ -601,7 +756,12 @@ $RightMargin: 128px;
   }
   .Tes_Img_Slider {
     .Img_Slide_Holder {
-      gap: $Gutter !important;
+      .on_Active {
+        margin-right: $Gutter !important;
+      }
+    }
+    .Tes_Controllers {
+      padding-left: $Gutter;
     }
   }
   .Header_Logo {
@@ -618,6 +778,11 @@ $RightMargin: 128px;
     right: 0;
     top: #{1.5 * $Gutter};
     bottom: 7vh;
+  }
+  #Form_Section {
+    form {
+      padding-left: #{2 * $Gutter};
+    }
   }
 }
 @media screen and (min-width: 1024px) {
@@ -637,7 +802,12 @@ $RightMargin: 128px;
   }
   .Tes_Img_Slider {
     .Img_Slide_Holder {
-      gap: $Gutter !important;
+      .on_Active {
+        margin-right: $Gutter !important;
+      }
+    }
+    .Tes_Controllers {
+      padding-left: $Gutter;
     }
   }
   .Header_Logo {
@@ -655,13 +825,41 @@ $RightMargin: 128px;
     top: #{1.5 * $Gutter};
     bottom: 7vh;
   }
+  #Form_Section {
+    form {
+      padding-left: #{2 * $Gutter};
+    }
+  }
 }
 
-// @media screen and (max-width: 1441px) {
-//   .Tes_Content_Slider {
-//     grid-column: 1/5 !important;
-//   }
-// }
+@media screen and (max-width: 1441px) {
+  .Tes_Content_Slider {
+    grid-column: 1/6 !important;
+  }
+  .HomepageFloat {
+    #Testimonial_Section {
+      .Tes_Img_Slider {
+        grid-column: 6/13;
+      }
+
+      .Tes_Overlay::after {
+        grid-column: 2/10 !important;
+      }
+      .Tes_Slider_El_Holder {
+        .Tes_Slider_El {
+          img {
+            width: 32% !important;
+          }
+        }
+      }
+    }
+  }
+  #Form_Section {
+    form {
+      padding-left: #{2 * $Gutter};
+    }
+  }
+}
 
 @media screen and (min-width: 1728px) {
   $Gutter: 42px;
@@ -680,7 +878,12 @@ $RightMargin: 128px;
   }
   .Tes_Img_Slider {
     .Img_Slide_Holder {
-      gap: $Gutter !important;
+      .on_Active {
+        margin-right: $Gutter !important;
+      }
+    }
+    .Tes_Controllers {
+      padding-left: $Gutter;
     }
   }
   .Header_Logo {
@@ -697,6 +900,11 @@ $RightMargin: 128px;
     right: 0;
     top: #{1.5 * $Gutter};
     bottom: 7vh;
+  }
+  #Form_Section {
+    form {
+      padding-left: #{2 * $Gutter};
+    }
   }
 }
 @media screen and (min-width: 2200px) {
@@ -716,7 +924,12 @@ $RightMargin: 128px;
   }
   .Tes_Img_Slider {
     .Img_Slide_Holder {
-      gap: $Gutter !important;
+      .on_Active {
+        margin-right: $Gutter !important;
+      }
+    }
+    .Tes_Controllers {
+      padding-left: $Gutter;
     }
   }
   .Header_Logo {
@@ -733,5 +946,10 @@ $RightMargin: 128px;
     right: 0;
     top: #{1.5 * $Gutter};
     bottom: 7vh;
+  }
+  #Form_Section {
+    form {
+      padding-left: #{2 * $Gutter};
+    }
   }
 }

@@ -1,27 +1,27 @@
 import "../Styles/App.css";
 import { useEffect, useState } from "react";
-import { ButtonFull, ButtonSlider, ButtonTextOnly } from "./Buttons";
+import {
+  ButtonFull,
+  ButtonSlider,
+  SliderIndex,
+  ButtonTextOnly,
+} from "./Buttons";
 
 import Copy_Logo from "../Assets/Copy_Logo.svg";
 import WatchOut from "../Assets/WatchOut.gif";
 import Magnify from "../Assets/Magnify.svg";
 import Location from "../Assets/Location.svg";
 
-const HomepageFloat = () => {
-  const TestPrevFunct = () => {
-    console.log("Prev");
-  };
-  const TestNextFunct = () => {
-    console.log("Next");
-  };
-
+const HomepageFloat = (Props) => {
   const [Tes_Content_Slider_Width, Tes_Content_Slider_WidthChange] =
     useState(256);
 
-  // Declare Pseudo Funtion for The Onclick At Testimonials Section
+  // Declare Pseudo Funtion for The Onclick At Testimonials (Tes) Section
 
-  const [NextTes, setNextTes] = useState(() => () => {});
-  const [PrevTes, setPrevTes] = useState(() => () => {});
+  const [NextTes, setNextTes] = useState(null);
+  const [PrevTes, setPrevTes] = useState(null);
+
+  const [TesCurrentIndex, setTesCurIndex] = useState(0);
 
   // This Funct Trigger After the Entire Homepage is Mounted
   const HomePageFuncAfterLoad = () => {
@@ -57,23 +57,50 @@ const HomepageFloat = () => {
     var Tes_Slide_Index = 0;
 
     //
-
-    NextTes = () => {
-      console.log("presssed Next");
-      //
-      if (Tes_Slide_Index < Imgs_Slide.length - 1) {
+    setNextTes(() => {
+      return () => {
         //
+        if (Tes_Slide_Index < Imgs_Slide.length - 1) {
+          //
 
-        Imgs_Slide[Tes_Slide_Index].classList.remove("on_Active");
-        Tes_Slide_Index++;
-        Imgs_Slide[Tes_Slide_Index].classList.add("on_Active");
+          Imgs_Slide[Tes_Slide_Index].classList.remove("on_Active");
+          //
+          Tes_Slide_Index++;
 
-        Tes_Slider_El_Holder.style.transform = `translateX(${
-          Tes_Slide_Index * 100
-        }%)`;
-      }
-    };
+          setTesCurIndex(Tes_Slide_Index);
 
+          Imgs_Slide[Tes_Slide_Index].classList.add("on_Active");
+
+          Tes_Slider_El_Holder.style.transform = `translateX(-${
+            Tes_Slide_Index * 100
+          }%)`;
+
+          Img_Slide_Holder.style.transform = `translateX(-${
+            Tes_Slide_Index * 38
+          }%)`;
+        }
+      };
+    });
+
+    setPrevTes(() => {
+      //
+      return () => {
+        if (Tes_Slide_Index > 0) {
+          Imgs_Slide[Tes_Slide_Index].classList.remove("on_Active");
+          //
+          Tes_Slide_Index--;
+          setTesCurIndex(Tes_Slide_Index);
+
+          Imgs_Slide[Tes_Slide_Index].classList.add("on_Active");
+          Tes_Slider_El_Holder.style.transform = `translateX(-${
+            Tes_Slide_Index * 100
+          }%)`;
+          Img_Slide_Holder.style.transform = `translateX(-${
+            Tes_Slide_Index * 38
+          }%)`;
+        }
+      };
+    });
     //
     // Trigger Right Before the Homepage is Remove
     return () => {
@@ -84,7 +111,7 @@ const HomepageFloat = () => {
 
   return (
     <main className="HomepageFloat">
-      <section className="Section" id="Header_Section">
+      <header className="Section" id="Header_Section">
         <div className="Header_BG_Overlay Overlay"></div>{" "}
         <div className="Header_Image">
           <img src={WatchOut}></img>
@@ -107,11 +134,11 @@ const HomepageFloat = () => {
             <div className="Header_Button_Add_Overlay"></div>
             <ButtonFull
               IconURL={Magnify}
-              Label="Cách tôi làm việc"
+              Label="Cách tôi làm việc."
             ></ButtonFull>
           </div>
         </div>
-      </section>
+      </header>
       <div className="Header_Logo">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 316.42 85.08">
           <path
@@ -143,7 +170,7 @@ const HomepageFloat = () => {
                 cao cấp…
               </p>
               <div className="Work_Button_Holder">
-                <ButtonFull IconURL={Copy_Logo} Label="Quy trình"></ButtonFull>
+                <ButtonFull IconURL={Copy_Logo} Label="Quy trình."></ButtonFull>
               </div>
             </div>
           </div>
@@ -166,7 +193,7 @@ const HomepageFloat = () => {
                 cao cấp…
               </p>
               <div className="Work_Button_Holder">
-                <ButtonFull IconURL={Copy_Logo} Label="Quy trình"></ButtonFull>
+                <ButtonFull IconURL={Copy_Logo} Label="Quy trình."></ButtonFull>
               </div>
             </div>
           </div>{" "}
@@ -189,7 +216,7 @@ const HomepageFloat = () => {
                 cao cấp…
               </p>
               <div className="Work_Button_Holder">
-                <ButtonFull IconURL={Copy_Logo} Label="Quy trình"></ButtonFull>
+                <ButtonFull IconURL={Copy_Logo} Label="Quy trình."></ButtonFull>
               </div>
             </div>
           </div>
@@ -329,24 +356,46 @@ const HomepageFloat = () => {
             <img src="https://i.kym-cdn.com/entries/icons/original/000/037/158/thinkmarkthumbnail.PNG"></img>
           </div>
           <div className="Tes_Controllers">
-            <div></div>
+            <SliderIndex
+              FinalIndex="3"
+              Current_Index={TesCurrentIndex}
+            ></SliderIndex>
             <ButtonSlider PrevFunc={PrevTes} NextFunc={NextTes}></ButtonSlider>
           </div>
         </div>
       </section>
-      <section className="Section" id="Sec1Float">
-        <ButtonFull IconURL={Copy_Logo} Label="Khám phá"></ButtonFull>
+      <section className="Section Column_Grid" id="Form_Section">
+        <h1>Liên hệ</h1>
+        <form id="Contact_Form" name="Contact_Form">
+          <label htmlFor="Contact_Form" id="Form_Label">
+            <h2>
+              {Props.IsVietnamese
+                ? "Nhắn tôi gì đó?"
+                : "Wanna discuss something?"}
+            </h2>
+          </label>
+          <input
+            type="email"
+            id="Email_Input"
+            name="Email"
+            placeholder={Props.IsVietnamese ? "Email của bạn" : "Your Email?"}
+            required
+          ></input>
+          <textarea
+            name="Messages"
+            id="Message_Input"
+            required
+            placeholder={Props.IsVietnamese ? "Nội dung" : "Tell me something?"}
+          ></textarea>
+          <div className="Contact_Form_Button_Holder">
+            <ButtonFull
+              IconURL={Copy_Logo}
+              Label={Props.IsVietnamese ? "Gửi nào." : "Deliver it."}
+            ></ButtonFull>
+          </div>
+        </form>
       </section>
-      <section className="Section" id="Sec2Float">
-        <ButtonSlider
-          PrevFunc={TestPrevFunct}
-          NextFunc={TestNextFunct}
-        ></ButtonSlider>
-      </section>{" "}
-      <section className="Section" id="Sec3Float">
-        <ButtonTextOnly Label="Khám phá"></ButtonTextOnly>
-      </section>
-      <section className="Section" id="Sec5Float"></section>
+      <footer className="Footer Column_Grid"></footer>
     </main>
   );
 };

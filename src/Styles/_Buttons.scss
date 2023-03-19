@@ -185,6 +185,45 @@ $ButtonOverAllSize: 54px;
   }
 }
 
+.Slider_Indexes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  overflow: hidden;
+
+  position: relative;
+
+  gap: 2px;
+
+  span {
+    font-weight: 600;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    height: 0.8rem;
+
+    color: $BlackText;
+  }
+  .Current_Index {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+    height: 0.8rem;
+    transition: $SmoothBezier;
+  }
+
+  hr {
+    width: 32px;
+
+    border: none;
+    height: 2px;
+
+    background: $WhiteGrey;
+  }
+}
+
 #Next:hover {
   width: 86px;
 
