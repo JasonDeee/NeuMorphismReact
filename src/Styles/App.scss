@@ -65,6 +65,28 @@ svg {
     position: relative;
     width: 100%;
     height: 100%;
+
+    .Img_CTA_Label {
+      pointer-events: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+
+      color: $PureWhite;
+      transition: $SmoothBezier;
+      letter-spacing: -0.1rem;
+
+      white-space: nowrap;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: $LightShadow;
+      opacity: 0;
+    }
   }
 
   img {
@@ -86,6 +108,12 @@ svg {
 .Image_Container:hover {
   .Img_Scaler {
     clip-path: polygon(3% 3%, 97% 3%, 97% 97%, 3% 97%);
+
+    .Img_CTA_Label {
+      letter-spacing: 0.12rem;
+
+      opacity: 1;
+    }
   }
 
   img {
@@ -149,6 +177,16 @@ $LeftMargin: 32px;
     border-radius: 2px;
     position: absolute;
     top: 0;
+  }
+
+  .ScrollBar_Track::after {
+    position: absolute;
+    width: 64px;
+    left: 0;
+    right: 0;
+    height: 100%;
+    top: 0;
+    margin: auto;
   }
   .ScrollBar_Thumb {
     width: 8px;

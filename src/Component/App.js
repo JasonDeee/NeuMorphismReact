@@ -32,6 +32,9 @@ function App() {
   };
 
   // Init Constances
+  const clamp = (num, min, max) => {
+    return Math.min(Math.max(num, min), max);
+  };
 
   //
 
@@ -60,8 +63,6 @@ function App() {
       }, 1555);
 
       body.style.height = Math.round(main.clientHeight) + "px";
-
-      console.log("got the Height");
     };
 
     window.addEventListener("resize", ScrollUpdate);
@@ -75,12 +76,14 @@ function App() {
     //
     // Scroll Bar
     const ScrollBar_Observer = document.querySelector(".ScrollBar_Observer");
+    const Stylized_Scroll_Bar = document.querySelector(".Stylized_Scroll_Bar");
     const ScrollBar_Thumb = document.querySelector(
       ".Stylized_Scroll_Bar .ScrollBar_Thumb"
     );
     const ScrollBar_Track = document.querySelector(
       ".Stylized_Scroll_Bar .ScrollBar_Track"
     );
+
     const Direction_Button = document.querySelector(
       ".Stylized_Scroll_Bar .Direction_Button"
     );
@@ -92,6 +95,58 @@ function App() {
         !entries[0].isIntersecting
       );
     });
+
+    // Scroll On Hold
+    var ScrollBar_Thumb_IsHolded = false,
+      ScrollBar_Track_Top = (window.innerHeight * 31) / 100 + 12,
+      ScrollBar_Track_Bottom = (window.innerHeight * 69) / 100 - 12,
+      ScrollBar_Track_height = (window.innerHeight * 38) / 100 - 24;
+
+    console.log(ScrollBar_Track_Top);
+    console.log(ScrollBar_Track_Bottom);
+
+    const ScrollBar_FuncIn = (e) => {
+      e.preventDefault();
+      //
+      if (e.button == 0) {
+        ScrollBar_Thumb_IsHolded = true;
+      }
+    };
+
+    const ScrollBar_FuncOnActive = (e) => {
+      if (ScrollBar_Thumb_IsHolded == true) {
+        //
+
+        let Themain =
+          clamp(
+            e.pageY - window.pageYOffset - ScrollBar_Track_Top,
+            0,
+            ScrollBar_Track_height
+          ) / ScrollBar_Track_height;
+        //
+
+        window.scrollTo(
+          0,
+          main.clientHeight *
+            (clamp(
+              e.pageY - window.pageYOffset - ScrollBar_Track_Top,
+              0,
+              ScrollBar_Track_height
+            ) /
+              ScrollBar_Track_height)
+        );
+      }
+    };
+
+    const ScrollBar_FuncOut = (e) => {
+      ScrollBar_Thumb_IsHolded = false;
+    };
+
+    //
+    ScrollBar_Thumb.addEventListener("mousedown", ScrollBar_FuncIn);
+    Stylized_Scroll_Bar.addEventListener("mousemove", ScrollBar_FuncOnActive);
+    window.addEventListener("mouseup", ScrollBar_FuncOut);
+    window.addEventListener("blur", ScrollBar_FuncOut);
 
     Direction_Button_Observer.observe(ScrollBar_Observer);
 

@@ -134,7 +134,9 @@ const HomepageFloat = (Props) => {
             <div className="Header_Button_Add_Overlay"></div>
             <ButtonFull
               IconURL={Magnify}
-              Label="Cách tôi làm việc."
+              Label={
+                Props.IsVietnamese ? "Cách tôi làm việc." : "The ways i work."
+              }
             ></ButtonFull>
           </div>
         </div>
@@ -155,6 +157,9 @@ const HomepageFloat = (Props) => {
             <div className="Image_Container Lazy_Image Work_Images">
               <div className="Img_Scaler">
                 <img src="https://i.kym-cdn.com/entries/icons/original/000/037/158/thinkmarkthumbnail.PNG"></img>
+                <label className="Img_CTA_Label">
+                  {Props.IsVietnamese ? "Quy trình." : "My Workflow."}
+                </label>{" "}
               </div>
             </div>
             <div className="Main_Work_Contents">
@@ -170,7 +175,10 @@ const HomepageFloat = (Props) => {
                 cao cấp…
               </p>
               <div className="Work_Button_Holder">
-                <ButtonFull IconURL={Copy_Logo} Label="Quy trình."></ButtonFull>
+                <ButtonFull
+                  IconURL={Copy_Logo}
+                  Label={Props.IsVietnamese ? "Quy trình." : "My Workflow."}
+                ></ButtonFull>
               </div>
             </div>
           </div>
@@ -178,6 +186,9 @@ const HomepageFloat = (Props) => {
             <div className="Image_Container Lazy_Image Work_Images">
               <div className="Img_Scaler">
                 <img src="https://i.kym-cdn.com/entries/icons/original/000/037/158/thinkmarkthumbnail.PNG"></img>
+                <label className="Img_CTA_Label">
+                  {Props.IsVietnamese ? "Quy trình." : "My Workflow."}
+                </label>
               </div>
             </div>
             <div className="Main_Work_Contents">
@@ -193,14 +204,20 @@ const HomepageFloat = (Props) => {
                 cao cấp…
               </p>
               <div className="Work_Button_Holder">
-                <ButtonFull IconURL={Copy_Logo} Label="Quy trình."></ButtonFull>
+                <ButtonFull
+                  IconURL={Copy_Logo}
+                  Label={Props.IsVietnamese ? "Quy trình." : "My Workflow."}
+                ></ButtonFull>
               </div>
             </div>
-          </div>{" "}
+          </div>
           <div className="Work" id="work3">
             <div className="Image_Container Lazy_Image Work_Images">
               <div className="Img_Scaler">
                 <img src="https://i.kym-cdn.com/entries/icons/original/000/037/158/thinkmarkthumbnail.PNG"></img>
+                <label className="Img_CTA_Label">
+                  {Props.IsVietnamese ? "Quy trình." : "My Workflow."}
+                </label>
               </div>
             </div>
             <div className="Main_Work_Contents">
@@ -216,7 +233,10 @@ const HomepageFloat = (Props) => {
                 cao cấp…
               </p>
               <div className="Work_Button_Holder">
-                <ButtonFull IconURL={Copy_Logo} Label="Quy trình."></ButtonFull>
+                <ButtonFull
+                  IconURL={Copy_Logo}
+                  Label={Props.IsVietnamese ? "Quy trình." : "My Workflow."}
+                ></ButtonFull>
               </div>
             </div>
           </div>
