@@ -1641,8 +1641,56 @@ svg {
 
 .HomepageFloat footer {
   background: #151515;
-  height: 20vh;
-  width: 100vw;
+  height: 20vh !important;
+  width: 100vw !important;
+  margin-bottom: 0 !important;
+}
+
+.HomepageFloat footer .Footer_Col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  color: #ffffff;
+}
+
+.HomepageFloat footer .Footer_Col h2 {
+  font-size: 1.62vw;
+}
+
+.HomepageFloat footer .Footer_Col small {
+  font-size: 0.86vw;
+}
+
+.HomepageFloat footer #Col1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+}
+
+.HomepageFloat footer #Col2 {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 4;
+  grid-column: 5/9;
+}
+
+.HomepageFloat footer #Col3 {
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 3;
+  grid-column: 9/12;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .HomePageFixed {

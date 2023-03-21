@@ -440,7 +440,41 @@ const HomepageFloat = (Props) => {
           </div>
         </div>
       </section>
-      <footer className="Footer Column_Grid"></footer>
+      <footer className="Section Footer Column_Grid">
+        <div className="Footer_Col" id="Col1">
+          <ul>
+            <h2>Đối tác & Khách hàng</h2>
+            <li>
+              <small>
+                Là một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến”
+              </small>
+            </li>{" "}
+            <li>
+              <small>
+                Là một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến”
+              </small>
+            </li>
+          </ul>
+        </div>
+        <div className="Footer_Col" id="Col2">
+          <ul>
+            <h2>Đối tác & Khách hàng</h2>
+            <li>
+              <small>
+                Là một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến”
+              </small>
+            </li>{" "}
+            <li>
+              <small>
+                Là một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến”
+              </small>
+            </li>
+          </ul>
+        </div>
+        <div className="Footer_Col" id="Col3">
+          <small> Imprint © 2022 Melanie Daveid</small>
+        </div>
+      </footer>
     </main>
   );
 };
