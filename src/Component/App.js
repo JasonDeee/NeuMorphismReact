@@ -6,7 +6,7 @@ import {
 } from "react-router-dom";
 //
 //
-import { useEffect, useState, Fragment } from "react";
+import { useEffect, useState, Fragment, useRef } from "react";
 
 import { HomepageFloat, HomePageFixed } from "./Homepage";
 
@@ -23,14 +23,20 @@ function App() {
   // var IsVietnamese = true; // Language Changer
 
   const [IsVietnamese, SetVietNamese] = useState(true);
-  const [FloaterClass, setFoatClassName] = useState("Float");
-  const [Type, SetType] = useState("App");
+  const FloaterClass = useRef("Float");
+  const Type = useRef("App");
 
   const ScrollToTop = () => {
     //
     window.scrollTo(0, 0);
   };
+  if (!isEdge) {
+    FloaterClass.current = "Float_Active";
+  }
 
+  if (isMobile) {
+    Type.current = "Mobile";
+  }
   // Init Constances
   const clamp = (num, min, max) => {
     return Math.min(Math.max(num, min), max);
@@ -39,14 +45,6 @@ function App() {
   //
 
   const EffectInit = () => {
-    if (isMobile) {
-      SetType("Mobile");
-    }
-
-    if (!isEdge) {
-      setFoatClassName("Float_Active");
-    }
-
     // Constances
     // Update The Scroll Height
     const body = document.body;
@@ -80,9 +78,9 @@ function App() {
     const ScrollBar_Thumb = document.querySelector(
       ".Stylized_Scroll_Bar .ScrollBar_Thumb"
     );
-    const ScrollBar_Track = document.querySelector(
-      ".Stylized_Scroll_Bar .ScrollBar_Track"
-    );
+    // const ScrollBar_Track = document.querySelector(
+    //   ".Stylized_Scroll_Bar .ScrollBar_Track"
+    // );
 
     const Direction_Button = document.querySelector(
       ".Stylized_Scroll_Bar .Direction_Button"
@@ -169,8 +167,7 @@ function App() {
       <Fragment>
         <div className={Type}>
           <div className="ScrollBar_Observer"></div>
-          {/*  */}{" "}
-          <div className={FloaterClass + " main"}>
+          <div className={FloaterClass.current + " main"}>
             <Switch>
               <Route
                 exact

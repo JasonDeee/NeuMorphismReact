@@ -25,10 +25,10 @@ const ButtonSlider = (Props) => {
 
 //
 
-const SliderIndex = (Props) => {
+const SliderIndex = ({ Current_Index, FinalIndex }) => {
   //
   const MaxIndexArray = Array.from(
-    { length: Props.FinalIndex },
+    { length: FinalIndex },
     (_, index) => index + 1
   );
 
@@ -36,17 +36,22 @@ const SliderIndex = (Props) => {
     <span key={number}>{"0" + number}</span>
   ));
 
+  // console.log(inputRef.current);
+
+  //
   return (
     <div className="Slider_Indexes">
       <div
         className="Current_Index"
-        style={{ transform: `translateY(-${Props.Current_Index * 0.8}rem)` }}
+        style={{ transform: `translateY(-${Current_Index * 0.8}rem)` }}
         // style={{ transform: `translateY(-2rem)` }}
+
+        // ref={inputRef}
       >
         {spans}
       </div>
       <hr></hr>
-      <span>{"0" + Props.FinalIndex}</span>
+      <span>{"0" + FinalIndex}</span>
     </div>
   );
 };

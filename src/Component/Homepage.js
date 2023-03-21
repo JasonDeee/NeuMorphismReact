@@ -1,5 +1,5 @@
 import "../Styles/App.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import {
   ButtonFull,
   ButtonSlider,
@@ -22,7 +22,7 @@ const HomepageFloat = (Props) => {
   const [PrevTes, setPrevTes] = useState(null);
 
   const [TesCurrentIndex, setTesCurIndex] = useState(0);
-
+  //  const TesCurrentIndex = useRef(0);
   // This Funct Trigger After the Entire Homepage is Mounted
   const HomePageFuncAfterLoad = () => {
     //
@@ -65,9 +65,11 @@ const HomepageFloat = (Props) => {
 
           Imgs_Slide[Tes_Slide_Index].classList.remove("on_Active");
           //
+          //  TesCurrentIndex.current = TesCurrentIndex.current + 1;
           Tes_Slide_Index++;
-
           setTesCurIndex(Tes_Slide_Index);
+
+          // setTesCurIndex(TesCurrentIndex.current);
 
           Imgs_Slide[Tes_Slide_Index].classList.add("on_Active");
 
@@ -84,6 +86,7 @@ const HomepageFloat = (Props) => {
 
     setPrevTes(() => {
       //
+
       return () => {
         if (Tes_Slide_Index > 0) {
           Imgs_Slide[Tes_Slide_Index].classList.remove("on_Active");
@@ -379,6 +382,7 @@ const HomepageFloat = (Props) => {
             <SliderIndex
               FinalIndex="3"
               Current_Index={TesCurrentIndex}
+              inputRef={TesCurrentIndex}
             ></SliderIndex>
             <ButtonSlider PrevFunc={PrevTes} NextFunc={NextTes}></ButtonSlider>
           </div>
