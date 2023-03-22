@@ -26,6 +26,10 @@ function App() {
   const FloaterClass = useRef("Float");
   const Type = useRef("App");
 
+  var ScrollBar_Thumb_IsHolded = false,
+    ScrollBar_Track_Top = (window.innerHeight * 31) / 100 + 12,
+    ScrollBar_Track_height = (window.innerHeight * 38) / 100 - 24;
+
   const ScrollToTop = () => {
     //
     window.scrollTo(0, 0);
@@ -53,9 +57,14 @@ function App() {
     ScrollToTop();
 
     const ScrollUpdate = () => {
+      body.style.height = Math.round(main.clientHeight) + "px";
+
       //
       let ScrollReszieTimer = setTimeout(() => {
         body.style.height = Math.round(main.clientHeight) + "px";
+
+        ScrollBar_Track_Top = (window.innerHeight * 31) / 100 + 12;
+        ScrollBar_Track_height = (window.innerHeight * 38) / 100 - 24;
 
         clearTimeout(ScrollReszieTimer);
       }, 1555);
@@ -87,7 +96,6 @@ function App() {
     );
 
     const Direction_Button_Observer = new IntersectionObserver((entries) => {
-      console.log(entries[0]);
       Direction_Button.classList.toggle(
         "Direction_Button_Active",
         !entries[0].isIntersecting
@@ -95,13 +103,6 @@ function App() {
     });
 
     // Scroll On Hold
-    var ScrollBar_Thumb_IsHolded = false,
-      ScrollBar_Track_Top = (window.innerHeight * 31) / 100 + 12,
-      ScrollBar_Track_Bottom = (window.innerHeight * 69) / 100 - 12,
-      ScrollBar_Track_height = (window.innerHeight * 38) / 100 - 24;
-
-    console.log(ScrollBar_Track_Top);
-    console.log(ScrollBar_Track_Bottom);
 
     const ScrollBar_FuncIn = (e) => {
       e.preventDefault();
@@ -115,17 +116,9 @@ function App() {
       if (ScrollBar_Thumb_IsHolded == true) {
         //
 
-        let Themain =
-          clamp(
-            e.pageY - window.pageYOffset - ScrollBar_Track_Top,
-            0,
-            ScrollBar_Track_height
-          ) / ScrollBar_Track_height;
-        //
-
         window.scrollTo(
           0,
-          main.clientHeight *
+          (main.clientHeight - window.innerHeight) *
             (clamp(
               e.pageY - window.pageYOffset - ScrollBar_Track_Top,
               0,

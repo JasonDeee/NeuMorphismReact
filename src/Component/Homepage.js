@@ -11,6 +11,9 @@ import Copy_Logo from "../Assets/Copy_Logo.svg";
 import WatchOut from "../Assets/WatchOut.gif";
 import Magnify from "../Assets/Magnify.svg";
 import Location from "../Assets/Location.svg";
+import ScrollDown from "../Assets/ScrollDown.svg";
+import ScrollDown2 from "../Assets/ScrollDown2.svg";
+import DownArrow from "../Assets/DownArrow.svg";
 
 const HomepageFloat = (Props) => {
   const [Tes_Content_Slider_Width, Tes_Content_Slider_WidthChange] =
@@ -118,13 +121,17 @@ const HomepageFloat = (Props) => {
         <div className="Header_BG_Overlay Overlay"></div>{" "}
         <div className="Header_Image">
           <img src={WatchOut}></img>
+          <p>
+            Một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến” như
+            In-house team, Agency, Production House và Freelancer.
+          </p>
         </div>
         <div className="Header_Contents">
           <h1>V!sual designer</h1>
-          <div className="Location_Tag">
+          {/* <div className="Location_Tag">
             <img src={Location}></img>
             <p>Hà Nội, VN</p>
-          </div>
+          </div> */}
           <p>
             Là một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến” như
             In-house team, Agency, Production House và Freelancer, tôi cảm thấy
@@ -136,7 +143,7 @@ const HomepageFloat = (Props) => {
           <div className="Header_CTA_Button">
             <div className="Header_Button_Add_Overlay"></div>
             <ButtonFull
-              IconURL={Magnify}
+              IconURL={DownArrow}
               Label={
                 Props.IsVietnamese ? "Cách tôi làm việc." : "The ways i work."
               }
@@ -179,7 +186,7 @@ const HomepageFloat = (Props) => {
               </p>
               <div className="Work_Button_Holder">
                 <ButtonFull
-                  IconURL={Copy_Logo}
+                  IconURL={Magnify}
                   Label={Props.IsVietnamese ? "Quy trình." : "My Workflow."}
                 ></ButtonFull>
               </div>
@@ -208,7 +215,7 @@ const HomepageFloat = (Props) => {
               </p>
               <div className="Work_Button_Holder">
                 <ButtonFull
-                  IconURL={Copy_Logo}
+                  IconURL={Magnify}
                   Label={Props.IsVietnamese ? "Quy trình." : "My Workflow."}
                 ></ButtonFull>
               </div>
@@ -237,7 +244,7 @@ const HomepageFloat = (Props) => {
               </p>
               <div className="Work_Button_Holder">
                 <ButtonFull
-                  IconURL={Copy_Logo}
+                  IconURL={Magnify}
                   Label={Props.IsVietnamese ? "Quy trình." : "My Workflow."}
                 ></ButtonFull>
               </div>
@@ -443,12 +450,12 @@ const HomepageFloat = (Props) => {
       <footer className="Section Footer Column_Grid">
         <div className="Footer_Col" id="Col1">
           <ul>
-            <h2>Đối tác & Khách hàng</h2>
+            <h2>{Props.IsVietnamese ? "Đối tác" : "Partner?"}</h2>
             <li>
               <small>
                 Là một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến”
               </small>
-            </li>{" "}
+            </li>
             <li>
               <small>
                 Là một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến”
@@ -458,12 +465,12 @@ const HomepageFloat = (Props) => {
         </div>
         <div className="Footer_Col" id="Col2">
           <ul>
-            <h2>Đối tác & Khách hàng</h2>
+            <h2>{Props.IsVietnamese ? "Đã nhắc tới" : "Mentioned?"}</h2>
             <li>
               <small>
                 Là một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến”
               </small>
-            </li>{" "}
+            </li>
             <li>
               <small>
                 Là một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến”
@@ -472,7 +479,7 @@ const HomepageFloat = (Props) => {
           </ul>
         </div>
         <div className="Footer_Col" id="Col3">
-          <small> Imprint © 2022 Melanie Daveid</small>
+          <small>Imprint © 2023 JasonD.</small>
         </div>
       </footer>
     </main>

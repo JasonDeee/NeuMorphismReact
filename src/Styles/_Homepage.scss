@@ -60,19 +60,17 @@ $RightMargin: 128px;
       position: absolute;
     }
 
-    .Header_BG_Overlay::after {
-      content: "Một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến” như In-house team, Agency, Production House và Freelancer.";
+    .Header_Image p {
       display: block;
       position: absolute;
-      right: 0;
-      bottom: -0.76rem;
+      right: -1vw;
 
       font-size: 0.76rem;
       font-weight: 300;
       font-style: italic;
-      text-align: right;
+      text-align: left;
 
-      transform: translateY(100%);
+      transform: translateX(100%);
     }
 
     .Header_Contents {
@@ -113,8 +111,11 @@ $RightMargin: 128px;
       }
 
       h1 {
-        font-size: 6rem;
+        font-size: 1.5rem;
         text-transform: uppercase;
+
+        font-family: "Lexend";
+
         font-weight: 700;
         line-height: 3rem;
         width: 100%;
@@ -135,18 +136,30 @@ $RightMargin: 128px;
         position: relative;
         right: 0;
         bottom: 0;
-        margin-top: 4vh;
-        transform: translate(0, 50%);
+        margin-top: 8vh;
+        // transform: translate(0, 50%);
+
+        .ButtonContainer label {
+          transform: translate(0, 0) !important;
+
+          margin-left: 32px;
+          padding-right: 16px;
+        }
 
         .Header_Button_Add_Overlay {
           background: $white;
-          height: 64px;
-          width: 64px;
-          border-radius: 50%;
+          height: 100%;
+          width: 100%;
+          border-radius: 32vw;
           position: absolute;
-          left: 64px;
+          left: 0;
           top: 0;
-          transform: translateY(-50%);
+          // transform: translateY(-50%);
+        }
+      }
+      .Header_CTA_Button:hover {
+        .ButtonContainer label {
+          margin-left: 0;
         }
       }
     }
@@ -244,8 +257,9 @@ $RightMargin: 128px;
       #work3 {
         grid-column: 7 / span 4;
         .Work_Button_Holder {
-          width: 86% !important;
+          width: 100% !important;
           justify-content: flex-end;
+          padding-right: 8%;
         }
       }
       .Work_Images {
@@ -268,7 +282,8 @@ $RightMargin: 128px;
         }
 
         .Work_Button_Holder {
-          width: 85% !important;
+          width: 100% !important;
+          padding-left: 5%;
         }
       }
 
@@ -299,7 +314,7 @@ $RightMargin: 128px;
         }
 
         .Work_Button_Holder {
-          width: 50%;
+          width: 70%;
 
           @include FlexCenter(row);
         }
@@ -724,6 +739,7 @@ $RightMargin: 128px;
 
       h2 {
         font-size: 1.62vw;
+        margin-bottom: 3vh;
       }
 
       small {

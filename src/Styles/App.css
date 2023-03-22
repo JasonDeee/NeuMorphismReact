@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   width: 100vw;
   overflow: hidden;
@@ -436,11 +435,6 @@ svg {
   padding-right: 24px;
 }
 
-.Button_Full {
-  -webkit-transform: translateX(38%);
-          transform: translateX(38%);
-}
-
 .Button_Full:hover {
   gap: 16px;
   -webkit-transform: translateX(0);
@@ -725,18 +719,16 @@ svg {
   position: absolute;
 }
 
-.HomepageFloat #Header_Section .Header_BG_Overlay::after {
-  content: "Một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến” như In-house team, Agency, Production House và Freelancer.";
+.HomepageFloat #Header_Section .Header_Image p {
   display: block;
   position: absolute;
-  right: 0;
-  bottom: -0.76rem;
+  right: -1vw;
   font-size: 0.76rem;
   font-weight: 300;
   font-style: italic;
-  text-align: right;
-  -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  text-align: left;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
 }
 
 .HomepageFloat #Header_Section .Header_Contents {
@@ -797,8 +789,9 @@ svg {
 }
 
 .HomepageFloat #Header_Section .Header_Contents h1 {
-  font-size: 6rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
+  font-family: "Lexend";
   font-weight: 700;
   line-height: 3rem;
   width: 100%;
@@ -819,21 +812,28 @@ svg {
   position: relative;
   right: 0;
   bottom: 0;
-  margin-top: 4vh;
-  -webkit-transform: translate(0, 50%);
-          transform: translate(0, 50%);
+  margin-top: 8vh;
+}
+
+.HomepageFloat #Header_Section .Header_Contents .Header_CTA_Button .ButtonContainer label {
+  -webkit-transform: translate(0, 0) !important;
+          transform: translate(0, 0) !important;
+  margin-left: 32px;
+  padding-right: 16px;
 }
 
 .HomepageFloat #Header_Section .Header_Contents .Header_CTA_Button .Header_Button_Add_Overlay {
   background: #f9f7f7;
-  height: 64px;
-  width: 64px;
-  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  border-radius: 32vw;
   position: absolute;
-  left: 64px;
+  left: 0;
   top: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+}
+
+.HomepageFloat #Header_Section .Header_Contents .Header_CTA_Button:hover .ButtonContainer label {
+  margin-left: 0;
 }
 
 .HomepageFloat #Header_Section .Header_Image {
@@ -964,10 +964,11 @@ svg {
 }
 
 .HomepageFloat #Works_Showreel_Section .Work_Contents #work3 .Work_Button_Holder {
-  width: 86% !important;
+  width: 100% !important;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  padding-right: 8%;
 }
 
 .HomepageFloat #Works_Showreel_Section .Work_Contents .Work_Images {
@@ -998,7 +999,8 @@ svg {
 }
 
 .HomepageFloat #Works_Showreel_Section .Work_Contents .Top_Work .Work_Button_Holder {
-  width: 85% !important;
+  width: 100% !important;
+  padding-left: 5%;
 }
 
 .HomepageFloat #Works_Showreel_Section .Work_Contents .Main_Work_Contents {
@@ -1036,7 +1038,7 @@ svg {
 }
 
 .HomepageFloat #Works_Showreel_Section .Work_Contents .Main_Work_Contents .Work_Button_Holder {
-  width: 50%;
+  width: 70%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1665,6 +1667,7 @@ svg {
 
 .HomepageFloat footer .Footer_Col h2 {
   font-size: 1.62vw;
+  margin-bottom: 3vh;
 }
 
 .HomepageFloat footer .Footer_Col small {
