@@ -14,6 +14,7 @@ import Location from "../Assets/Location.svg";
 import ScrollDown from "../Assets/ScrollDown.svg";
 import ScrollDown2 from "../Assets/ScrollDown2.svg";
 import DownArrow from "../Assets/DownArrow.svg";
+import DownArrow2 from "../Assets/DownArrow2.svg";
 
 const HomepageFloat = (Props) => {
   const [Tes_Content_Slider_Width, Tes_Content_Slider_WidthChange] =
@@ -122,28 +123,46 @@ const HomepageFloat = (Props) => {
         <div className="Header_Image">
           <img src={WatchOut}></img>
           <p>
-            Một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến” như
-            In-house team, Agency, Production House và Freelancer.
+            {Props.IsVietnamese
+              ? `"Luôn có những người tỏ ra khắt khe với tôi, nhưng họ luôn quan sát và là những người đầu tiên mỉm cười khi tôi đi đúng hướng"`
+              : `Manies revealed so stricted to me, but they always observe and always take the 1st place to be so pleasant for my right decisions.`}
           </p>
         </div>
         <div className="Header_Contents">
-          <h1>V!sual designer</h1>
+          <h1>
+            {Props.IsVietnamese
+              ? "Chúng ta là một cặp nếu bạn"
+              : "We are a match"}
+            <br></br>
+            {Props.IsVietnamese
+              ? "là một Agency và đang..."
+              : "If you're an Agency and..."}
+          </h1>
           {/* <div className="Location_Tag">
             <img src={Location}></img>
             <p>Hà Nội, VN</p>
           </div> */}
-          <p>
-            Là một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến” như
-            In-house team, Agency, Production House và Freelancer, tôi cảm thấy
-            may mắn vì trong 5 năm đó được trải nghiệm công việc Marketing ở
-            nhiều ngành hàng: từ quen thuộc như các ngành Hàng tiêu dùng (Kem
-            đánh răng, Sữa tắm, Nước tăng lực…) cho tới những ngành “ngách” hơn
-            như Vận tải hành khách, Công nghệ, Nội thất cao cấp
-          </p>
+          {Props.IsVietnamese ? (
+            <p>
+              Đang tìm kiếm một người cho giải pháp visual của sản phẩm với đa
+              dạng phương pháp tư duy và kinh nghiệm từ thiết kế tới tối ưu trải
+              nghiệm người dùng.
+            </p>
+          ) : (
+            <p>
+              Looking for a Generalist Visual Designer with a broad mindset
+              ranging from multiple platform and experience from design to
+              optimize user journey.
+            </p>
+          )}
+
           <div className="Header_CTA_Button">
             <div className="Header_Button_Add_Overlay"></div>
             <ButtonFull
-              IconURL={DownArrow}
+              OnClickFunc={() => {
+                window.scrollTo(0, window.innerHeight);
+              }}
+              IconURL={DownArrow2}
               Label={
                 Props.IsVietnamese ? "Cách tôi làm việc." : "The ways i work."
               }
@@ -173,8 +192,11 @@ const HomepageFloat = (Props) => {
               </div>
             </div>
             <div className="Main_Work_Contents">
-              <h2>Là một Marketer</h2>
-              <span>Key Visual tết 2023</span>
+              <h2>Key Visual tết 2023</h2>
+              <span>
+                Kenli trao tuyệt tác
+                <br></br>- Gia chủ đón xuân sang
+              </span>
               <p>
                 Là một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến” như
                 In-house team, Agency, Production House và Freelancer, tôi cảm

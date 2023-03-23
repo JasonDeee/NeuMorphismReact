@@ -735,6 +735,7 @@ svg {
   position: relative;
   height: 38vh;
   max-width: 62%;
+  padding-bottom: 4vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -793,11 +794,9 @@ svg {
   text-transform: uppercase;
   font-family: "Lexend";
   font-weight: 700;
-  line-height: 3rem;
-  width: 100%;
-  margin-top: -2rem;
+  line-height: 1.8rem;
+  max-width: 72%;
   margin-bottom: 4vh;
-  white-space: nowrap;
 }
 
 .HomepageFloat #Header_Section .Header_Contents p {
@@ -968,7 +967,7 @@ svg {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding-right: 8%;
+  padding-right: 8px;
 }
 
 .HomepageFloat #Works_Showreel_Section .Work_Contents .Work_Images {
@@ -1029,6 +1028,7 @@ svg {
   color: #353535;
   font-size: 0.76rem;
   font-weight: 500;
+  margin-top: 2px;
   margin-bottom: 2rem;
 }
 

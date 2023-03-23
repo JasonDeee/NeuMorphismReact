@@ -54,8 +54,6 @@ function App() {
     const body = document.body;
     const main = document.querySelector(".main");
 
-    ScrollToTop();
-
     const ScrollUpdate = () => {
       body.style.height = Math.round(main.clientHeight) + "px";
 
@@ -142,6 +140,7 @@ function App() {
     Direction_Button_Observer.observe(ScrollBar_Observer);
 
     ScrollUpdate();
+    ScrollToTop();
 
     const ScrollFunc = () => {
       main.style.transform = `translateY(-${window.pageYOffset}px)`;

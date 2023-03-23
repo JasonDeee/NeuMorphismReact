@@ -2,7 +2,12 @@ import "../Styles/App.css";
 
 const ButtonFull = (Props) => {
   return (
-    <button className="ButtonContainer Button_Full">
+    <button
+      className="ButtonContainer Button_Full"
+      onClick={() => {
+        Props.OnClickFunc();
+      }}
+    >
       <div className="Button_Overlay"></div>
       <div
         className="Button_Icon"

@@ -78,6 +78,7 @@ $RightMargin: 128px;
       height: 38vh;
       max-width: 62%;
 
+      padding-bottom: 4vh;
       @include FlexCenter(column);
       align-items: center;
       justify-content: center;
@@ -117,13 +118,12 @@ $RightMargin: 128px;
         font-family: "Lexend";
 
         font-weight: 700;
-        line-height: 3rem;
-        width: 100%;
+        line-height: 1.8rem;
+        max-width: 72%;
 
-        margin-top: -2rem;
         margin-bottom: 4vh;
 
-        white-space: nowrap;
+        // white-space: nowrap;
       }
       p {
         color: $PureBlack;
@@ -259,7 +259,7 @@ $RightMargin: 128px;
         .Work_Button_Holder {
           width: 100% !important;
           justify-content: flex-end;
-          padding-right: 8%;
+          padding-right: 8px;
         }
       }
       .Work_Images {
@@ -305,6 +305,7 @@ $RightMargin: 128px;
           font-size: 0.76rem;
           font-weight: 500;
 
+          margin-top: 2px;
           margin-bottom: 2rem;
         }
 
