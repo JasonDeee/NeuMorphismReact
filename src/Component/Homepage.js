@@ -146,13 +146,13 @@ const HomepageFloat = (Props) => {
             <p>
               Đang tìm kiếm một người cho giải pháp visual của sản phẩm với đa
               dạng phương pháp tư duy và kinh nghiệm từ thiết kế tới tối ưu trải
-              nghiệm người dùng.
+              nghiệm người dùng trong phân khúc sản phẩm cao cấp.
             </p>
           ) : (
             <p>
-              Looking for a Generalist Visual Designer with a broad mindset
+              Seeking for a Generalist Visual Designer with a broad mindset
               ranging from multiple platform and experience from design to
-              optimize user journey.
+              optimize user's journey within high class products.
             </p>
           )}
 
@@ -185,7 +185,7 @@ const HomepageFloat = (Props) => {
           <div className="Work Top_Work" id="work1">
             <div className="Image_Container Lazy_Image Work_Images">
               <div className="Img_Scaler">
-                <img src="https://i.kym-cdn.com/entries/icons/original/000/037/158/thinkmarkthumbnail.PNG"></img>
+                <img src="https://i.imgur.com/T8qecxI.jpg"></img>
                 <label className="Img_CTA_Label">
                   {Props.IsVietnamese ? "Quy trình." : "My Workflow."}
                 </label>{" "}

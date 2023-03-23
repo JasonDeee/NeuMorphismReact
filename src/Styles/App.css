@@ -833,6 +833,7 @@ svg {
 
 .HomepageFloat #Header_Section .Header_Contents .Header_CTA_Button:hover .ButtonContainer label {
   margin-left: 0;
+  padding-right: 0;
 }
 
 .HomepageFloat #Header_Section .Header_Image {
