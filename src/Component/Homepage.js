@@ -185,7 +185,7 @@ const HomepageFloat = (Props) => {
           <div className="Work Top_Work" id="work1">
             <div className="Image_Container Lazy_Image Work_Images">
               <div className="Img_Scaler">
-                <img src="https://i.imgur.com/T8qecxI.jpg"></img>
+                <img src="https://i.imgur.com/hudo4U0.jpg"></img>
                 <label className="Img_CTA_Label">
                   {Props.IsVietnamese ? "Quy trình." : "My Workflow."}
                 </label>{" "}
