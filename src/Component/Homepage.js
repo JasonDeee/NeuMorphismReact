@@ -10,10 +10,7 @@ import {
 import Copy_Logo from "../Assets/Copy_Logo.svg";
 import WatchOut from "../Assets/WatchOut.gif";
 import Magnify from "../Assets/Magnify.svg";
-import Location from "../Assets/Location.svg";
-import ScrollDown from "../Assets/ScrollDown.svg";
-import ScrollDown2 from "../Assets/ScrollDown2.svg";
-import DownArrow from "../Assets/DownArrow.svg";
+
 import DownArrow2 from "../Assets/DownArrow2.svg";
 
 const HomepageFloat = (Props) => {
@@ -26,7 +23,55 @@ const HomepageFloat = (Props) => {
   const [PrevTes, setPrevTes] = useState(null);
 
   const [TesCurrentIndex, setTesCurIndex] = useState(0);
+
+  // Section Changer
+  // const [SectionChangerData, setDataChanger] = useState(
+  //   {
+  //     top: 0,
+  //     height: 0,
+  //     left: 0,
+  //     width: 0,
+  //   }
+  // )
+
   //  const TesCurrentIndex = useRef(0);
+
+  const ImgTransitors = [useRef(), useRef(), useRef()];
+  const HomePageItSelf = useRef();
+
+  // Get Info of the Img Transitor
+  const SetImgTransitor = (index) => {
+    HomePageItSelf.current.classList.add("HomepageHidden");
+
+    ImgTransitors[index].current.style.width =
+      ImgTransitors[index].current.getBoundingClientRect().width + "px";
+    ImgTransitors[index].current.style.height =
+      ImgTransitors[index].current.getBoundingClientRect().height + "px";
+
+    ImgTransitors[index].current.style.top =
+      ImgTransitors[index].current.getBoundingClientRect().top +
+      window.pageYOffset +
+      "px";
+
+    ImgTransitors[index].current.style.left =
+      ImgTransitors[index].current.getBoundingClientRect().left + "px";
+
+    ImgTransitors[index].current.style.position = "fixed";
+
+    let Delayer = window.setTimeout(() => {
+      ImgTransitors[index].current.classList.add("OnTransition");
+
+      ImgTransitors[index].current.style.top = window.pageYOffset + "px";
+
+      ImgTransitors[index].current.style.left = 0;
+
+      // Props.ScrollToTop();
+
+      window.clearTimeout(Delayer);
+      Delayer = null;
+    }, 120);
+  };
+
   // This Funct Trigger After the Entire Homepage is Mounted
   const HomePageFuncAfterLoad = () => {
     //
@@ -117,7 +162,7 @@ const HomepageFloat = (Props) => {
   useEffect(HomePageFuncAfterLoad, []);
 
   return (
-    <main className="HomepageFloat">
+    <main className="HomepageFloat" ref={HomePageItSelf}>
       <header className="Section" id="Header_Section">
         <div className="Header_BG_Overlay Overlay"></div>{" "}
         <div className="Header_Image">
@@ -183,7 +228,13 @@ const HomepageFloat = (Props) => {
         <h1>Nổi bật</h1>
         <div className="Work_Contents Column_Grid">
           <div className="Work Top_Work" id="work1">
-            <div className="Image_Container Lazy_Image Work_Images">
+            <div
+              className="Image_Container Lazy_Image Work_Images"
+              ref={ImgTransitors[0]}
+              onClick={() => {
+                SetImgTransitor(0);
+              }}
+            >
               <div className="Img_Scaler">
                 <img src="https://i.imgur.com/hudo4U0.jpg"></img>
                 <label className="Img_CTA_Label">
@@ -208,6 +259,9 @@ const HomepageFloat = (Props) => {
               </p>
               <div className="Work_Button_Holder">
                 <ButtonFull
+                  OnClickFunc={() => {
+                    SetImgTransitor(0);
+                  }}
                   IconURL={Magnify}
                   Label={Props.IsVietnamese ? "Quy trình." : "My Workflow."}
                 ></ButtonFull>
@@ -215,7 +269,13 @@ const HomepageFloat = (Props) => {
             </div>
           </div>
           <div className="Work" id="work2">
-            <div className="Image_Container Lazy_Image Work_Images">
+            <div
+              className="Image_Container Lazy_Image Work_Images"
+              ref={ImgTransitors[1]}
+              onClick={() => {
+                SetImgTransitor(1);
+              }}
+            >
               <div className="Img_Scaler">
                 <img src="https://i.kym-cdn.com/entries/icons/original/000/037/158/thinkmarkthumbnail.PNG"></img>
                 <label className="Img_CTA_Label">
@@ -237,6 +297,9 @@ const HomepageFloat = (Props) => {
               </p>
               <div className="Work_Button_Holder">
                 <ButtonFull
+                  OnClickFunc={() => {
+                    SetImgTransitor(1);
+                  }}
                   IconURL={Magnify}
                   Label={Props.IsVietnamese ? "Quy trình." : "My Workflow."}
                 ></ButtonFull>
@@ -244,7 +307,13 @@ const HomepageFloat = (Props) => {
             </div>
           </div>
           <div className="Work" id="work3">
-            <div className="Image_Container Lazy_Image Work_Images">
+            <div
+              className="Image_Container Lazy_Image Work_Images"
+              ref={ImgTransitors[2]}
+              onClick={() => {
+                SetImgTransitor(2);
+              }}
+            >
               <div className="Img_Scaler">
                 <img src="https://i.kym-cdn.com/entries/icons/original/000/037/158/thinkmarkthumbnail.PNG"></img>
                 <label className="Img_CTA_Label">
@@ -266,6 +335,9 @@ const HomepageFloat = (Props) => {
               </p>
               <div className="Work_Button_Holder">
                 <ButtonFull
+                  OnClickFunc={() => {
+                    SetImgTransitor(2);
+                  }}
                   IconURL={Magnify}
                   Label={Props.IsVietnamese ? "Quy trình." : "My Workflow."}
                 ></ButtonFull>
@@ -510,12 +582,28 @@ const HomepageFloat = (Props) => {
 
 const HomePageFixed = () => {
   //
+
+  // const Work_Images = document.querySelectorAll(".Work_Images");
+  // const Work_ImageTag = document.querySelectorAll(".Work_Images img");
+
+  //  const Image_Transitor_UpdateHeight = () => {
+  //   //
+
+  // console.log(ImgTransitors[index].current);
+  //  };
+
+  const HomePageFixedEffect = () => {
+    //
+    // Image_Transitor_UpdateHeight();
+  };
+
+  useEffect(HomePageFixedEffect, []);
+
   return (
     <main className="HomePageFixed">
-      <section className="Section" id="Sec1Fixed"></section>
-      <section className="Section" id="Sec2Fixed"></section>
-      <section className="Section" id="Sec3Fixed"></section>
-      <section className="Section" id="Sec4Fixed"></section>
+      {/* <div className="Image_Transitor">
+        <img src="https://i.imgur.com/hudo4U0.jpg"></img>
+      </div> */}
     </main>
   );
 };

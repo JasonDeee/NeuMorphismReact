@@ -165,7 +165,10 @@ function App() {
                 exact
                 path="/"
                 element={
-                  <HomepageFloat IsVietnamese={IsVietnamese}></HomepageFloat>
+                  <HomepageFloat
+                    IsVietnamese={IsVietnamese}
+                    ScrollToTop={ScrollToTop}
+                  ></HomepageFloat>
                 }
               />
             </Switch>{" "}

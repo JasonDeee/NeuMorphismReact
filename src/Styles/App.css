@@ -977,6 +977,30 @@ svg {
   -ms-grid-column: 1 !important;
   -ms-grid-column-span: 7 !important;
   grid-column: 1/8 !important;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.HomepageFloat #Works_Showreel_Section .Work_Contents .OnTransition {
+  width: 50vw !important;
+  height: 100vh !important;
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  z-index: 99;
+}
+
+.HomepageFloat #Works_Showreel_Section .Work_Contents .OnTransition label {
+  opacity: 0 !important;
+}
+
+.HomepageFloat #Works_Showreel_Section .Work_Contents .OnTransition img {
+  -webkit-transform: scale(1) !important;
+          transform: scale(1) !important;
+}
+
+.HomepageFloat #Works_Showreel_Section .Work_Contents .OnTransition .Img_Scaler {
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%) !important;
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%) !important;
 }
 
 .HomepageFloat #Works_Showreel_Section .Work_Contents .Top_Work {
@@ -1950,5 +1974,10 @@ svg {
   #Form_Section .Email_Contact {
     padding-left: 96px;
   }
+}
+
+.HomepageHidden *:not([id="NotHidden"]) {
+  /* your styles here */
+  opacity: 0 !important;
 }
 /*# sourceMappingURL=App.css.map */
