@@ -6,6 +6,7 @@ import {
   SliderIndex,
   ButtonTextOnly,
 } from "./Buttons";
+import TheCatWatching from "./TheCatWatching";
 
 import Copy_Logo from "../Assets/Copy_Logo.svg";
 import WatchOut from "../Assets/WatchOut.gif";
@@ -41,7 +42,7 @@ const HomepageFloat = (Props) => {
 
   // Get Info of the Img Transitor
   const SetImgTransitor = (index) => {
-    HomePageItSelf.current.classList.add("HomepageHidden");
+    // HomePageItSelf.current.classList.add("HomepageHidden");
 
     ImgTransitors[index].current.style.width =
       ImgTransitors[index].current.getBoundingClientRect().width + "px";
@@ -165,8 +166,8 @@ const HomepageFloat = (Props) => {
     <main className="HomepageFloat" ref={HomePageItSelf}>
       <header className="Section" id="Header_Section">
         <div className="Header_BG_Overlay Overlay"></div>{" "}
-        <div className="Header_Image">
-          <img src={WatchOut}></img>
+        <div className="Header_Image TheWatchingCat">
+          <TheCatWatching></TheCatWatching>
           <p>
             {Props.IsVietnamese
               ? `"Luôn có những người tỏ ra khắt khe với tôi, nhưng họ luôn quan sát và là những người đầu tiên mỉm cười khi tôi đi đúng hướng"`

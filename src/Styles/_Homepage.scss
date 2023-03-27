@@ -181,8 +181,6 @@ $RightMargin: 128px;
         width: 80%;
         height: 80%;
 
-        transform: translate(-5%, 0);
-
         filter: drop-shadow(12px 12px 32px $LightShadow);
       }
     }
@@ -1129,9 +1127,9 @@ $RightMargin: 128px;
   }
 }
 
-.HomepageHidden {
-  *:not([id="NotHidden"]) {
-    /* your styles here */
-    opacity: 0 !important;
-  }
-}
+// .HomepageHidden {
+//   *:not([id="NotHidden"]) {
+//     /* your styles here */
+//     opacity: 0 !important;
+//   }
+// }

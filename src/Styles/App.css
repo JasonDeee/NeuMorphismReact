@@ -47,6 +47,228 @@ svg {
   background: linear-gradient(62deg, #151515 0%, #353535 100%);
 }
 
+@-webkit-keyframes HandSwitcher1 {
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  34% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes HandSwitcher1 {
+  0% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+  }
+  34% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes HandSwitcher2 {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 0;
+  }
+  34% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 1;
+  }
+  67% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes HandSwitcher2 {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 0;
+  }
+  34% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 1;
+  }
+  67% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes HandSwitcher3 {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  67% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes HandSwitcher3 {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  67% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.TheWatchingCat .WatchingCat-1,
+.TheWatchingCat .WatchingCat-2 {
+  fill: #fff;
+}
+
+.TheWatchingCat .WatchingCat-3,
+.TheWatchingCat .WatchingCat-4,
+.TheWatchingCat .WatchingCat-2,
+.TheWatchingCat .WatchingCat-5,
+.TheWatchingCat .WatchingCat-6,
+.TheWatchingCat .WatchingCat-7 {
+  stroke: #292929;
+}
+
+.TheWatchingCat .WatchingCat-3,
+.TheWatchingCat .WatchingCat-4,
+.TheWatchingCat .WatchingCat-2,
+.TheWatchingCat .WatchingCat-5,
+.TheWatchingCat .WatchingCat-7 {
+  stroke-width: 10px;
+}
+
+.TheWatchingCat .WatchingCat-3,
+.TheWatchingCat .WatchingCat-8,
+.TheWatchingCat .WatchingCat-6 {
+  fill: none;
+}
+
+.TheWatchingCat .WatchingCat-3,
+.TheWatchingCat .WatchingCat-2,
+.TheWatchingCat .WatchingCat-5,
+.TheWatchingCat .WatchingCat-6,
+.TheWatchingCat .WatchingCat-7 {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.TheWatchingCat .WatchingCat-4 {
+  stroke-miterlimit: 10;
+}
+
+.TheWatchingCat .WatchingCat-4,
+.TheWatchingCat .WatchingCat-5 {
+  fill: #4d4d4d;
+}
+
+.TheWatchingCat .WatchingCat-9 {
+  -webkit-clip-path: url(#clippath-2);
+          clip-path: url(#clippath-2);
+}
+
+.TheWatchingCat .WatchingCat-10 {
+  -webkit-clip-path: url(#clippath-1);
+          clip-path: url(#clippath-1);
+}
+
+.TheWatchingCat .WatchingCat-11 {
+  fill: #f2ae66;
+}
+
+.TheWatchingCat .WatchingCat-12 {
+  fill: url(#radial-gradient);
+}
+
+.TheWatchingCat .WatchingCat-13 {
+  -webkit-clip-path: url(#clippath);
+          clip-path: url(#clippath);
+}
+
+.TheWatchingCat .WatchingCat-14 {
+  fill: url(#radial-gradient-2);
+}
+
+.TheWatchingCat .WatchingCat-15 {
+  -webkit-clip-path: url(#clippath-3);
+          clip-path: url(#clippath-3);
+}
+
+.TheWatchingCat .WatchingCat-16 {
+  fill: #292929;
+}
+
+.TheWatchingCat .WatchingCat-6 {
+  stroke-width: 6px;
+}
+
+.TheWatchingCat .WatchingCat-7 {
+  fill: #87ddf1;
+}
+
+.TheWatchingCat .WatchingCat-17 {
+  fill: #76564a;
+}
+
+.TheWatchingCat #Hands g {
+  -webkit-transition: none;
+  transition: none;
+}
+
+.TheWatchingCat #Hands #The_HAND_Point1 {
+  -webkit-animation: HandSwitcher1 3s linear infinite forwards;
+          animation: HandSwitcher1 3s linear infinite forwards;
+}
+
+.TheWatchingCat #Hands #The_HAND_Point2 {
+  -webkit-animation: HandSwitcher2 3s linear infinite forwards;
+          animation: HandSwitcher2 3s linear infinite forwards;
+}
+
+.TheWatchingCat #Hands #The_HAND_Point3 {
+  -webkit-animation: HandSwitcher3 3s linear infinite forwards;
+          animation: HandSwitcher3 3s linear infinite forwards;
+}
+
+.TheWatchingCat #Happy {
+  -webkit-transition: none;
+  transition: none;
+  opacity: 0;
+}
+
 .Image_Container {
   cursor: pointer;
 }
@@ -864,8 +1086,6 @@ svg {
      object-fit: contain;
   width: 80%;
   height: 80%;
-  -webkit-transform: translate(-5%, 0);
-          transform: translate(-5%, 0);
   -webkit-filter: drop-shadow(12px 12px 32px #00000096);
           filter: drop-shadow(12px 12px 32px #00000096);
 }
@@ -1974,10 +2194,5 @@ svg {
   #Form_Section .Email_Contact {
     padding-left: 96px;
   }
-}
-
-.HomepageHidden *:not([id="NotHidden"]) {
-  /* your styles here */
-  opacity: 0 !important;
 }
 /*# sourceMappingURL=App.css.map */
