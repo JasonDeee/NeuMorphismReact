@@ -25,6 +25,9 @@ const HomepageFloat = (Props) => {
 
   const [TesCurrentIndex, setTesCurIndex] = useState(0);
 
+  const HeaderSection = useRef();
+  const HeaderSectionOverlay = useRef();
+
   // Section Changer
   // const [SectionChangerData, setDataChanger] = useState(
   //   {
@@ -164,10 +167,16 @@ const HomepageFloat = (Props) => {
 
   return (
     <main className="HomepageFloat" ref={HomePageItSelf}>
-      <header className="Section" id="Header_Section">
-        <div className="Header_BG_Overlay Overlay"></div>{" "}
+      <header className="Section" id="Header_Section" ref={HeaderSection}>
+        <div
+          className="Header_BG_Overlay Overlay"
+          ref={HeaderSectionOverlay}
+        ></div>{" "}
         <div className="Header_Image TheWatchingCat">
-          <TheCatWatching></TheCatWatching>
+          <TheCatWatching
+            HoverIdentifier={HeaderSection}
+            BoundingRect={HeaderSectionOverlay}
+          ></TheCatWatching>
           <p>
             {Props.IsVietnamese
               ? `"Luôn có những người tỏ ra khắt khe với tôi, nhưng họ luôn quan sát và là những người đầu tiên mỉm cười khi tôi đi đúng hướng"`

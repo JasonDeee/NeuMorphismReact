@@ -1,9 +1,42 @@
 import { useEffect, useState, useRef } from "react";
 
-const TheCatWatching = () => {
+const TheCatWatching = (Props) => {
+  const EyeL_Neural = useRef();
+  const EyeR_Neural = useRef();
+  const EyeL_Happy = useRef();
+  const EyeR_Happy = useRef();
+
   const TheCatEffect = () => {
     //
     // const CatWatchingHands = document.querySelectorAll("#Hands g");
+
+    const EyeTrackerFunct = (e) => {
+      //
+
+      let x =
+          (Props.BoundingRect.current.getBoundingClientRect().width / 2 +
+            Props.BoundingRect.current.getBoundingClientRect().left -
+            Math.abs(e.pageX)) /
+          (Props.BoundingRect.current.getBoundingClientRect().width / 2),
+        y =
+          (EyeR_Neural.current.getBoundingClientRect().height / 2 +
+            EyeR_Neural.current.getBoundingClientRect().top -
+            Math.abs(e.pageY)) /
+          (EyeR_Neural.current.getBoundingClientRect().height / 2 +
+            EyeR_Neural.current.getBoundingClientRect().top);
+
+      EyeL_Neural.current.style.transform = `translate(${-x * 5}%, ${-y * 2}%)`;
+
+      EyeR_Neural.current.style.transform = `translate(${-x * 5}%, ${-y * 2}%)`;
+      console.log(y);
+
+      //
+    };
+
+    Props.HoverIdentifier.current.addEventListener(
+      "mousemove",
+      EyeTrackerFunct
+    );
   };
 
   useEffect(TheCatEffect, []);
@@ -320,6 +353,7 @@ const TheCatWatching = () => {
                 cx="885.5"
                 cy="574.35"
                 r="39"
+                ref={EyeL_Neural}
               />
             </g>
             <path
@@ -353,6 +387,7 @@ const TheCatWatching = () => {
                 cx="572"
                 cy="572"
                 r="39"
+                ref={EyeR_Neural}
               />
             </g>
             <path
@@ -400,6 +435,7 @@ const TheCatWatching = () => {
                   cx="885.5"
                   cy="574.35"
                   r="39"
+                  ref={EyeL_Happy}
                 />
               </g>
               <path
@@ -441,6 +477,7 @@ const TheCatWatching = () => {
                   cx="584"
                   cy="577"
                   r="39"
+                  ref={EyeR_Happy}
                 />
               </g>
               <path
