@@ -57,6 +57,51 @@
   }
 }
 
+@keyframes Left_BeardWinging {
+  0% {
+    transform: rotate(0);
+  }
+
+  5% {
+    transform: rotate(-18deg);
+  }
+  10% {
+    transform: rotate(10deg);
+  }
+  12% {
+    transform: rotate(-4deg);
+  }
+  11% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes Right_BeardWinging {
+  0% {
+    transform: rotate(0);
+  }
+
+  5% {
+    transform: rotate(18deg);
+  }
+  10% {
+    transform: rotate(-10deg);
+  }
+
+  12% {
+    transform: rotate(4deg);
+  }
+  11% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
 .TheWatchingCat {
   .WatchingCat-1,
   .WatchingCat-2 {
@@ -171,5 +216,36 @@
   #Happy {
     transition: none;
     opacity: 0;
+  }
+
+  #Beard_L {
+    g {
+      transition: $SmoothBezier;
+      transform-origin: left top;
+
+      animation: Left_BeardWinging 4s cubic-bezier(0.5, 0, 0.25, 1.25) infinite,
+        Left_BeardWinging 5s 2s cubic-bezier(0.5, 0, 0.25, 1.25) infinite;
+
+      transform-box: fill-box;
+    }
+  }
+  #Beard_R {
+    g {
+      transition: $SmoothBezier;
+      transform-origin: right top;
+
+      animation: Right_BeardWinging 4s cubic-bezier(0.5, 0, 0.25, 1.25) infinite,
+        Right_BeardWinging 5s 2s cubic-bezier(0.5, 0, 0.25, 1.25) infinite;
+
+      transform-box: fill-box;
+    }
+  }
+  #FACE_BG,
+  #EyeBall_L,
+  #EyeBall_R,
+  #EyeBall_L-2,
+  #EyeBall_L-3 {
+    transform-origin: center center;
+    transition: all 0.11s ease-out;
   }
 }

@@ -6,6 +6,9 @@ const TheCatWatching = (Props) => {
   const EyeL_Happy = useRef();
   const EyeR_Happy = useRef();
 
+  //
+  const FACE_BG = useRef();
+
   const TheCatEffect = () => {
     //
     // const CatWatchingHands = document.querySelectorAll("#Hands g");
@@ -27,16 +30,33 @@ const TheCatWatching = (Props) => {
 
       EyeL_Neural.current.style.transform = `translate(${-x * 5}%, ${-y * 2}%)`;
 
+      FACE_BG.current.style.transform = `scaleX(${1 - Math.abs(x / 42)})`;
+
       EyeR_Neural.current.style.transform = `translate(${-x * 5}%, ${-y * 2}%)`;
       console.log(y);
 
       //
     };
 
+    const EyeTrackerReturnToRest = () => {
+      //
+      EyeL_Neural.current.style = ``;
+
+      EyeR_Neural.current.style = ``;
+      FACE_BG.current.style = ``;
+    };
+
     Props.HoverIdentifier.current.addEventListener(
       "mousemove",
       EyeTrackerFunct
     );
+
+    Props.HoverIdentifier.current.addEventListener(
+      "mouseout",
+      EyeTrackerReturnToRest
+    );
+
+    window.addEventListener("blur", EyeTrackerReturnToRest);
   };
 
   useEffect(TheCatEffect, []);
@@ -186,7 +206,7 @@ const TheCatWatching = (Props) => {
             d="M708.5,324.01l395-104.66s14.93,78.43,0,168c-13,78-66.79,241-374,241-209,0-331,0-402-185-42.4-110.47-14-196-14-196l395,76.66Z"
           />
         </g>
-        <g id="FACE_BG" data-name="FACE BG">
+        <g id="FACE_BG" data-name="FACE BG" ref={FACE_BG}>
           <rect
             id="HEAD_Margin"
             data-name="HEAD Margin"

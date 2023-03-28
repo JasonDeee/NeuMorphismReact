@@ -149,6 +149,114 @@ svg {
   }
 }
 
+@-webkit-keyframes Left_BeardWinging {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  5% {
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg);
+  }
+  10% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  12% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  11% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes Left_BeardWinging {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  5% {
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg);
+  }
+  10% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  12% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  11% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@-webkit-keyframes Right_BeardWinging {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  5% {
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg);
+  }
+  10% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  12% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+  }
+  11% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes Right_BeardWinging {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  5% {
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg);
+  }
+  10% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  12% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+  }
+  11% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
 .TheWatchingCat .WatchingCat-1,
 .TheWatchingCat .WatchingCat-2 {
   fill: #fff;
@@ -267,6 +375,37 @@ svg {
   -webkit-transition: none;
   transition: none;
   opacity: 0;
+}
+
+.TheWatchingCat #Beard_L g {
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-animation: Left_BeardWinging 4s cubic-bezier(0.5, 0, 0.25, 1.25) infinite, Left_BeardWinging 5s 2s cubic-bezier(0.5, 0, 0.25, 1.25) infinite;
+          animation: Left_BeardWinging 4s cubic-bezier(0.5, 0, 0.25, 1.25) infinite, Left_BeardWinging 5s 2s cubic-bezier(0.5, 0, 0.25, 1.25) infinite;
+  transform-box: fill-box;
+}
+
+.TheWatchingCat #Beard_R g {
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+  -webkit-animation: Right_BeardWinging 4s cubic-bezier(0.5, 0, 0.25, 1.25) infinite, Right_BeardWinging 5s 2s cubic-bezier(0.5, 0, 0.25, 1.25) infinite;
+          animation: Right_BeardWinging 4s cubic-bezier(0.5, 0, 0.25, 1.25) infinite, Right_BeardWinging 5s 2s cubic-bezier(0.5, 0, 0.25, 1.25) infinite;
+  transform-box: fill-box;
+}
+
+.TheWatchingCat #FACE_BG,
+.TheWatchingCat #EyeBall_L,
+.TheWatchingCat #EyeBall_R,
+.TheWatchingCat #EyeBall_L-2,
+.TheWatchingCat #EyeBall_L-3 {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transition: all 0.11s ease-out;
+  transition: all 0.11s ease-out;
 }
 
 .Image_Container {
