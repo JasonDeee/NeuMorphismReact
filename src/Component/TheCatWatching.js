@@ -29,12 +29,12 @@ const TheCatWatching = (Props) => {
             EyeR_Neural.current.getBoundingClientRect().top);
 
       EyeL_Neural.current.style.transform = `translate(${-x * 5}%, ${-y * 2}%)`;
+      EyeL_Happy.current.style.transform = `translate(${-x * 5}%, ${-y * 2}%)`;
 
       FACE_BG.current.style.transform = `scaleX(${1 - Math.abs(x / 42)})`;
 
       EyeR_Neural.current.style.transform = `translate(${-x * 5}%, ${-y * 2}%)`;
-      console.log(y);
-
+      EyeR_Happy.current.style.transform = `translate(${-x * 5}%, ${-y * 2}%)`;
       //
     };
 
@@ -508,12 +508,6 @@ const TheCatWatching = (Props) => {
               />
             </g>
           </g>
-          <path
-            id="Mouth-2"
-            data-name="Mouth"
-            className="WatchingCat-3"
-            d="M782,755s-9,34-41,7c-27,26-41,0-41,0"
-          />
         </g>
         <g id="EyeBrow">
           <g id="Neural-2" data-name="Neural">
@@ -527,7 +521,7 @@ const TheCatWatching = (Props) => {
               id="EyeBow_L"
               data-name="EyeBow L"
               className="WatchingCat-6"
-              d="M799,555s-9.94,8.05-17,16c-8,9-13,15-13,15"
+              d="M804,553s-7.49,4.49-19,16c-6,6-10,17-10,17"
             />
           </g>
         </g>

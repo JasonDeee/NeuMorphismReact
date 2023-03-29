@@ -211,6 +211,9 @@
         <path id="EyeBow_R-2" data-name="EyeBow R" className="WatchingCat-6"
           d="M662,555s-2.41-13.23-20-23c-18-10-43-3-43-3" />
         <path id="EyeBow_L-2" data-name="EyeBow L" className="WatchingCat-6" d="M850,527s-16-7-34,4-20,18-20,18" />
+        <path id="EyeBow_L-2" data-name="EyeBow L" class="cls-1" d="M57,3.7S38.41,.52,23,7.7,3,25.7,3,25.7" />
+
+
       </g>
     </g>
   </g>

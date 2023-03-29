@@ -248,4 +248,66 @@
     transform-origin: center center;
     transition: all 0.11s ease-out;
   }
+  #Mouth,
+  #EyeBow_R,
+  #EyeBow_L,
+  #EarMask_Neural,
+  #Ear_Line-2,
+  #Ear_Color-2,
+  #Ear_Color,
+  #Ear_Line,
+  #Ear_BG_line {
+    transition: all 0.66s cubic-bezier(0.25, 0, 0, 1);
+  }
+}
+
+.HappyCat_Active {
+  #Happy {
+    opacity: 1 !important;
+    display: unset !important;
+  }
+
+  #Neural g {
+    display: none !important;
+  }
+
+  #Mouth {
+    d: path("M782,755s-9,34-41,7c-27,26-41,0-41,0");
+  }
+  #EyeBow_R {
+    d: path("M662,555s-2.41-13.23-20-23c-18-10-43-3-43-3");
+  }
+  #EyeBow_L {
+    d: path("M877,523s-25-7-43,3c-17.59,9.77-20,23-20,23");
+  }
+
+  #EarMask_Neural {
+    d: path(
+      "M291.5,345.35l293.35-45.34s61.65-32.16,139.15-32.16,122.76,19.5,122.76,19.5l259.74,38"
+    );
+  }
+
+  #Ear_Line-2 {
+    d: path("M292,345s64-7,128,25c29,18,77,23,111.02,10.35");
+  }
+
+  #Ear_Color-2 {
+    d: path(
+      "M459,384c-137-57-167.5-38.65-167.5-38.65l293-45s-68.5,100.65-125.5,83.65Z"
+    );
+  }
+
+  #Ear_Color {
+    d: path("M986,364c86-35,100-39,100-39l-266-38s16,132,166,77Z");
+  }
+
+  #Ear_Line {
+    d: path("M1101,326s-39-5-90,28c-72.54,37-121.64,6.51-121.64,6.51");
+  }
+
+  #Ear_BG_line {
+    d: path(
+      "M708.5,324.01l398,1.34s-27.5,6.65-27.5,81.65c0,91-42.29,221.35-349.5,221.35-209,0-349.5-61.35-377.5-185.35-22-81-60.5-97.65-60.5-97.65l417-21.34Z"
+    );
+  }
 }

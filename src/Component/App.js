@@ -39,7 +39,7 @@ function App() {
   }
 
   if (isMobile) {
-    Type.current = "Mobile";
+    Type.current = "App Mobile";
   }
   // Init Constances
   const clamp = (num, min, max) => {

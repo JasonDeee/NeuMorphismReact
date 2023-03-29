@@ -769,7 +769,9 @@ $RightMargin: 128px;
       }
 
       small {
-        font-size: 0.86vw;
+        // font-size: max(0.86vw, 1rem);
+        font-size: calc(min(0.86vw, 1rem));
+        //  font-size: 0.86vw;
       }
     }
 

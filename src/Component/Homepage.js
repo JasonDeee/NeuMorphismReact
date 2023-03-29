@@ -27,6 +27,15 @@ const HomepageFloat = (Props) => {
 
   const HeaderSection = useRef();
   const HeaderSectionOverlay = useRef();
+  const Header_CTA_Button = useRef();
+
+  const HappyCatActive = () => {
+    HeaderSection.current.classList.add("HappyCat_Active");
+  };
+
+  const HappyCatDeactive = () => {
+    HeaderSection.current.classList.remove("HappyCat_Active");
+  };
 
   // Section Changer
   // const [SectionChangerData, setDataChanger] = useState(
@@ -108,6 +117,11 @@ const HomepageFloat = (Props) => {
 
     // // Init Current State
     var Tes_Slide_Index = 0;
+
+    Header_CTA_Button.current.addEventListener("mouseenter", HappyCatActive);
+    Header_CTA_Button.current.addEventListener("mouseleave", HappyCatDeactive);
+
+    window.addEventListener("blur", HappyCatDeactive);
 
     //
     setNextTes(() => {
@@ -211,7 +225,7 @@ const HomepageFloat = (Props) => {
             </p>
           )}
 
-          <div className="Header_CTA_Button">
+          <div className="Header_CTA_Button" ref={Header_CTA_Button}>
             <div className="Header_Button_Add_Overlay"></div>
             <ButtonFull
               OnClickFunc={() => {
