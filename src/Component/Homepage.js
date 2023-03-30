@@ -273,13 +273,11 @@ const HomepageFloat = (Props) => {
                 <br></br>- Gia chủ đón xuân sang
               </span>
               <p>
-                Là một Marketer với 5 năm kinh nghiệm ở nhiều “chiến tuyến” như
-                In-house team, Agency, Production House và Freelancer, tôi cảm
-                thấy may mắn vì trong 5 năm đó được trải nghiệm công việc
-                Marketing ở nhiều ngành hàng: từ quen thuộc như các ngành Hàng
-                tiêu dùng (Kem đánh răng, Sữa tắm, Nước tăng lực…) cho tới những
-                ngành “ngách” hơn như Vận tải hành khách, Công nghệ, Nội thất
-                cao cấp…
+                Từng được Đài truyền hình và nhiều Kênh truyền thông đưa tin,
+                Nội thất Kenli Trở thành đơn vị phân phối sofa nhập khẩu dẫn đầu
+                thị trường cuối năm 2022. Mang tới dịp đầu năm 2023 là những lựa
+                chọn tuyệt vời cho tổ ấm và là Tuyệt tác thể hiện trọn vẹn vẻ
+                đẹp không gian và cá tính gia chủ.
               </p>
               <div className="Work_Button_Holder">
                 <ButtonFull
