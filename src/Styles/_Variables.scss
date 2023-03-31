@@ -33,6 +33,9 @@ $LeftMargin: 64px;
 $RightMargin: 128px;
 $Gutter: 48px;
 
+$MobileMarginLeft: 16px;
+$MobileMarginRight: 16px;
+
 @media screen and (max-width: 960px) {
   $Gutter: 32px;
   $LeftMargin: 32px;

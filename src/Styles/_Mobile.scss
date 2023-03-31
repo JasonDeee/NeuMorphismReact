@@ -1,0 +1,70 @@
+@import "./Variables";
+@mixin FlexCenter($direction) {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: $direction;
+}
+
+.Header_Logo {
+  top: 0;
+  left: $MobileMarginLeft;
+  margin: unset;
+  width: 78px;
+  height: 56px;
+}
+
+.Language_Switch {
+  height: 56px;
+  top: 0;
+  right: $MobileMarginRight;
+  justify-content: flex-end;
+}
+
+.Stylized_Scroll_Bar {
+  width: 96px;
+
+  top: unset;
+  height: 50vh;
+  bottom: 0;
+
+  .ScrollBar_Track,
+  .ScrollBar_Thumb {
+    display: none;
+  }
+}
+
+.HomepageFloat {
+  #Header_Section {
+    width: 100vw;
+    padding-left: $MobileMarginLeft;
+    padding-right: $MobileMarginRight;
+
+    position: relative;
+
+    .Header_BG_Overlay {
+      // width: 100%;
+      height: 100%;
+      left: $MobileMarginLeft;
+      right: $MobileMarginRight;
+      top: 56px;
+      bottom: unset;
+    }
+
+    .Header_CTA_Button {
+      margin-top: 0;
+    }
+
+    .Header_Image {
+      margin-bottom: 0;
+    }
+    .Header_Contents {
+      padding: 0;
+      max-width: 78%;
+      height: auto;
+      h1 {
+        width: 100%;
+      }
+    }
+  }
+}

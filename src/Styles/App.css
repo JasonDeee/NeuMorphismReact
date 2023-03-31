@@ -1,3 +1,10 @@
+.TestTilt {
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  background: brown;
+}
+
 body {
   width: 100vw;
   overflow: hidden;
@@ -2391,5 +2398,67 @@ svg {
   #Form_Section .Email_Contact {
     padding-left: 96px;
   }
+}
+
+.Mobile .Header_Logo {
+  top: 0;
+  left: 16px;
+  margin: unset;
+  width: 78px;
+  height: 56px;
+}
+
+.Mobile .Language_Switch {
+  height: 56px;
+  top: 0;
+  right: 16px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.Mobile .Stylized_Scroll_Bar {
+  width: 96px;
+  top: unset;
+  height: 50vh;
+  bottom: 0;
+}
+
+.Mobile .Stylized_Scroll_Bar .ScrollBar_Track,
+.Mobile .Stylized_Scroll_Bar .ScrollBar_Thumb {
+  display: none;
+}
+
+.Mobile .HomepageFloat #Header_Section {
+  width: 100vw;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+}
+
+.Mobile .HomepageFloat #Header_Section .Header_BG_Overlay {
+  height: 100%;
+  left: 16px;
+  right: 16px;
+  top: 56px;
+  bottom: unset;
+}
+
+.Mobile .HomepageFloat #Header_Section .Header_CTA_Button {
+  margin-top: 0;
+}
+
+.Mobile .HomepageFloat #Header_Section .Header_Image {
+  margin-bottom: 0;
+}
+
+.Mobile .HomepageFloat #Header_Section .Header_Contents {
+  padding: 0;
+  max-width: 78%;
+  height: auto;
+}
+
+.Mobile .HomepageFloat #Header_Section .Header_Contents h1 {
+  width: 100%;
 }
 /*# sourceMappingURL=App.css.map */

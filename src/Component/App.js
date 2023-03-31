@@ -26,6 +26,8 @@ function App() {
   const FloaterClass = useRef("Float");
   const Type = useRef("App");
 
+  const TiltTest = useRef();
+
   var ScrollBar_Thumb_IsHolded = false,
     ScrollBar_Track_Top = (window.innerHeight * 31) / 100 + 12,
     ScrollBar_Track_height = (window.innerHeight * 38) / 100 - 24;
@@ -34,7 +36,8 @@ function App() {
     //
     window.scrollTo(0, 0);
   };
-  if (!isEdge) {
+
+  if (!isEdge && !isMobile) {
     FloaterClass.current = "Float_Active";
   }
 
@@ -49,6 +52,8 @@ function App() {
   //
 
   const EffectInit = () => {
+    // Local Host Config
+
     // Constances
     // Update The Scroll Height
     const body = document.body;
@@ -142,22 +147,45 @@ function App() {
     ScrollUpdate();
     ScrollToTop();
 
-    const ScrollFunc = () => {
-      main.style.transform = `translateY(-${window.pageYOffset}px)`;
+    if (!isMobile) {
+      const ScrollFunc = () => {
+        main.style.transform = `translateY(-${window.pageYOffset}px)`;
 
-      //
-      ScrollBar_Thumb.style.transform = `translateY(calc(${
-        window.pageYOffset / (main.clientHeight - window.innerHeight)
-      } * (38vh - 24px)))`;
-    };
-    window.addEventListener("scroll", ScrollFunc);
+        //
+        ScrollBar_Thumb.style.transform = `translateY(calc(${
+          window.pageYOffset / (main.clientHeight - window.innerHeight)
+        } * (38vh - 24px)))`;
+      };
+      window.addEventListener("scroll", ScrollFunc);
+    }
+
+    if (window.DeviceOrientationEvent) {
+      window.addEventListener(
+        "deviceorientation",
+        function (event) {
+          // Handle orientation event
+          var alpha = Math.floor(event.alpha * 100) / 100;
+          var beta = Math.floor(event.beta * 100) / 100;
+          var gamma = Math.floor(event.gamma * 100) / 100;
+          // Do something with the values
+          TiltTest.current.textContent = `Okay: ${alpha} + ${beta} + ${gamma} `;
+        },
+        false
+      );
+    } else {
+      TiltTest.current.textContent = "Device orientation not supported";
+    }
   };
 
   useEffect(EffectInit, []);
   return (
     <Router basename="" hashType="slash">
       <Fragment>
-        <div className={Type}>
+        {" "}
+        <p className="TestTilt" ref={TiltTest}>
+          Its Here
+        </p>
+        <div className={Type.current}>
           <div className="ScrollBar_Observer"></div>
           <div className={FloaterClass.current + " main"}>
             <Switch>
