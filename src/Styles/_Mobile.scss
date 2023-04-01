@@ -6,6 +6,10 @@
   flex-direction: $direction;
 }
 
+h1 {
+  font-size: 1.6rem;
+}
+
 .Header_Logo {
   top: 0;
   left: $MobileMarginLeft;
@@ -26,7 +30,7 @@
 
   top: unset;
   height: 50vh;
-  bottom: 0;
+  bottom: 32px;
 
   .ScrollBar_Track,
   .ScrollBar_Thumb {
@@ -39,6 +43,9 @@
     width: 100vw;
     padding-left: $MobileMarginLeft;
     padding-right: $MobileMarginRight;
+
+    justify-content: flex-start;
+    padding-top: 86px;
 
     position: relative;
 
@@ -56,14 +63,18 @@
     }
 
     .Header_Image {
-      margin-bottom: 0;
+      margin-bottom: 5vh;
     }
     .Header_Contents {
       padding: 0;
-      max-width: 78%;
+      max-width: unset;
       height: auto;
-      h1 {
-        width: 100%;
+
+      h1,
+      p {
+        width: auto;
+        max-width: 78%;
+        margin-bottom: 2vh;
       }
     }
   }

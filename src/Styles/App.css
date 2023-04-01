@@ -2400,6 +2400,10 @@ svg {
   }
 }
 
+.Mobile h1 {
+  font-size: 1.6rem;
+}
+
 .Mobile .Header_Logo {
   top: 0;
   left: 16px;
@@ -2421,7 +2425,7 @@ svg {
   width: 96px;
   top: unset;
   height: 50vh;
-  bottom: 0;
+  bottom: 32px;
 }
 
 .Mobile .Stylized_Scroll_Bar .ScrollBar_Track,
@@ -2433,6 +2437,10 @@ svg {
   width: 100vw;
   padding-left: 16px;
   padding-right: 16px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-top: 86px;
   position: relative;
 }
 
@@ -2449,16 +2457,19 @@ svg {
 }
 
 .Mobile .HomepageFloat #Header_Section .Header_Image {
-  margin-bottom: 0;
+  margin-bottom: 5vh;
 }
 
 .Mobile .HomepageFloat #Header_Section .Header_Contents {
   padding: 0;
-  max-width: 78%;
+  max-width: unset;
   height: auto;
 }
 
-.Mobile .HomepageFloat #Header_Section .Header_Contents h1 {
-  width: 100%;
+.Mobile .HomepageFloat #Header_Section .Header_Contents h1,
+.Mobile .HomepageFloat #Header_Section .Header_Contents p {
+  width: auto;
+  max-width: 78%;
+  margin-bottom: 2vh;
 }
 /*# sourceMappingURL=App.css.map */
