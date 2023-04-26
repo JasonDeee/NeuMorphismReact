@@ -168,7 +168,7 @@ function App() {
           var beta = Math.floor(event.beta * 100) / 100;
           var gamma = Math.floor(event.gamma * 100) / 100;
           // Do something with the values
-          TiltTest.current.textContent = `Okay: ${alpha} + ${beta} + ${gamma} `;
+          TiltTest.current.textContent = `Mobile Tilt Test: ${alpha} + ${beta} + ${gamma} `;
         },
         false
       );
