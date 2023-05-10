@@ -196,6 +196,7 @@ function App() {
                   <HomepageFloat
                     IsVietnamese={IsVietnamese}
                     ScrollToTop={ScrollToTop}
+                    // isMobile={isMobile}
                   ></HomepageFloat>
                 }
               />

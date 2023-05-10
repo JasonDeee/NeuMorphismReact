@@ -7,56 +7,91 @@ const TheCatWatching = (Props) => {
   const EyeR_Happy = useRef();
 
   //
+  // Define Users
+  const userAgent = navigator.userAgent;
+  const isMobile = /iPhone|iPad|iPod|Windows Phone|Android/i.test(userAgent);
+  //
   const FACE_BG = useRef();
 
   const TheCatEffect = () => {
     //
     // const CatWatchingHands = document.querySelectorAll("#Hands g");
 
-    const EyeTrackerFunct = (e) => {
+    if (isMobile) {
+      console.log(isMobile);
+
       //
 
-      let x =
-          (Props.BoundingRect.current.getBoundingClientRect().width / 2 +
-            Props.BoundingRect.current.getBoundingClientRect().left -
-            Math.abs(e.pageX)) /
-          (Props.BoundingRect.current.getBoundingClientRect().width / 2),
-        y =
-          (EyeR_Neural.current.getBoundingClientRect().height / 2 +
-            EyeR_Neural.current.getBoundingClientRect().top -
-            Math.abs(e.pageY)) /
-          (EyeR_Neural.current.getBoundingClientRect().height / 2 +
-            EyeR_Neural.current.getBoundingClientRect().top);
-
-      EyeL_Neural.current.style.transform = `translate(${-x * 5}%, ${-y * 2}%)`;
-      EyeL_Happy.current.style.transform = `translate(${-x * 5}%, ${-y * 2}%)`;
-
-      FACE_BG.current.style.transform = `scaleX(${1 - Math.abs(x / 42)})`;
-
-      EyeR_Neural.current.style.transform = `translate(${-x * 5}%, ${-y * 2}%)`;
-      EyeR_Happy.current.style.transform = `translate(${-x * 5}%, ${-y * 2}%)`;
+      if (window.DeviceOrientationEvent) {
+        window.addEventListener(
+          "deviceorientation",
+          function (event) {
+            // Handle orientation event
+            var alpha = Math.floor(event.alpha * 100) / 100;
+            var beta = Math.floor(event.beta * 100) / 100;
+            var gamma = Math.floor(event.gamma * 100) / 100;
+            // Do something with the values
+          },
+          false
+        );
+      }
+    } else {
       //
-    };
+      console.log(isMobile);
 
-    const EyeTrackerReturnToRest = () => {
-      //
-      EyeL_Neural.current.style = ``;
+      const EyeTrackerFunct = (e) => {
+        //
 
-      EyeR_Neural.current.style = ``;
-      FACE_BG.current.style = ``;
-    };
+        let x =
+            (Props.BoundingRect.current.getBoundingClientRect().width / 2 +
+              Props.BoundingRect.current.getBoundingClientRect().left -
+              Math.abs(e.pageX)) /
+            (Props.BoundingRect.current.getBoundingClientRect().width / 2),
+          y =
+            (EyeR_Neural.current.getBoundingClientRect().height / 2 +
+              EyeR_Neural.current.getBoundingClientRect().top -
+              Math.abs(e.pageY)) /
+            (EyeR_Neural.current.getBoundingClientRect().height / 2 +
+              EyeR_Neural.current.getBoundingClientRect().top);
 
-    Props.HoverIdentifier.current.addEventListener(
-      "mousemove",
-      EyeTrackerFunct
-    );
+        EyeL_Neural.current.style.transform = `translate(${-x * 5}%, ${
+          -y * 2
+        }%)`;
+        EyeL_Happy.current.style.transform = `translate(${-x * 5}%, ${
+          -y * 2
+        }%)`;
 
-    Props.HoverIdentifier.current.addEventListener(
-      "mouseout",
-      EyeTrackerReturnToRest
-    );
+        FACE_BG.current.style.transform = `scaleX(${1 - Math.abs(x / 42)})`;
 
-    window.addEventListener("blur", EyeTrackerReturnToRest);
+        EyeR_Neural.current.style.transform = `translate(${-x * 5}%, ${
+          -y * 2
+        }%)`;
+        EyeR_Happy.current.style.transform = `translate(${-x * 5}%, ${
+          -y * 2
+        }%)`;
+        //
+      };
+
+      const EyeTrackerReturnToRest = () => {
+        //
+        EyeL_Neural.current.style = ``;
+
+        EyeR_Neural.current.style = ``;
+        FACE_BG.current.style = ``;
+      };
+
+      Props.HoverIdentifier.current.addEventListener(
+        "mousemove",
+        EyeTrackerFunct
+      );
+
+      Props.HoverIdentifier.current.addEventListener(
+        "mouseout",
+        EyeTrackerReturnToRest
+      );
+
+      window.addEventListener("blur", EyeTrackerReturnToRest);
+    }
   };
 
   useEffect(TheCatEffect, []);
