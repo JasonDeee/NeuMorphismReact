@@ -17,23 +17,45 @@ const TheCatWatching = (Props) => {
     //
     // const CatWatchingHands = document.querySelectorAll("#Hands g");
 
+    const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
+
     if (isMobile) {
       console.log(isMobile);
 
       //
 
+      const EyeTrackerFunct = (event) => {
+        // Handle orientation event
+
+        // Do something with the values
+
+        let x = (100 * event.gamma) / 90,
+          y = (100 * event.beta) / 90;
+
+        EyeL_Neural.current.style.transform = `translate(${clamp(
+          -x / 5,
+          -6.9,
+          6.9
+        )}%, ${5 - clamp(y / 5, -4, 5)}%)`;
+        EyeL_Happy.current.style.transform = `translate(${clamp(
+          -x / 5,
+          -6.9,
+          6.9
+        )}%, ${5 - clamp(y / 5, -4, 5)}%)`;
+
+        EyeR_Neural.current.style.transform = `translate(${clamp(
+          -x / 5,
+          -6.9,
+          6.9
+        )}%, ${5 - clamp(y / 5, -4, 5)}%)`;
+        EyeR_Happy.current.style.transform = `translate(${clamp(
+          -x / 5,
+          -6.9,
+          6.9
+        )}%, ${5 - clamp(y / 5, -4, 5)}%)`;
+      };
       if (window.DeviceOrientationEvent) {
-        window.addEventListener(
-          "deviceorientation",
-          function (event) {
-            // Handle orientation event
-            var alpha = Math.floor(event.alpha * 100) / 100;
-            var beta = Math.floor(event.beta * 100) / 100;
-            var gamma = Math.floor(event.gamma * 100) / 100;
-            // Do something with the values
-          },
-          false
-        );
+        window.addEventListener("deviceorientation", EyeTrackerFunct, false);
       }
     } else {
       //

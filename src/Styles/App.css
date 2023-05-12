@@ -1,2486 +1,2486 @@
-  .TestTilt {
-    position: fixed;
-    bottom: 0;
-    z-index: 999;
-    background: brown;
-  }
-
-  body {
-    width: 100vw;
-    overflow: hidden;
-  }
-
-  a {
-    color: inherit;
-  }
-
-  div,
-  p,
-  li {
-    font-size: 1rem;
-    font-weight: 300;
-  }
-
-  h1 {
-    font-family: "Barlow Condensed", sans-serif;
-    font-weight: 700;
-    line-height: 6rem;
-    font-size: 6rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  div {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-
-  section,
-  header,
-  footer {
-    position: relative;
-  }
-
-  svg {
-    overflow: visible;
-    width: 100%;
-    height: 100%;
-  }
-
-  .Lazy_Image img {
-    background: linear-gradient(62deg, #151515 0%, #353535 100%);
-  }
-
-  @-webkit-keyframes HandSwitcher1 {
-    0% {
-      opacity: 1;
-    }
-    33% {
-      opacity: 1;
-    }
-    34% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  @keyframes HandSwitcher1 {
-    0% {
-      opacity: 1;
-    }
-    33% {
-      opacity: 1;
-    }
-    34% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  @-webkit-keyframes HandSwitcher2 {
-    0% {
-      opacity: 0;
-    }
-    33% {
-      opacity: 0;
-    }
-    34% {
-      opacity: 1;
-    }
-    66% {
-      opacity: 1;
-    }
-    67% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  @keyframes HandSwitcher2 {
-    0% {
-      opacity: 0;
-    }
-    33% {
-      opacity: 0;
-    }
-    34% {
-      opacity: 1;
-    }
-    66% {
-      opacity: 1;
-    }
-    67% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
-
-  @-webkit-keyframes HandSwitcher3 {
-    0% {
-      opacity: 0;
-    }
-    66% {
-      opacity: 0;
-    }
-    67% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @keyframes HandSwitcher3 {
-    0% {
-      opacity: 0;
-    }
-    66% {
-      opacity: 0;
-    }
-    67% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @-webkit-keyframes Left_BeardWinging {
-    0% {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-    }
-    5% {
-      -webkit-transform: rotate(-18deg);
-              transform: rotate(-18deg);
-    }
-    10% {
-      -webkit-transform: rotate(10deg);
-              transform: rotate(10deg);
-    }
-    12% {
-      -webkit-transform: rotate(-4deg);
-              transform: rotate(-4deg);
-    }
-    11% {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-    }
-    100% {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-    }
-  }
-
-  @keyframes Left_BeardWinging {
-    0% {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-    }
-    5% {
-      -webkit-transform: rotate(-18deg);
-              transform: rotate(-18deg);
-    }
-    10% {
-      -webkit-transform: rotate(10deg);
-              transform: rotate(10deg);
-    }
-    12% {
-      -webkit-transform: rotate(-4deg);
-              transform: rotate(-4deg);
-    }
-    11% {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-    }
-    100% {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-    }
-  }
-
-  @-webkit-keyframes Right_BeardWinging {
-    0% {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-    }
-    5% {
-      -webkit-transform: rotate(18deg);
-              transform: rotate(18deg);
-    }
-    10% {
-      -webkit-transform: rotate(-10deg);
-              transform: rotate(-10deg);
-    }
-    12% {
-      -webkit-transform: rotate(4deg);
-              transform: rotate(4deg);
-    }
-    11% {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-    }
-    100% {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-    }
-  }
-
-  @keyframes Right_BeardWinging {
-    0% {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-    }
-    5% {
-      -webkit-transform: rotate(18deg);
-              transform: rotate(18deg);
-    }
-    10% {
-      -webkit-transform: rotate(-10deg);
-              transform: rotate(-10deg);
-    }
-    12% {
-      -webkit-transform: rotate(4deg);
-              transform: rotate(4deg);
-    }
-    11% {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-    }
-    100% {
-      -webkit-transform: rotate(0);
-              transform: rotate(0);
-    }
-  }
-
-  .TheWatchingCat .WatchingCat-1,
-  .TheWatchingCat .WatchingCat-2 {
-    fill: #fff;
-  }
-
-  .TheWatchingCat .WatchingCat-3,
-  .TheWatchingCat .WatchingCat-4,
-  .TheWatchingCat .WatchingCat-2,
-  .TheWatchingCat .WatchingCat-5,
-  .TheWatchingCat .WatchingCat-6,
-  .TheWatchingCat .WatchingCat-7 {
-    stroke: #292929;
-  }
-
-  .TheWatchingCat .WatchingCat-3,
-  .TheWatchingCat .WatchingCat-4,
-  .TheWatchingCat .WatchingCat-2,
-  .TheWatchingCat .WatchingCat-5,
-  .TheWatchingCat .WatchingCat-7 {
-    stroke-width: 10px;
-  }
-
-  .TheWatchingCat .WatchingCat-3,
-  .TheWatchingCat .WatchingCat-8,
-  .TheWatchingCat .WatchingCat-6 {
-    fill: none;
-  }
-
-  .TheWatchingCat .WatchingCat-3,
-  .TheWatchingCat .WatchingCat-2,
-  .TheWatchingCat .WatchingCat-5,
-  .TheWatchingCat .WatchingCat-6,
-  .TheWatchingCat .WatchingCat-7 {
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-
-  .TheWatchingCat .WatchingCat-4 {
-    stroke-miterlimit: 10;
-  }
-
-  .TheWatchingCat .WatchingCat-4,
-  .TheWatchingCat .WatchingCat-5 {
-    fill: #4d4d4d;
-  }
-
-  .TheWatchingCat .WatchingCat-9 {
-    -webkit-clip-path: url(#clippath-2);
-            clip-path: url(#clippath-2);
-  }
-
-  .TheWatchingCat .WatchingCat-10 {
-    -webkit-clip-path: url(#clippath-1);
-            clip-path: url(#clippath-1);
-  }
-
-  .TheWatchingCat .WatchingCat-11 {
-    fill: #f2ae66;
-  }
-
-  .TheWatchingCat .WatchingCat-12 {
-    fill: url(#radial-gradient);
-  }
-
-  .TheWatchingCat .WatchingCat-13 {
-    -webkit-clip-path: url(#clippath);
-            clip-path: url(#clippath);
-  }
-
-  .TheWatchingCat .WatchingCat-14 {
-    fill: url(#radial-gradient-2);
-  }
-
-  .TheWatchingCat .WatchingCat-15 {
-    -webkit-clip-path: url(#clippath-3);
-            clip-path: url(#clippath-3);
-  }
-
-  .TheWatchingCat .WatchingCat-16 {
-    fill: #292929;
-  }
-
-  .TheWatchingCat .WatchingCat-6 {
-    stroke-width: 6px;
-  }
-
-  .TheWatchingCat .WatchingCat-7 {
-    fill: #87ddf1;
-  }
-
-  .TheWatchingCat .WatchingCat-17 {
-    fill: #76564a;
-  }
-
-  .TheWatchingCat #Hands g {
-    -webkit-transition: none;
-    transition: none;
-  }
-
-  .TheWatchingCat #Hands #The_HAND_Point1 {
-    -webkit-animation: HandSwitcher1 3s linear infinite forwards;
-            animation: HandSwitcher1 3s linear infinite forwards;
-  }
-
-  .TheWatchingCat #Hands #The_HAND_Point2 {
-    -webkit-animation: HandSwitcher2 3s linear infinite forwards;
-            animation: HandSwitcher2 3s linear infinite forwards;
-  }
-
-  .TheWatchingCat #Hands #The_HAND_Point3 {
-    -webkit-animation: HandSwitcher3 3s linear infinite forwards;
-            animation: HandSwitcher3 3s linear infinite forwards;
-  }
-
-  .TheWatchingCat #Happy {
-    -webkit-transition: none;
-    transition: none;
-    opacity: 0;
-  }
-
-  .TheWatchingCat #Beard_L g {
-    -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    -webkit-transform-origin: left top;
-            transform-origin: left top;
-    -webkit-animation: Left_BeardWinging 4s cubic-bezier(0.5, 0, 0.25, 1.25) infinite, Left_BeardWinging 5s 2s cubic-bezier(0.5, 0, 0.25, 1.25) infinite;
-            animation: Left_BeardWinging 4s cubic-bezier(0.5, 0, 0.25, 1.25) infinite, Left_BeardWinging 5s 2s cubic-bezier(0.5, 0, 0.25, 1.25) infinite;
-    transform-box: fill-box;
-  }
-
-  .TheWatchingCat #Beard_R g {
-    -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    -webkit-transform-origin: right top;
-            transform-origin: right top;
-    -webkit-animation: Right_BeardWinging 4s cubic-bezier(0.5, 0, 0.25, 1.25) infinite, Right_BeardWinging 5s 2s cubic-bezier(0.5, 0, 0.25, 1.25) infinite;
-            animation: Right_BeardWinging 4s cubic-bezier(0.5, 0, 0.25, 1.25) infinite, Right_BeardWinging 5s 2s cubic-bezier(0.5, 0, 0.25, 1.25) infinite;
-    transform-box: fill-box;
-  }
-
-  .TheWatchingCat #FACE_BG,
-  .TheWatchingCat #EyeBall_L,
-  .TheWatchingCat #EyeBall_R,
-  .TheWatchingCat #EyeBall_L-2,
-  .TheWatchingCat #EyeBall_L-3 {
-    -webkit-transform-origin: center center;
-            transform-origin: center center;
-    -webkit-transition: all 0.11s ease-out;
-    transition: all 0.11s ease-out;
-  }
-
-  .TheWatchingCat #Mouth,
-  .TheWatchingCat #EyeBow_R,
-  .TheWatchingCat #EyeBow_L,
-  .TheWatchingCat #EarMask_Neural,
-  .TheWatchingCat #Ear_Line-2,
-  .TheWatchingCat #Ear_Color-2,
-  .TheWatchingCat #Ear_Color,
-  .TheWatchingCat #Ear_Line,
-  .TheWatchingCat #Ear_BG_line {
-    -webkit-transition: all 0.66s cubic-bezier(0.25, 0, 0, 1);
-    transition: all 0.66s cubic-bezier(0.25, 0, 0, 1);
-  }
-
-  .HappyCat_Active #Happy {
-    opacity: 1 !important;
-    display: unset !important;
-  }
-
-  .HappyCat_Active #Neural g {
-    display: none !important;
-  }
-
-  .HappyCat_Active #Mouth {
-    d: path("M782,755s-9,34-41,7c-27,26-41,0-41,0");
-  }
-
-  .HappyCat_Active #EyeBow_R {
-    d: path("M662,555s-2.41-13.23-20-23c-18-10-43-3-43-3");
-  }
-
-  .HappyCat_Active #EyeBow_L {
-    d: path("M877,523s-25-7-43,3c-17.59,9.77-20,23-20,23");
-  }
-
-  .HappyCat_Active #EarMask_Neural {
-    d: path("M291.5,345.35l293.35-45.34s61.65-32.16,139.15-32.16,122.76,19.5,122.76,19.5l259.74,38");
-  }
-
-  .HappyCat_Active #Ear_Line-2 {
-    d: path("M292,345s64-7,128,25c29,18,77,23,111.02,10.35");
-  }
-
-  .HappyCat_Active #Ear_Color-2 {
-    d: path("M459,384c-137-57-167.5-38.65-167.5-38.65l293-45s-68.5,100.65-125.5,83.65Z");
-  }
-
-  .HappyCat_Active #Ear_Color {
-    d: path("M986,364c86-35,100-39,100-39l-266-38s16,132,166,77Z");
-  }
-
-  .HappyCat_Active #Ear_Line {
-    d: path("M1101,326s-39-5-90,28c-72.54,37-121.64,6.51-121.64,6.51");
-  }
-
-  .HappyCat_Active #Ear_BG_line {
-    d: path("M708.5,324.01l398,1.34s-27.5,6.65-27.5,81.65c0,91-42.29,221.35-349.5,221.35-209,0-349.5-61.35-377.5-185.35-22-81-60.5-97.65-60.5-97.65l417-21.34Z");
-  }
-
-  .Image_Container {
-    cursor: pointer;
-  }
-
-  .Image_Container .Img_Scaler {
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%);
-            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%);
-    -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: 100%;
-  }
-
-  .Image_Container .Img_Scaler .Img_CTA_Label {
-    pointer-events: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    color: #ffffff;
-    -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    letter-spacing: -0.1rem;
-    white-space: nowrap;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    background: #00000096;
-    opacity: 0;
-  }
-
-  .Image_Container img {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-      object-fit: cover;
-    -o-object-position: center;
-      object-position: center;
-    -webkit-transform-origin: center;
-            transform-origin: center;
-    -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-  }
-
-  .Full_Screen_Ready_Image {
-    cursor: -webkit-zoom-in;
-    cursor: zoom-in;
-  }
-
-  .Image_Container:hover .Img_Scaler {
-    -webkit-clip-path: polygon(3% 3%, 97% 3%, 97% 97%, 3% 97%);
-            clip-path: polygon(3% 3%, 97% 3%, 97% 97%, 3% 97%);
-  }
-
-  .Image_Container:hover .Img_Scaler .Img_CTA_Label {
-    letter-spacing: 0.12rem;
+.TestTilt {
+  position: fixed;
+  bottom: 0;
+  z-index: 999;
+  background: brown;
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
+}
+
+a {
+  color: inherit;
+}
+
+div,
+p,
+li {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+h1 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  line-height: 6rem;
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+div {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+section,
+header,
+footer {
+  position: relative;
+}
+
+svg {
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+}
+
+.Lazy_Image img {
+  background: linear-gradient(62deg, #151515 0%, #353535 100%);
+}
+
+@-webkit-keyframes HandSwitcher1 {
+  0% {
     opacity: 1;
   }
-
-  .Image_Container:hover img {
-    -webkit-transform: scale(1.12);
-            transform: scale(1.12);
+  33% {
+    opacity: 1;
   }
-
-  .Language_Switch {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    gap: 8px;
-    width: 128px;
-    position: fixed;
-    top: 24px;
-    right: 0;
-    font-weight: 300;
-    font-size: 0.76rem;
-    color: #e9e7e7;
-    cursor: pointer;
+  34% {
+    opacity: 0;
   }
-
-  .Language_Switch div {
-    -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    pointer-events: none;
+  100% {
+    opacity: 0;
   }
+}
 
-  .Language_Switch .Lang_Active {
-    color: #353535;
+@keyframes HandSwitcher1 {
+  0% {
+    opacity: 1;
   }
-
-  .ScrollBar_Observer {
-    width: 48px;
-    height: 48px;
-    position: absolute;
-    top: 80vh;
-    right: 0;
-    pointer-events: none;
+  33% {
+    opacity: 1;
   }
+  34% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
+@-webkit-keyframes HandSwitcher2 {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 0;
+  }
+  34% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 1;
+  }
+  67% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes HandSwitcher2 {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 0;
+  }
+  34% {
+    opacity: 1;
+  }
+  66% {
+    opacity: 1;
+  }
+  67% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes HandSwitcher3 {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  67% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes HandSwitcher3 {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  67% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes Left_BeardWinging {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  5% {
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg);
+  }
+  10% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  12% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  11% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes Left_BeardWinging {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  5% {
+    -webkit-transform: rotate(-18deg);
+            transform: rotate(-18deg);
+  }
+  10% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  12% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  11% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@-webkit-keyframes Right_BeardWinging {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  5% {
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg);
+  }
+  10% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  12% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+  }
+  11% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes Right_BeardWinging {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  5% {
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg);
+  }
+  10% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  12% {
+    -webkit-transform: rotate(4deg);
+            transform: rotate(4deg);
+  }
+  11% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+.TheWatchingCat .WatchingCat-1,
+.TheWatchingCat .WatchingCat-2 {
+  fill: #fff;
+}
+
+.TheWatchingCat .WatchingCat-3,
+.TheWatchingCat .WatchingCat-4,
+.TheWatchingCat .WatchingCat-2,
+.TheWatchingCat .WatchingCat-5,
+.TheWatchingCat .WatchingCat-6,
+.TheWatchingCat .WatchingCat-7 {
+  stroke: #292929;
+}
+
+.TheWatchingCat .WatchingCat-3,
+.TheWatchingCat .WatchingCat-4,
+.TheWatchingCat .WatchingCat-2,
+.TheWatchingCat .WatchingCat-5,
+.TheWatchingCat .WatchingCat-7 {
+  stroke-width: 10px;
+}
+
+.TheWatchingCat .WatchingCat-3,
+.TheWatchingCat .WatchingCat-8,
+.TheWatchingCat .WatchingCat-6 {
+  fill: none;
+}
+
+.TheWatchingCat .WatchingCat-3,
+.TheWatchingCat .WatchingCat-2,
+.TheWatchingCat .WatchingCat-5,
+.TheWatchingCat .WatchingCat-6,
+.TheWatchingCat .WatchingCat-7 {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.TheWatchingCat .WatchingCat-4 {
+  stroke-miterlimit: 10;
+}
+
+.TheWatchingCat .WatchingCat-4,
+.TheWatchingCat .WatchingCat-5 {
+  fill: #4d4d4d;
+}
+
+.TheWatchingCat .WatchingCat-9 {
+  -webkit-clip-path: url(#clippath-2);
+          clip-path: url(#clippath-2);
+}
+
+.TheWatchingCat .WatchingCat-10 {
+  -webkit-clip-path: url(#clippath-1);
+          clip-path: url(#clippath-1);
+}
+
+.TheWatchingCat .WatchingCat-11 {
+  fill: #f2ae66;
+}
+
+.TheWatchingCat .WatchingCat-12 {
+  fill: url(#radial-gradient);
+}
+
+.TheWatchingCat .WatchingCat-13 {
+  -webkit-clip-path: url(#clippath);
+          clip-path: url(#clippath);
+}
+
+.TheWatchingCat .WatchingCat-14 {
+  fill: url(#radial-gradient-2);
+}
+
+.TheWatchingCat .WatchingCat-15 {
+  -webkit-clip-path: url(#clippath-3);
+          clip-path: url(#clippath-3);
+}
+
+.TheWatchingCat .WatchingCat-16 {
+  fill: #292929;
+}
+
+.TheWatchingCat .WatchingCat-6 {
+  stroke-width: 6px;
+}
+
+.TheWatchingCat .WatchingCat-7 {
+  fill: #87ddf1;
+}
+
+.TheWatchingCat .WatchingCat-17 {
+  fill: #76564a;
+}
+
+.TheWatchingCat #Hands g {
+  -webkit-transition: none;
+  transition: none;
+}
+
+.TheWatchingCat #Hands #The_HAND_Point1 {
+  -webkit-animation: HandSwitcher1 3s linear infinite forwards;
+          animation: HandSwitcher1 3s linear infinite forwards;
+}
+
+.TheWatchingCat #Hands #The_HAND_Point2 {
+  -webkit-animation: HandSwitcher2 3s linear infinite forwards;
+          animation: HandSwitcher2 3s linear infinite forwards;
+}
+
+.TheWatchingCat #Hands #The_HAND_Point3 {
+  -webkit-animation: HandSwitcher3 3s linear infinite forwards;
+          animation: HandSwitcher3 3s linear infinite forwards;
+}
+
+.TheWatchingCat #Happy {
+  -webkit-transition: none;
+  transition: none;
+  opacity: 0;
+}
+
+.TheWatchingCat #Beard_L g {
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-animation: Left_BeardWinging 4s cubic-bezier(0.5, 0, 0.25, 1.25) infinite, Left_BeardWinging 5s 2s cubic-bezier(0.5, 0, 0.25, 1.25) infinite;
+          animation: Left_BeardWinging 4s cubic-bezier(0.5, 0, 0.25, 1.25) infinite, Left_BeardWinging 5s 2s cubic-bezier(0.5, 0, 0.25, 1.25) infinite;
+  transform-box: fill-box;
+}
+
+.TheWatchingCat #Beard_R g {
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+  -webkit-animation: Right_BeardWinging 4s cubic-bezier(0.5, 0, 0.25, 1.25) infinite, Right_BeardWinging 5s 2s cubic-bezier(0.5, 0, 0.25, 1.25) infinite;
+          animation: Right_BeardWinging 4s cubic-bezier(0.5, 0, 0.25, 1.25) infinite, Right_BeardWinging 5s 2s cubic-bezier(0.5, 0, 0.25, 1.25) infinite;
+  transform-box: fill-box;
+}
+
+.TheWatchingCat #FACE_BG,
+.TheWatchingCat #EyeBall_L,
+.TheWatchingCat #EyeBall_R,
+.TheWatchingCat #EyeBall_L-2,
+.TheWatchingCat #EyeBall_L-3 {
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-transition: all 0.11s ease-out;
+  transition: all 0.11s ease-out;
+}
+
+.TheWatchingCat #Mouth,
+.TheWatchingCat #EyeBow_R,
+.TheWatchingCat #EyeBow_L,
+.TheWatchingCat #EarMask_Neural,
+.TheWatchingCat #Ear_Line-2,
+.TheWatchingCat #Ear_Color-2,
+.TheWatchingCat #Ear_Color,
+.TheWatchingCat #Ear_Line,
+.TheWatchingCat #Ear_BG_line {
+  -webkit-transition: all 0.66s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.66s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.HappyCat_Active #Happy {
+  opacity: 1 !important;
+  display: unset !important;
+}
+
+.HappyCat_Active #Neural g {
+  display: none !important;
+}
+
+.HappyCat_Active #Mouth {
+  d: path("M782,755s-9,34-41,7c-27,26-41,0-41,0");
+}
+
+.HappyCat_Active #EyeBow_R {
+  d: path("M662,555s-2.41-13.23-20-23c-18-10-43-3-43-3");
+}
+
+.HappyCat_Active #EyeBow_L {
+  d: path("M877,523s-25-7-43,3c-17.59,9.77-20,23-20,23");
+}
+
+.HappyCat_Active #EarMask_Neural {
+  d: path("M291.5,345.35l293.35-45.34s61.65-32.16,139.15-32.16,122.76,19.5,122.76,19.5l259.74,38");
+}
+
+.HappyCat_Active #Ear_Line-2 {
+  d: path("M292,345s64-7,128,25c29,18,77,23,111.02,10.35");
+}
+
+.HappyCat_Active #Ear_Color-2 {
+  d: path("M459,384c-137-57-167.5-38.65-167.5-38.65l293-45s-68.5,100.65-125.5,83.65Z");
+}
+
+.HappyCat_Active #Ear_Color {
+  d: path("M986,364c86-35,100-39,100-39l-266-38s16,132,166,77Z");
+}
+
+.HappyCat_Active #Ear_Line {
+  d: path("M1101,326s-39-5-90,28c-72.54,37-121.64,6.51-121.64,6.51");
+}
+
+.HappyCat_Active #Ear_BG_line {
+  d: path("M708.5,324.01l398,1.34s-27.5,6.65-27.5,81.65c0,91-42.29,221.35-349.5,221.35-209,0-349.5-61.35-377.5-185.35-22-81-60.5-97.65-60.5-97.65l417-21.34Z");
+}
+
+.Image_Container {
+  cursor: pointer;
+}
+
+.Image_Container .Img_Scaler {
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%);
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.Image_Container .Img_Scaler .Img_CTA_Label {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: #ffffff;
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  letter-spacing: -0.1rem;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #00000096;
+  opacity: 0;
+}
+
+.Image_Container img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.Full_Screen_Ready_Image {
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+}
+
+.Image_Container:hover .Img_Scaler {
+  -webkit-clip-path: polygon(3% 3%, 97% 3%, 97% 97%, 3% 97%);
+          clip-path: polygon(3% 3%, 97% 3%, 97% 97%, 3% 97%);
+}
+
+.Image_Container:hover .Img_Scaler .Img_CTA_Label {
+  letter-spacing: 0.12rem;
+  opacity: 1;
+}
+
+.Image_Container:hover img {
+  -webkit-transform: scale(1.12);
+          transform: scale(1.12);
+}
+
+.Language_Switch {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 8px;
+  width: 128px;
+  position: fixed;
+  top: 24px;
+  right: 0;
+  font-weight: 300;
+  font-size: 0.76rem;
+  color: #e9e7e7;
+  cursor: pointer;
+}
+
+.Language_Switch div {
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  pointer-events: none;
+}
+
+.Language_Switch .Lang_Active {
+  color: #353535;
+}
+
+.ScrollBar_Observer {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  top: 80vh;
+  right: 0;
+  pointer-events: none;
+}
+
+.Stylized_Scroll_Bar {
+  height: 62vh;
+  position: fixed;
+  top: 31vh;
+  padding: 0;
+  right: 0;
+  margin: auto;
+  width: 128px;
+  z-index: 999;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Stylized_Scroll_Bar .ScrollBar_Track {
+  width: 2px;
+  height: 38vh;
+  background: #e9e7e7;
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+}
+
+.Stylized_Scroll_Bar .ScrollBar_Track::after {
+  position: absolute;
+  width: 64px;
+  left: 0;
+  right: 0;
+  height: 100%;
+  top: 0;
+  margin: auto;
+}
+
+.Stylized_Scroll_Bar .ScrollBar_Thumb {
+  width: 8px;
+  height: 24px;
+  border-radius: 16px;
+  background: #353535;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99);
+  transition: -webkit-transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99);
+  transition: transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99);
+  transition: transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99), -webkit-transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99);
+  top: 0;
+  cursor: ns-resize;
+}
+
+.Stylized_Scroll_Bar .Direction_Button {
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0;
+}
+
+.Stylized_Scroll_Bar .Direction_Button svg {
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.Stylized_Scroll_Bar .Direction_Button .Direction_Button_Icon-1 {
+  fill: none;
+  stroke: #151515;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.Stylized_Scroll_Bar .Direction_Button_Active {
+  pointer-events: all !important;
+  background: #8e724b;
+  -webkit-transform: rotate(180deg) scale(1.11);
+          transform: rotate(180deg) scale(1.11);
+}
+
+.Stylized_Scroll_Bar .Direction_Button_Active .Direction_Button_Icon-1 {
+  stroke: #ffffff;
+}
+
+.Stylized_Scroll_Bar .Direction_Button_Active:hover {
+  opacity: 0.62;
+}
+
+.Stylized_Scroll_Bar .Direction_Button_Active:hover svg {
+  -webkit-transform: scale(0.66);
+          transform: scale(0.66);
+}
+
+.Column_Grid {
+  display: -ms-grid !important;
+  display: grid !important;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  height: auto;
+  position: relative;
+  -webkit-column-gap: 16px;
+          column-gap: 16px;
+}
+
+@media screen and (min-width: 768px) {
   .Stylized_Scroll_Bar {
-    height: 62vh;
-    position: fixed;
-    top: 31vh;
-    padding: 0;
-    right: 0;
-    margin: auto;
     width: 128px;
-    z-index: 999;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
-
-  .Stylized_Scroll_Bar .ScrollBar_Track {
-    width: 2px;
-    height: 38vh;
-    background: #e9e7e7;
-    border-radius: 2px;
-    position: absolute;
-    top: 0;
+  .Language_Switch {
+    top: 24px;
   }
-
-  .Stylized_Scroll_Bar .ScrollBar_Track::after {
-    position: absolute;
-    width: 64px;
-    left: 0;
-    right: 0;
-    height: 100%;
-    top: 0;
-    margin: auto;
-  }
-
-  .Stylized_Scroll_Bar .ScrollBar_Thumb {
-    width: 8px;
-    height: 24px;
-    border-radius: 16px;
-    background: #353535;
-    position: absolute;
-    -webkit-transition: -webkit-transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99);
-    transition: -webkit-transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99);
-    transition: transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99);
-    transition: transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99), -webkit-transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99);
-    top: 0;
-    cursor: ns-resize;
-  }
-
-  .Stylized_Scroll_Bar .Direction_Button {
-    width: 36px;
-    height: 36px;
-    padding: 8px;
-    cursor: pointer;
-    pointer-events: none;
-    -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    border-radius: 50%;
-    position: absolute;
-    bottom: 0;
-  }
-
-  .Stylized_Scroll_Bar .Direction_Button svg {
-    -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-  }
-
-  .Stylized_Scroll_Bar .Direction_Button .Direction_Button_Icon-1 {
-    fill: none;
-    stroke: #151515;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-  }
-
-  .Stylized_Scroll_Bar .Direction_Button_Active {
-    pointer-events: all !important;
-    background: #8e724b;
-    -webkit-transform: rotate(180deg) scale(1.11);
-            transform: rotate(180deg) scale(1.11);
-  }
-
-  .Stylized_Scroll_Bar .Direction_Button_Active .Direction_Button_Icon-1 {
-    stroke: #ffffff;
-  }
-
-  .Stylized_Scroll_Bar .Direction_Button_Active:hover {
-    opacity: 0.62;
-  }
-
-  .Stylized_Scroll_Bar .Direction_Button_Active:hover svg {
-    -webkit-transform: scale(0.66);
-            transform: scale(0.66);
-  }
-
   .Column_Grid {
-    display: -ms-grid !important;
-    display: grid !important;
-    -ms-grid-columns: (1fr)[12];
-        grid-template-columns: repeat(12, 1fr);
-    height: auto;
-    position: relative;
     -webkit-column-gap: 16px;
             column-gap: 16px;
   }
+}
 
-  @media screen and (min-width: 768px) {
-    .Stylized_Scroll_Bar {
-      width: 128px;
-    }
-    .Language_Switch {
-      top: 24px;
-    }
-    .Column_Grid {
-      -webkit-column-gap: 16px;
-              column-gap: 16px;
-    }
-  }
-
-  @media screen and (min-width: 960px) {
-    .Stylized_Scroll_Bar {
-      width: 128px;
-    }
-    .Language_Switch {
-      top: 48px;
-    }
-    .Column_Grid {
-      -webkit-column-gap: 32px;
-              column-gap: 32px;
-    }
-  }
-
-  @media screen and (min-width: 1024px) {
-    .Stylized_Scroll_Bar {
-      width: 128px;
-    }
-    .Language_Switch {
-      top: 48px;
-    }
-    .Column_Grid {
-      -webkit-column-gap: 32px;
-              column-gap: 32px;
-    }
-  }
-
-  @media screen and (min-width: 1728px) {
-    .Stylized_Scroll_Bar {
-      width: 128px;
-    }
-    .Language_Switch {
-      top: 63px;
-    }
-    .Column_Grid {
-      -webkit-column-gap: 42px;
-              column-gap: 42px;
-    }
-  }
-
-  @media screen and (min-width: 2200px) {
-    .Stylized_Scroll_Bar {
-      width: 128px;
-    }
-    .Language_Switch {
-      top: 72px;
-    }
-    .Column_Grid {
-      -webkit-column-gap: 48px;
-              column-gap: 48px;
-    }
-  }
-
-  .Section {
-    height: 100vh;
-    width: 50vw;
-    margin-bottom: 16px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-
-  .Float_Active {
-    position: fixed;
-    right: 0;
-    -webkit-transition: -webkit-transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99);
-    transition: -webkit-transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99);
-    transition: transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99);
-    transition: transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99), -webkit-transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99);
-  }
-
-  .ButtonContainer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    gap: 0;
-    padding-left: 13.5px;
-    padding-right: 13.5px;
-    position: relative;
-    background: none;
-    height: 54px;
-    -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    outline: none;
-    border: none;
-    cursor: pointer;
-    color: #151515;
-  }
-
-  .ButtonContainer .Button_Overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    margin: auto;
-    height: 54px;
-    width: 54px;
-    background: linear-gradient(340deg, #8e724b 32%, #663b00 100%);
-    -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    border-radius: 128px;
-  }
-
-  .ButtonContainer .Button_Icon {
-    position: relative;
-    width: 27px;
-    height: 27px;
-  }
-
-  .ButtonContainer label {
-    pointer-events: none;
-    white-space: nowrap;
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1rem;
-    margin-right: 0;
-    height: 1rem;
-    width: auto;
-    -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    -webkit-transform: translate(2px, 50%);
-            transform: translate(2px, 50%);
-  }
-
-  .ButtonContainer:hover {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-
-  .Button_Full:hover {
-    gap: 16px;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-
-  .Button_Full:hover label {
-    margin-right: 8px;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-    color: white;
-  }
-
-  .Button_Full:hover .Button_Overlay {
-    width: 100%;
-  }
-
-  .Button_Text_Only label {
-    -webkit-transform: translate(24px, 50%);
-            transform: translate(24px, 50%);
-  }
-
-  .Button_Text_Only:hover .Button_Overlay {
-    width: 100%;
-  }
-
-  .Button_Text_Only:hover label {
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-    color: white;
-  }
-
-  .Button_Slider {
-    gap: 0;
-    padding: 0;
-  }
-
-  .Button_Slider .Button_Overlay {
-    pointer-events: none;
-    z-index: -1;
-    right: 0;
-    bottom: 0;
-  }
-
-  .Button_Slider .Button_Arrow {
-    z-index: 99;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    position: relative;
-    height: 64px;
-    overflow: visible;
-    -webkit-transform: translateY(10.8px);
-            transform: translateY(10.8px);
-    -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    border-color: #151515;
-  }
-
-  .Button_Slider .Button_Arrow::before,
-  .Button_Slider .Button_Arrow::after {
-    content: "";
-    -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    position: absolute;
-  }
-
-  .Button_Slider #Next {
-    width: 54px;
-  }
-
-  .Button_Slider #Prev {
-    width: 27px;
-  }
-
-  .Button_Slider #Prev::before {
-    right: 4px;
-  }
-
-  .Button_Slider #Next::before {
-    left: 4px;
-  }
-
-  .Button_Slider #Prev::after {
-    border-width: 2px 0 0 2px;
-    left: -4px;
-  }
-
-  .Button_Slider #Next::after {
-    right: -4px;
-    border-width: 0 2px 2px 0;
-  }
-
-  .Button_Slider .Button_Arrow::after {
-    width: 8px;
-    height: 8px;
-    border: solid;
-    border-color: inherit;
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-  }
-
-  .Button_Slider .Button_Arrow::before {
-    height: 2px;
-    width: 100%;
-    background: #151515;
-  }
-
-  .Button_Slider:hover .Button_Arrow {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-
-  .Slider_Indexes {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    overflow: hidden;
-    position: relative;
-    gap: 2px;
-  }
-
-  .Slider_Indexes span {
-    font-weight: 600;
-    font-size: 0.8rem;
-    line-height: 0.8rem;
-    height: 0.8rem;
-    color: #353535;
-  }
-
-  .Slider_Indexes .Current_Index {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    height: 0.8rem;
-    -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-  }
-
-  .Slider_Indexes hr {
-    width: 32px;
-    border: none;
-    height: 2px;
-    background: #e9e7e7;
-  }
-
-  #Next:hover {
-    width: 86px;
-  }
-
-  #Next:hover ~ .Button_Overlay {
-    right: 0;
-    left: 40px;
+@media screen and (min-width: 960px) {
+  .Stylized_Scroll_Bar {
     width: 128px;
   }
-
-  #Next:hover::after,
-  #Prev:hover::after {
-    border-color: #ffffff;
+  .Language_Switch {
+    top: 48px;
   }
-
-  #Next:hover::before,
-  #Prev:hover::before {
-    background: #ffffff;
+  .Column_Grid {
+    -webkit-column-gap: 32px;
+            column-gap: 32px;
   }
+}
 
-  #Prev:hover {
-    width: 86px;
-    margin-right: 8px;
-  }
-
-  #Prev:hover ~ #Next {
-    width: 32px;
-  }
-
-  #Prev:hover ~ .Button_Overlay {
-    right: 40px;
-    left: 0;
+@media screen and (min-width: 1024px) {
+  .Stylized_Scroll_Bar {
     width: 128px;
   }
-
-  .Overlay {
-    background: #e9e7e7;
+  .Language_Switch {
+    top: 48px;
   }
-
-  .HomepageFloat {
-    width: 100vw;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+  .Column_Grid {
+    -webkit-column-gap: 32px;
+            column-gap: 32px;
   }
+}
 
-  .HomepageFloat .Header_Logo {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    position: absolute;
-    margin: auto;
-    height: 36px;
+@media screen and (min-width: 1728px) {
+  .Stylized_Scroll_Bar {
+    width: 128px;
   }
-
-  .HomepageFloat .Header_Logo svg {
-    width: 100%;
+  .Language_Switch {
+    top: 63px;
   }
-
-  .HomepageFloat .Header_Logo .JasonD-Logo--1 {
-    fill: #656565;
+  .Column_Grid {
+    -webkit-column-gap: 42px;
+            column-gap: 42px;
   }
+}
 
+@media screen and (min-width: 2200px) {
+  .Stylized_Scroll_Bar {
+    width: 128px;
+  }
+  .Language_Switch {
+    top: 72px;
+  }
+  .Column_Grid {
+    -webkit-column-gap: 48px;
+            column-gap: 48px;
+  }
+}
+
+.Section {
+  height: 100vh;
+  width: 50vw;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Float_Active {
+  position: fixed;
+  right: 0;
+  -webkit-transition: -webkit-transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99);
+  transition: -webkit-transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99);
+  transition: transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99);
+  transition: transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99), -webkit-transform 0.66s cubic-bezier(0.11, 0.55, 0.44, 0.99);
+}
+
+.ButtonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 0;
+  padding-left: 13.5px;
+  padding-right: 13.5px;
+  position: relative;
+  background: none;
+  height: 54px;
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: #151515;
+}
+
+.ButtonContainer .Button_Overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: auto;
+  height: 54px;
+  width: 54px;
+  background: linear-gradient(340deg, #8e724b 32%, #663b00 100%);
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  border-radius: 128px;
+}
+
+.ButtonContainer .Button_Icon {
+  position: relative;
+  width: 27px;
+  height: 27px;
+}
+
+.ButtonContainer label {
+  pointer-events: none;
+  white-space: nowrap;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1rem;
+  margin-right: 0;
+  height: 1rem;
+  width: auto;
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  -webkit-transform: translate(2px, 50%);
+          transform: translate(2px, 50%);
+}
+
+.ButtonContainer:hover {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.Button_Full:hover {
+  gap: 16px;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.Button_Full:hover label {
+  margin-right: 8px;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  color: white;
+}
+
+.Button_Full:hover .Button_Overlay {
+  width: 100%;
+}
+
+.Button_Text_Only label {
+  -webkit-transform: translate(24px, 50%);
+          transform: translate(24px, 50%);
+}
+
+.Button_Text_Only:hover .Button_Overlay {
+  width: 100%;
+}
+
+.Button_Text_Only:hover label {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  color: white;
+}
+
+.Button_Slider {
+  gap: 0;
+  padding: 0;
+}
+
+.Button_Slider .Button_Overlay {
+  pointer-events: none;
+  z-index: -1;
+  right: 0;
+  bottom: 0;
+}
+
+.Button_Slider .Button_Arrow {
+  z-index: 99;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  height: 64px;
+  overflow: visible;
+  -webkit-transform: translateY(10.8px);
+          transform: translateY(10.8px);
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  border-color: #151515;
+}
+
+.Button_Slider .Button_Arrow::before,
+.Button_Slider .Button_Arrow::after {
+  content: "";
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  position: absolute;
+}
+
+.Button_Slider #Next {
+  width: 54px;
+}
+
+.Button_Slider #Prev {
+  width: 27px;
+}
+
+.Button_Slider #Prev::before {
+  right: 4px;
+}
+
+.Button_Slider #Next::before {
+  left: 4px;
+}
+
+.Button_Slider #Prev::after {
+  border-width: 2px 0 0 2px;
+  left: -4px;
+}
+
+.Button_Slider #Next::after {
+  right: -4px;
+  border-width: 0 2px 2px 0;
+}
+
+.Button_Slider .Button_Arrow::after {
+  width: 8px;
+  height: 8px;
+  border: solid;
+  border-color: inherit;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.Button_Slider .Button_Arrow::before {
+  height: 2px;
+  width: 100%;
+  background: #151515;
+}
+
+.Button_Slider:hover .Button_Arrow {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.Slider_Indexes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  overflow: hidden;
+  position: relative;
+  gap: 2px;
+}
+
+.Slider_Indexes span {
+  font-weight: 600;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  height: 0.8rem;
+  color: #353535;
+}
+
+.Slider_Indexes .Current_Index {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  height: 0.8rem;
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.Slider_Indexes hr {
+  width: 32px;
+  border: none;
+  height: 2px;
+  background: #e9e7e7;
+}
+
+#Next:hover {
+  width: 86px;
+}
+
+#Next:hover ~ .Button_Overlay {
+  right: 0;
+  left: 40px;
+  width: 128px;
+}
+
+#Next:hover::after,
+#Prev:hover::after {
+  border-color: #ffffff;
+}
+
+#Next:hover::before,
+#Prev:hover::before {
+  background: #ffffff;
+}
+
+#Prev:hover {
+  width: 86px;
+  margin-right: 8px;
+}
+
+#Prev:hover ~ #Next {
+  width: 32px;
+}
+
+#Prev:hover ~ .Button_Overlay {
+  right: 40px;
+  left: 0;
+  width: 128px;
+}
+
+.Overlay {
+  background: #e9e7e7;
+}
+
+.HomepageFloat {
+  width: 100vw;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.HomepageFloat .Header_Logo {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  margin: auto;
+  height: 36px;
+}
+
+.HomepageFloat .Header_Logo svg {
+  width: 100%;
+}
+
+.HomepageFloat .Header_Logo .JasonD-Logo--1 {
+  fill: #656565;
+}
+
+.HomepageFloat .Section {
+  width: calc(100vw - 128px);
+}
+
+.HomepageFloat #Header_Section {
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: start;
+}
+
+.HomepageFloat #Header_Section .Header_BG_Overlay {
+  width: auto;
+  height: auto;
+  position: absolute;
+}
+
+.HomepageFloat #Header_Section .Header_Image p {
+  display: block;
+  position: absolute;
+  right: -1vw;
+  font-size: 0.76rem;
+  font-weight: 300;
+  font-style: italic;
+  text-align: left;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.HomepageFloat #Header_Section .Header_Contents {
+  position: relative;
+  height: 38vh;
+  max-width: 62%;
+  padding-bottom: 4vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #353535;
+}
+
+.HomepageFloat #Header_Section .Header_Contents .Location_Tag {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
+  gap: 8px;
+  margin-bottom: 4vh;
+}
+
+.HomepageFloat #Header_Section .Header_Contents .Location_Tag img {
+  height: 1fr;
+  width: 12px;
+}
+
+.HomepageFloat #Header_Section .Header_Contents .Location_Tag p {
+  font-size: 0.76rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.HomepageFloat #Header_Section .Header_Contents h1 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-family: "Lexend";
+  font-weight: 700;
+  line-height: 1.8rem;
+  max-width: 72%;
+  margin-bottom: 4vh;
+}
+
+.HomepageFloat #Header_Section .Header_Contents p {
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 300;
+  width: 1024px;
+  max-width: 48vw;
+}
+
+.HomepageFloat #Header_Section .Header_Contents .Header_CTA_Button {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  margin-top: 8vh;
+}
+
+.HomepageFloat #Header_Section .Header_Contents .Header_CTA_Button .ButtonContainer label {
+  -webkit-transform: translate(0, 0) !important;
+          transform: translate(0, 0) !important;
+  margin-left: 32px;
+  padding-right: 16px;
+}
+
+.HomepageFloat #Header_Section .Header_Contents .Header_CTA_Button .Header_Button_Add_Overlay {
+  background: #f9f7f7;
+  height: 100%;
+  width: 100%;
+  border-radius: 32vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.HomepageFloat #Header_Section .Header_Contents .Header_CTA_Button:hover .ButtonContainer label {
+  margin-left: 0;
+  padding-right: 0;
+}
+
+.HomepageFloat #Header_Section .Header_Image {
+  position: relative;
+  width: 32vh;
+  height: 32vh;
+  background: #f9f7f7;
+  border-radius: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 4vh;
+}
+
+.HomepageFloat #Header_Section .Header_Image img,
+.HomepageFloat #Header_Section .Header_Image svg {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 80%;
+  height: 80%;
+  -webkit-filter: drop-shadow(12px 12px 32px #00000096);
+          filter: drop-shadow(12px 12px 32px #00000096);
+}
+
+.HomepageFloat .Work_Overlay,
+.HomepageFloat .About_Overlay {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  padding: inherit;
+  z-index: -1;
+}
+
+.HomepageFloat .Work_Overlay::after,
+.HomepageFloat .About_Overlay::after {
+  content: "";
+  background: #e9e7e7;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 7;
+  grid-column: 3/10;
+}
+
+.HomepageFloat .Work_Overlay::after {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 7;
+  grid-column: 3/10;
+}
+
+.HomepageFloat .About_Overlay::after {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 5;
+  grid-column: 3/8;
+}
+
+.HomepageFloat #Works_Showreel_Section {
+  min-height: 100vh;
+  margin-top: 64px;
+  height: auto;
+}
+
+.HomepageFloat #Works_Showreel_Section h1 {
+  width: auto;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 7;
+  grid-column: 3/10;
+  text-align: center;
+  color: #353535;
+  height: auto;
+  font-size: 4rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-transform: uppercase;
+}
+
+.HomepageFloat #Works_Showreel_Section .Work_Contents {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
+}
+
+.HomepageFloat #Works_Showreel_Section .Work_Contents .Work {
+  position: relative;
+  min-height: 256px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-column: span 4;
+}
+
+.HomepageFloat #Works_Showreel_Section .Work_Contents #work2 {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-column: 2 / span 4;
+  margin-top: 6rem;
+}
+
+.HomepageFloat #Works_Showreel_Section .Work_Contents #work3 {
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 4;
+  grid-column: 7 / span 4;
+}
+
+.HomepageFloat #Works_Showreel_Section .Work_Contents #work3 .Work_Button_Holder {
+  width: 100% !important;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 8px;
+}
+
+.HomepageFloat #Works_Showreel_Section .Work_Contents .Work_Images {
+  min-height: auto;
+  aspect-ratio: 1;
+  -ms-grid-column: 1 !important;
+  -ms-grid-column-span: 7 !important;
+  grid-column: 1/8 !important;
+  -webkit-transition: none;
+  transition: none;
+}
+
+.HomepageFloat #Works_Showreel_Section .Work_Contents .OnTransition {
+  width: 50vw !important;
+  height: 100vh !important;
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  z-index: 99;
+}
+
+.HomepageFloat #Works_Showreel_Section .Work_Contents .OnTransition label {
+  opacity: 0 !important;
+}
+
+.HomepageFloat #Works_Showreel_Section .Work_Contents .OnTransition img {
+  -webkit-transform: scale(1) !important;
+          transform: scale(1) !important;
+}
+
+.HomepageFloat #Works_Showreel_Section .Work_Contents .OnTransition .Img_Scaler {
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%) !important;
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%) !important;
+}
+
+.HomepageFloat #Works_Showreel_Section .Work_Contents .Top_Work {
+  -ms-grid-column: 1 !important;
+  -ms-grid-column-span: 11 !important;
+  grid-column: 1/12 !important;
+  display: -ms-grid;
+  display: grid;
+  width: auto !important;
+  -ms-grid-columns: (1fr)[11];
+      grid-template-columns: repeat(11, 1fr);
+  margin-bottom: 64px;
+}
+
+.HomepageFloat #Works_Showreel_Section .Work_Contents .Top_Work .Work_Images {
+  height: auto;
+  -ms-grid-column: 1 !important;
+  -ms-grid-column-span: 7 !important;
+  grid-column: 1/8 !important;
+}
+
+.HomepageFloat #Works_Showreel_Section .Work_Contents .Top_Work .Work_Button_Holder {
+  width: 100% !important;
+  padding-left: 5%;
+}
+
+.HomepageFloat #Works_Showreel_Section .Work_Contents .Main_Work_Contents {
+  padding-bottom: 3rem;
+  min-height: 256px;
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 4;
+  grid-column: 8/12;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #353535;
+}
+
+.HomepageFloat #Works_Showreel_Section .Work_Contents .Main_Work_Contents span {
+  color: #353535;
+  font-size: 0.76rem;
+  font-weight: 500;
+  margin-top: 2px;
+  margin-bottom: 2rem;
+}
+
+.HomepageFloat #Works_Showreel_Section .Work_Contents .Main_Work_Contents p {
+  margin-bottom: 3rem;
+  color: #000000;
+}
+
+.HomepageFloat #Works_Showreel_Section .Work_Contents .Main_Work_Contents .Work_Button_Holder {
+  width: 70%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.HomepageFloat #About_Section {
+  margin-top: 12vh;
+  height: auto;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.HomepageFloat #About_Section .About_Top_Content,
+.HomepageFloat #About_Section .About_Contents {
+  width: auto;
+  text-align: start;
+  color: #353535;
+}
+
+.HomepageFloat #About_Section .About_Top_Content h1,
+.HomepageFloat #About_Section .About_Contents h1 {
+  text-transform: uppercase;
+  height: auto;
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.HomepageFloat #About_Section .About_Top_Content h2,
+.HomepageFloat #About_Section .About_Contents h2 {
+  text-transform: None;
+}
+
+.HomepageFloat #About_Section .About_Top_Content p,
+.HomepageFloat #About_Section .About_Contents p {
+  margin-bottom: 4rem;
+}
+
+.HomepageFloat #About_Section .About_Contents {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-column: 2/6;
+}
+
+.HomepageFloat #About_Section .About_Top_Content {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2/5;
+  margin-top: 4rem;
+}
+
+.HomepageFloat #About_Section .About_Images {
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 5;
+  grid-column: 7/12;
+  height: 1fr;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.HomepageFloat #About_Section .Work_Images {
+  height: 100%;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
+  grid-column: 1/8;
+}
+
+.HomepageFloat #About_Section .About_Top_Image {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 5;
+  grid-column: 6/11;
+}
+
+.HomepageFloat #Testimonial_Section {
+  margin-top: 12vh;
+  height: auto;
+  min-height: 30vh;
+  margin-bottom: 0;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.HomepageFloat #Testimonial_Section .Double_Quotes {
+  position: absolute;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 1;
+  grid-column: 4/5;
+  height: 5vh;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: visible;
+}
+
+.HomepageFloat #Testimonial_Section .Double_Quotes .Double_Quotes_Vector-1 {
+  fill: url(#Main_Gradient);
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Overlay::after {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 6;
+  grid-column: 2/8;
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Content_Slider,
+.HomepageFloat #Testimonial_Section .Tes_Img_Slider {
+  margin-top: 12vh;
+  margin-bottom: 12vh;
+  min-height: 256px;
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Content_Slider {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  overflow-x: hidden;
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Slider_El_Holder {
+  text-align: center;
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  margin-top: 2.5vh;
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Slider_El_Holder .Tes_Slider_El {
+  min-width: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 64px 32px;
+  color: #ffffff;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  width: 100%;
+  background: #151515;
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Slider_El_Holder .Tes_Slider_El span,
+.HomepageFloat #Testimonial_Section .Tes_Slider_El_Holder .Tes_Slider_El img {
+  margin-bottom: 32px;
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Slider_El_Holder .Tes_Slider_El h2 {
+  text-transform: uppercase;
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Slider_El_Holder .Tes_Slider_El span {
+  font-size: 0.72rem;
+  font-weight: 500;
+  opacity: 0.78;
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Slider_El_Holder .Tes_Slider_El img {
+  width: 72%;
+  aspect-ratio: 1;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Img_Slider {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 9;
+  grid-column: 4/13;
+  padding-top: 2.5vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Img_Slider .Slider_Indexes {
+  margin-bottom: 32%;
+  margin-right: -16px;
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Img_Slider .Img_Slide_Holder {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Img_Slider .Img_Slide_Holder img {
+  max-width: 38%;
+  height: 62%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  opacity: 0.38;
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Img_Slider .Img_Slide_Holder .on_Active {
+  max-width: 62%;
+  opacity: 1;
+  height: 100%;
+}
+
+.HomepageFloat #Testimonial_Section .Tes_Img_Slider .Tes_Controllers {
+  position: absolute;
+  width: 38%;
+  bottom: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: inherit;
+  padding-right: 8px;
+}
+
+.HomepageFloat #Form_Section {
+  color: #353535;
+  height: 80vh;
+  min-height: unset;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  margin-bottom: 0;
+  margin-top: -4vh;
+  padding-bottom: 11vh;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.HomepageFloat #Form_Section h1 {
+  text-transform: uppercase;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1/13;
+}
+
+.HomepageFloat #Form_Section form {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 7;
+  grid-column: 1/8;
+}
+
+.HomepageFloat #Form_Section .Email_Contact,
+.HomepageFloat #Form_Section form {
+  height: 38vh;
+  background: #e9e7e7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  gap: 16px;
+  padding-bottom: 4%;
+}
+
+.HomepageFloat #Form_Section .Email_Contact #Form_Label,
+.HomepageFloat #Form_Section form #Form_Label {
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.HomepageFloat #Form_Section .Email_Contact input,
+.HomepageFloat #Form_Section .Email_Contact textarea,
+.HomepageFloat #Form_Section .Email_Contact #Email_Input:placeholder-shown,
+.HomepageFloat #Form_Section .Email_Contact #Message_Input:placeholder-shown,
+.HomepageFloat #Form_Section form input,
+.HomepageFloat #Form_Section form textarea,
+.HomepageFloat #Form_Section form #Email_Input:placeholder-shown,
+.HomepageFloat #Form_Section form #Message_Input:placeholder-shown {
+  background: none;
+  border: none;
+  position: relative;
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  color: #353535;
+  width: 78%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: solid 1px #656565;
+}
+
+.HomepageFloat #Form_Section .Email_Contact input::-webkit-input-placeholder,
+.HomepageFloat #Form_Section .Email_Contact textarea::-webkit-input-placeholder,
+.HomepageFloat #Form_Section form input::-webkit-input-placeholder,
+.HomepageFloat #Form_Section form textarea::-webkit-input-placeholder {
+  font-weight: 300;
+  color: #656565;
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.HomepageFloat #Form_Section .Email_Contact input:-ms-input-placeholder,
+.HomepageFloat #Form_Section .Email_Contact textarea:-ms-input-placeholder,
+.HomepageFloat #Form_Section form input:-ms-input-placeholder,
+.HomepageFloat #Form_Section form textarea:-ms-input-placeholder {
+  font-weight: 300;
+  color: #656565;
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.HomepageFloat #Form_Section .Email_Contact input::-ms-input-placeholder,
+.HomepageFloat #Form_Section .Email_Contact textarea::-ms-input-placeholder,
+.HomepageFloat #Form_Section form input::-ms-input-placeholder,
+.HomepageFloat #Form_Section form textarea::-ms-input-placeholder {
+  font-weight: 300;
+  color: #656565;
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.HomepageFloat #Form_Section .Email_Contact input::placeholder,
+.HomepageFloat #Form_Section .Email_Contact textarea::placeholder,
+.HomepageFloat #Form_Section form input::placeholder,
+.HomepageFloat #Form_Section form textarea::placeholder {
+  font-weight: 300;
+  color: #656565;
+  -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+  transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.HomepageFloat #Form_Section .Email_Contact textarea::-webkit-input-placeholder,
+.HomepageFloat #Form_Section form textarea::-webkit-input-placeholder {
+  -webkit-transform: translateY(200%);
+          transform: translateY(200%);
+}
+
+.HomepageFloat #Form_Section .Email_Contact textarea:-ms-input-placeholder,
+.HomepageFloat #Form_Section form textarea:-ms-input-placeholder {
+  transform: translateY(200%);
+}
+
+.HomepageFloat #Form_Section .Email_Contact textarea::-ms-input-placeholder,
+.HomepageFloat #Form_Section form textarea::-ms-input-placeholder {
+  transform: translateY(200%);
+}
+
+.HomepageFloat #Form_Section .Email_Contact textarea::placeholder,
+.HomepageFloat #Form_Section form textarea::placeholder {
+  -webkit-transform: translateY(200%);
+          transform: translateY(200%);
+}
+
+.HomepageFloat #Form_Section .Email_Contact input:focus,
+.HomepageFloat #Form_Section .Email_Contact textarea:focus,
+.HomepageFloat #Form_Section form input:focus,
+.HomepageFloat #Form_Section form textarea:focus {
+  outline: none;
+  padding: 8px;
+  background: #d9d7d7 !important;
+}
+
+.HomepageFloat #Form_Section .Email_Contact input:valid,
+.HomepageFloat #Form_Section .Email_Contact textarea:valid,
+.HomepageFloat #Form_Section form input:valid,
+.HomepageFloat #Form_Section form textarea:valid {
+  border-color: #8e724b;
+  border-width: 2px;
+}
+
+.HomepageFloat #Form_Section .Email_Contact input:invalid,
+.HomepageFloat #Form_Section .Email_Contact textarea:invalid,
+.HomepageFloat #Form_Section form input:invalid,
+.HomepageFloat #Form_Section form textarea:invalid {
+  border-color: #ad1313;
+  border-width: 2px;
+}
+
+.HomepageFloat #Form_Section .Email_Contact textarea:focus::-webkit-input-placeholder,
+.HomepageFloat #Form_Section form textarea:focus::-webkit-input-placeholder {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.HomepageFloat #Form_Section .Email_Contact textarea:focus:-ms-input-placeholder,
+.HomepageFloat #Form_Section form textarea:focus:-ms-input-placeholder {
+  transform: translateY(0);
+}
+
+.HomepageFloat #Form_Section .Email_Contact textarea:focus::-ms-input-placeholder,
+.HomepageFloat #Form_Section form textarea:focus::-ms-input-placeholder {
+  transform: translateY(0);
+}
+
+.HomepageFloat #Form_Section .Email_Contact textarea:focus::placeholder,
+.HomepageFloat #Form_Section form textarea:focus::placeholder {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.HomepageFloat #Form_Section .Email_Contact input,
+.HomepageFloat #Form_Section form input {
+  height: 14%;
+}
+
+.HomepageFloat #Form_Section .Email_Contact textarea,
+.HomepageFloat #Form_Section form textarea {
+  height: 32%;
+}
+
+.HomepageFloat #Form_Section .Contact_Form_Button_Holder {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 78%;
+}
+
+.HomepageFloat #Form_Section .Email_Contact {
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 5;
+  grid-column: 8/13;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 1.5rem;
+}
+
+.HomepageFloat #Form_Section .Email_Contact h2 {
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.HomepageFloat #Form_Section .Email_Contact .Email_Holder {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+.HomepageFloat #Form_Section .Email_Contact .Email_Content {
+  position: relative;
+  width: 62%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 16px;
+  margin-top: 12%;
+  margin-left: -24px;
+}
+
+.HomepageFloat #Form_Section .Email_Contact .Email_Content button {
+  -webkit-transform: none !important;
+          transform: none !important;
+}
+
+.HomepageFloat #Form_Section .Email_Contact .Email_Content a,
+.HomepageFloat #Form_Section .Email_Contact .Email_Content a:link,
+.HomepageFloat #Form_Section .Email_Contact .Email_Content a:visited,
+.HomepageFloat #Form_Section .Email_Contact .Email_Content a:hover {
+  text-decoration: none;
+}
+
+.HomepageFloat #Form_Section .Email_Contact .Email_Content p {
+  font-size: 0.76rem;
+  font-weight: 400;
+}
+
+.HomepageFloat #Form_Section .Email_Contact .Illustration_Holder {
+  width: 38%;
+  aspect-ratio: 1;
+  height: auto;
+  background: #f9f7f7;
+  position: relative;
+  border-radius: 50%;
+  padding: 8%;
+}
+
+.HomepageFloat #Form_Section .Email_Contact .Illustration_Holder img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateX(-5%);
+          transform: translateX(-5%);
+  -webkit-filter: drop-shadow(18px 18px 32px #00000096);
+          filter: drop-shadow(18px 18px 32px #00000096);
+}
+
+.HomepageFloat footer {
+  background: #151515;
+  height: 20vh !important;
+  width: 100vw !important;
+  margin-bottom: 0 !important;
+}
+
+.HomepageFloat footer .Footer_Col {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  color: #ffffff;
+}
+
+.HomepageFloat footer .Footer_Col h2 {
+  font-size: 1.62vw;
+  margin-bottom: 3vh;
+}
+
+.HomepageFloat footer .Footer_Col small {
+  font-size: calc(min(0.86vw, 1rem));
+}
+
+.HomepageFloat footer #Col1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+}
+
+.HomepageFloat footer #Col2 {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 4;
+  grid-column: 5/9;
+}
+
+.HomepageFloat footer #Col3 {
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 3;
+  grid-column: 9/12;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.HomePageFixed {
+  pointer-events: none;
+}
+
+.HomepageFloat .Section {
+  padding-left: 32px;
+}
+
+.HomepageFloat .Work,
+.HomepageFloat .Work_Overlay {
+  gap: 16px;
+}
+
+.Header_Logo {
+  top: 32px;
+  width: 64px;
+  left: 32px;
+  right: 128px;
+}
+
+.Header_BG_Overlay::after {
+  max-width: calc((100vw - 336px) / 3);
+}
+
+.Header_BG_Overlay {
+  left: 32px;
+  right: 0;
+  top: 24px;
+  bottom: 7vh;
+}
+
+.Tes_Img_Slider .Img_Slide_Holder .on_Active {
+  margin-right: 16px !important;
+}
+
+#Form_Section form,
+#Form_Section .Email_Contact {
+  padding-left: 16px;
+}
+
+@media screen and (min-width: 768px) {
   .HomepageFloat .Section {
-    width: calc(100vw - 128px);
+    padding-left: 16px;
   }
-
-  .HomepageFloat #Header_Section {
-    height: 100vh;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    justify-items: start;
-  }
-
-  .HomepageFloat #Header_Section .Header_BG_Overlay {
-    width: auto;
-    height: auto;
-    position: absolute;
-  }
-
-  .HomepageFloat #Header_Section .Header_Image p {
-    display: block;
-    position: absolute;
-    right: -1vw;
-    font-size: 0.76rem;
-    font-weight: 300;
-    font-style: italic;
-    text-align: left;
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
-
-  .HomepageFloat #Header_Section .Header_Contents {
-    position: relative;
-    height: 38vh;
-    max-width: 62%;
-    padding-bottom: 4vh;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #353535;
-  }
-
-  .HomepageFloat #Header_Section .Header_Contents .Location_Tag {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    width: 100%;
-    gap: 8px;
-    margin-bottom: 4vh;
-  }
-
-  .HomepageFloat #Header_Section .Header_Contents .Location_Tag img {
-    height: 1fr;
-    width: 12px;
-  }
-
-  .HomepageFloat #Header_Section .Header_Contents .Location_Tag p {
-    font-size: 0.76rem;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-
-  .HomepageFloat #Header_Section .Header_Contents h1 {
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    font-family: "Lexend";
-    font-weight: 700;
-    line-height: 1.8rem;
-    max-width: 72%;
-    margin-bottom: 4vh;
-  }
-
-  .HomepageFloat #Header_Section .Header_Contents p {
-    color: #000000;
-    font-size: 1rem;
-    font-weight: 300;
-    width: 1024px;
-    max-width: 48vw;
-  }
-
-  .HomepageFloat #Header_Section .Header_Contents .Header_CTA_Button {
-    position: relative;
-    right: 0;
-    bottom: 0;
-    margin-top: 8vh;
-  }
-
-  .HomepageFloat #Header_Section .Header_Contents .Header_CTA_Button .ButtonContainer label {
-    -webkit-transform: translate(0, 0) !important;
-            transform: translate(0, 0) !important;
-    margin-left: 32px;
-    padding-right: 16px;
-  }
-
-  .HomepageFloat #Header_Section .Header_Contents .Header_CTA_Button .Header_Button_Add_Overlay {
-    background: #f9f7f7;
-    height: 100%;
-    width: 100%;
-    border-radius: 32vw;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-
-  .HomepageFloat #Header_Section .Header_Contents .Header_CTA_Button:hover .ButtonContainer label {
-    margin-left: 0;
-    padding-right: 0;
-  }
-
-  .HomepageFloat #Header_Section .Header_Image {
-    position: relative;
-    width: 32vh;
-    height: 32vh;
-    background: #f9f7f7;
-    border-radius: 50%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    margin-bottom: 4vh;
-  }
-
-  .HomepageFloat #Header_Section .Header_Image img,
-  .HomepageFloat #Header_Section .Header_Image svg {
-    -o-object-fit: contain;
-      object-fit: contain;
-    width: 80%;
-    height: 80%;
-    -webkit-filter: drop-shadow(12px 12px 32px #00000096);
-            filter: drop-shadow(12px 12px 32px #00000096);
-  }
-
+  .HomepageFloat .Work,
   .HomepageFloat .Work_Overlay,
   .HomepageFloat .About_Overlay {
-    width: 100%;
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[12];
-        grid-template-columns: repeat(12, 1fr);
-    padding: inherit;
-    z-index: -1;
-  }
-
-  .HomepageFloat .Work_Overlay::after,
-  .HomepageFloat .About_Overlay::after {
-    content: "";
-    background: #e9e7e7;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 7;
-    grid-column: 3/10;
-  }
-
-  .HomepageFloat .Work_Overlay::after {
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 7;
-    grid-column: 3/10;
-  }
-
-  .HomepageFloat .About_Overlay::after {
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 5;
-    grid-column: 3/8;
-  }
-
-  .HomepageFloat #Works_Showreel_Section {
-    min-height: 100vh;
-    margin-top: 64px;
-    height: auto;
-  }
-
-  .HomepageFloat #Works_Showreel_Section h1 {
-    width: auto;
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 7;
-    grid-column: 3/10;
-    text-align: center;
-    color: #353535;
-    height: auto;
-    font-size: 4rem;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    text-transform: uppercase;
-  }
-
-  .HomepageFloat #Works_Showreel_Section .Work_Contents {
-    width: 100%;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    position: relative;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 12;
-    grid-column: 1/13;
-  }
-
-  .HomepageFloat #Works_Showreel_Section .Work_Contents .Work {
-    position: relative;
-    min-height: 256px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    grid-column: span 4;
-  }
-
-  .HomepageFloat #Works_Showreel_Section .Work_Contents #work2 {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 4;
-    grid-column: 2 / span 4;
-    margin-top: 6rem;
-  }
-
-  .HomepageFloat #Works_Showreel_Section .Work_Contents #work3 {
-    -ms-grid-column: 7;
-    -ms-grid-column-span: 4;
-    grid-column: 7 / span 4;
-  }
-
-  .HomepageFloat #Works_Showreel_Section .Work_Contents #work3 .Work_Button_Holder {
-    width: 100% !important;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    padding-right: 8px;
-  }
-
-  .HomepageFloat #Works_Showreel_Section .Work_Contents .Work_Images {
-    min-height: auto;
-    aspect-ratio: 1;
-    -ms-grid-column: 1 !important;
-    -ms-grid-column-span: 7 !important;
-    grid-column: 1/8 !important;
-    -webkit-transition: none;
-    transition: none;
-  }
-
-  .HomepageFloat #Works_Showreel_Section .Work_Contents .OnTransition {
-    width: 50vw !important;
-    height: 100vh !important;
-    -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    z-index: 99;
-  }
-
-  .HomepageFloat #Works_Showreel_Section .Work_Contents .OnTransition label {
-    opacity: 0 !important;
-  }
-
-  .HomepageFloat #Works_Showreel_Section .Work_Contents .OnTransition img {
-    -webkit-transform: scale(1) !important;
-            transform: scale(1) !important;
-  }
-
-  .HomepageFloat #Works_Showreel_Section .Work_Contents .OnTransition .Img_Scaler {
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%) !important;
-            clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 100%) !important;
-  }
-
-  .HomepageFloat #Works_Showreel_Section .Work_Contents .Top_Work {
-    -ms-grid-column: 1 !important;
-    -ms-grid-column-span: 11 !important;
-    grid-column: 1/12 !important;
-    display: -ms-grid;
-    display: grid;
-    width: auto !important;
-    -ms-grid-columns: (1fr)[11];
-        grid-template-columns: repeat(11, 1fr);
-    margin-bottom: 64px;
-  }
-
-  .HomepageFloat #Works_Showreel_Section .Work_Contents .Top_Work .Work_Images {
-    height: auto;
-    -ms-grid-column: 1 !important;
-    -ms-grid-column-span: 7 !important;
-    grid-column: 1/8 !important;
-  }
-
-  .HomepageFloat #Works_Showreel_Section .Work_Contents .Top_Work .Work_Button_Holder {
-    width: 100% !important;
-    padding-left: 5%;
-  }
-
-  .HomepageFloat #Works_Showreel_Section .Work_Contents .Main_Work_Contents {
-    padding-bottom: 3rem;
-    min-height: 256px;
-    -ms-grid-column: 8;
-    -ms-grid-column-span: 4;
-    grid-column: 8/12;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    color: #353535;
-  }
-
-  .HomepageFloat #Works_Showreel_Section .Work_Contents .Main_Work_Contents span {
-    color: #353535;
-    font-size: 0.76rem;
-    font-weight: 500;
-    margin-top: 2px;
-    margin-bottom: 2rem;
-  }
-
-  .HomepageFloat #Works_Showreel_Section .Work_Contents .Main_Work_Contents p {
-    margin-bottom: 3rem;
-    color: #000000;
-  }
-
-  .HomepageFloat #Works_Showreel_Section .Work_Contents .Main_Work_Contents .Work_Button_Holder {
-    width: 70%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-
-  .HomepageFloat #About_Section {
-    margin-top: 12vh;
-    height: auto;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-  }
-
-  .HomepageFloat #About_Section .About_Top_Content,
-  .HomepageFloat #About_Section .About_Contents {
-    width: auto;
-    text-align: start;
-    color: #353535;
-  }
-
-  .HomepageFloat #About_Section .About_Top_Content h1,
-  .HomepageFloat #About_Section .About_Contents h1 {
-    text-transform: uppercase;
-    height: auto;
-    font-size: 4rem;
-    margin-bottom: 2rem;
-  }
-
-  .HomepageFloat #About_Section .About_Top_Content h2,
-  .HomepageFloat #About_Section .About_Contents h2 {
-    text-transform: None;
-  }
-
-  .HomepageFloat #About_Section .About_Top_Content p,
-  .HomepageFloat #About_Section .About_Contents p {
-    margin-bottom: 4rem;
-  }
-
-  .HomepageFloat #About_Section .About_Contents {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 4;
-    grid-column: 2/6;
-  }
-
-  .HomepageFloat #About_Section .About_Top_Content {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 3;
-    grid-column: 2/5;
-    margin-top: 4rem;
-  }
-
-  .HomepageFloat #About_Section .About_Images {
-    -ms-grid-column: 7;
-    -ms-grid-column-span: 5;
-    grid-column: 7/12;
-    height: 1fr;
-    margin-top: 4rem;
-    margin-bottom: 4rem;
-  }
-
-  .HomepageFloat #About_Section .Work_Images {
-    height: 100%;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 7;
-    grid-column: 1/8;
-  }
-
-  .HomepageFloat #About_Section .About_Top_Image {
-    -ms-grid-column: 6;
-    -ms-grid-column-span: 5;
-    grid-column: 6/11;
-  }
-
-  .HomepageFloat #Testimonial_Section {
-    margin-top: 12vh;
-    height: auto;
-    min-height: 30vh;
-    margin-bottom: 0;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-  }
-
-  .HomepageFloat #Testimonial_Section .Double_Quotes {
-    position: absolute;
-    -ms-grid-column: 4;
-    -ms-grid-column-span: 1;
-    grid-column: 4/5;
-    height: 5vh;
-    left: 0;
-    right: 0;
-    margin: auto;
-    overflow: visible;
-  }
-
-  .HomepageFloat #Testimonial_Section .Double_Quotes .Double_Quotes_Vector-1 {
-    fill: url(#Main_Gradient);
-  }
-
-  .HomepageFloat #Testimonial_Section .Tes_Overlay::after {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 6;
-    grid-column: 2/8;
-  }
-
-  .HomepageFloat #Testimonial_Section .Tes_Content_Slider,
-  .HomepageFloat #Testimonial_Section .Tes_Img_Slider {
-    margin-top: 12vh;
-    margin-bottom: 12vh;
-    min-height: 256px;
-  }
-
-  .HomepageFloat #Testimonial_Section .Tes_Content_Slider {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
-    grid-column: 1/4;
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
-    -webkit-box-pack: stretch;
-        -ms-flex-pack: stretch;
-            justify-content: stretch;
-    overflow-x: hidden;
-  }
-
-  .HomepageFloat #Testimonial_Section .Tes_Slider_El_Holder {
-    text-align: center;
-    width: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    margin-top: 2.5vh;
-    -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-  }
-
-  .HomepageFloat #Testimonial_Section .Tes_Slider_El_Holder .Tes_Slider_El {
-    min-width: inherit;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 64px 32px;
-    color: #ffffff;
-    -webkit-box-pack: stretch;
-        -ms-flex-pack: stretch;
-            justify-content: stretch;
-    width: 100%;
-    background: #151515;
-  }
-
-  .HomepageFloat #Testimonial_Section .Tes_Slider_El_Holder .Tes_Slider_El span,
-  .HomepageFloat #Testimonial_Section .Tes_Slider_El_Holder .Tes_Slider_El img {
-    margin-bottom: 32px;
-  }
-
-  .HomepageFloat #Testimonial_Section .Tes_Slider_El_Holder .Tes_Slider_El h2 {
-    text-transform: uppercase;
-  }
-
-  .HomepageFloat #Testimonial_Section .Tes_Slider_El_Holder .Tes_Slider_El span {
-    font-size: 0.72rem;
-    font-weight: 500;
-    opacity: 0.78;
-  }
-
-  .HomepageFloat #Testimonial_Section .Tes_Slider_El_Holder .Tes_Slider_El img {
-    width: 72%;
-    aspect-ratio: 1;
-    height: auto;
-    -o-object-fit: cover;
-      object-fit: cover;
-    border-radius: 50%;
-  }
-
-  .HomepageFloat #Testimonial_Section .Tes_Img_Slider {
-    -ms-grid-column: 4;
-    -ms-grid-column-span: 9;
-    grid-column: 4/13;
-    padding-top: 2.5vh;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .HomepageFloat #Testimonial_Section .Tes_Img_Slider .Slider_Indexes {
-    margin-bottom: 32%;
-    margin-right: -16px;
-  }
-
-  .HomepageFloat #Testimonial_Section .Tes_Img_Slider .Img_Slide_Holder {
-    width: 100%;
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-  }
-
-  .HomepageFloat #Testimonial_Section .Tes_Img_Slider .Img_Slide_Holder img {
-    max-width: 38%;
-    height: 62%;
-    -o-object-fit: cover;
-      object-fit: cover;
-    -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    opacity: 0.38;
-  }
-
-  .HomepageFloat #Testimonial_Section .Tes_Img_Slider .Img_Slide_Holder .on_Active {
-    max-width: 62%;
-    opacity: 1;
-    height: 100%;
-  }
-
-  .HomepageFloat #Testimonial_Section .Tes_Img_Slider .Tes_Controllers {
-    position: absolute;
-    width: 38%;
-    bottom: 0;
-    right: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: end;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    gap: inherit;
-    padding-right: 8px;
-  }
-
-  .HomepageFloat #Form_Section {
-    color: #353535;
-    height: 80vh;
-    min-height: unset;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: end;
-    margin-bottom: 0;
-    margin-top: -4vh;
-    padding-bottom: 11vh;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-
-  .HomepageFloat #Form_Section h1 {
-    text-transform: uppercase;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 12;
-    grid-column: 1/13;
-  }
-
-  .HomepageFloat #Form_Section form {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 7;
-    grid-column: 1/8;
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact,
-  .HomepageFloat #Form_Section form {
-    height: 38vh;
-    background: #e9e7e7;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    position: relative;
-    gap: 16px;
-    padding-bottom: 4%;
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact #Form_Label,
-  .HomepageFloat #Form_Section form #Form_Label {
-    position: absolute;
-    top: 0;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact input,
-  .HomepageFloat #Form_Section .Email_Contact textarea,
-  .HomepageFloat #Form_Section .Email_Contact #Email_Input:placeholder-shown,
-  .HomepageFloat #Form_Section .Email_Contact #Message_Input:placeholder-shown,
-  .HomepageFloat #Form_Section form input,
-  .HomepageFloat #Form_Section form textarea,
-  .HomepageFloat #Form_Section form #Email_Input:placeholder-shown,
-  .HomepageFloat #Form_Section form #Message_Input:placeholder-shown {
-    background: none;
-    border: none;
-    position: relative;
-    -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    color: #353535;
-    width: 78%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    border-bottom: solid 1px #656565;
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact input::-webkit-input-placeholder,
-  .HomepageFloat #Form_Section .Email_Contact textarea::-webkit-input-placeholder,
-  .HomepageFloat #Form_Section form input::-webkit-input-placeholder,
-  .HomepageFloat #Form_Section form textarea::-webkit-input-placeholder {
-    font-weight: 300;
-    color: #656565;
-    -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact input:-ms-input-placeholder,
-  .HomepageFloat #Form_Section .Email_Contact textarea:-ms-input-placeholder,
-  .HomepageFloat #Form_Section form input:-ms-input-placeholder,
-  .HomepageFloat #Form_Section form textarea:-ms-input-placeholder {
-    font-weight: 300;
-    color: #656565;
-    -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact input::-ms-input-placeholder,
-  .HomepageFloat #Form_Section .Email_Contact textarea::-ms-input-placeholder,
-  .HomepageFloat #Form_Section form input::-ms-input-placeholder,
-  .HomepageFloat #Form_Section form textarea::-ms-input-placeholder {
-    font-weight: 300;
-    color: #656565;
-    -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact input::placeholder,
-  .HomepageFloat #Form_Section .Email_Contact textarea::placeholder,
-  .HomepageFloat #Form_Section form input::placeholder,
-  .HomepageFloat #Form_Section form textarea::placeholder {
-    font-weight: 300;
-    color: #656565;
-    -webkit-transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-    transition: all 0.88s cubic-bezier(0.25, 0, 0, 1);
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact textarea::-webkit-input-placeholder,
-  .HomepageFloat #Form_Section form textarea::-webkit-input-placeholder {
-    -webkit-transform: translateY(200%);
-            transform: translateY(200%);
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact textarea:-ms-input-placeholder,
-  .HomepageFloat #Form_Section form textarea:-ms-input-placeholder {
-    transform: translateY(200%);
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact textarea::-ms-input-placeholder,
-  .HomepageFloat #Form_Section form textarea::-ms-input-placeholder {
-    transform: translateY(200%);
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact textarea::placeholder,
-  .HomepageFloat #Form_Section form textarea::placeholder {
-    -webkit-transform: translateY(200%);
-            transform: translateY(200%);
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact input:focus,
-  .HomepageFloat #Form_Section .Email_Contact textarea:focus,
-  .HomepageFloat #Form_Section form input:focus,
-  .HomepageFloat #Form_Section form textarea:focus {
-    outline: none;
-    padding: 8px;
-    background: #d9d7d7 !important;
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact input:valid,
-  .HomepageFloat #Form_Section .Email_Contact textarea:valid,
-  .HomepageFloat #Form_Section form input:valid,
-  .HomepageFloat #Form_Section form textarea:valid {
-    border-color: #8e724b;
-    border-width: 2px;
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact input:invalid,
-  .HomepageFloat #Form_Section .Email_Contact textarea:invalid,
-  .HomepageFloat #Form_Section form input:invalid,
-  .HomepageFloat #Form_Section form textarea:invalid {
-    border-color: #ad1313;
-    border-width: 2px;
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact textarea:focus::-webkit-input-placeholder,
-  .HomepageFloat #Form_Section form textarea:focus::-webkit-input-placeholder {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact textarea:focus:-ms-input-placeholder,
-  .HomepageFloat #Form_Section form textarea:focus:-ms-input-placeholder {
-    transform: translateY(0);
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact textarea:focus::-ms-input-placeholder,
-  .HomepageFloat #Form_Section form textarea:focus::-ms-input-placeholder {
-    transform: translateY(0);
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact textarea:focus::placeholder,
-  .HomepageFloat #Form_Section form textarea:focus::placeholder {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact input,
-  .HomepageFloat #Form_Section form input {
-    height: 14%;
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact textarea,
-  .HomepageFloat #Form_Section form textarea {
-    height: 32%;
-  }
-
-  .HomepageFloat #Form_Section .Contact_Form_Button_Holder {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    -webkit-transform: translateY(50%);
-            transform: translateY(50%);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-item-align: center;
-        align-self: center;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    width: 78%;
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact {
-    -ms-grid-column: 8;
-    -ms-grid-column-span: 5;
-    grid-column: 8/13;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding-top: 1.5rem;
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact h2 {
-    position: absolute;
-    top: 0;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact .Email_Holder {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    height: 100%;
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact .Email_Content {
-    position: relative;
-    width: 62%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    gap: 16px;
-    margin-top: 12%;
-    margin-left: -24px;
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact .Email_Content button {
-    -webkit-transform: none !important;
-            transform: none !important;
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact .Email_Content a,
-  .HomepageFloat #Form_Section .Email_Contact .Email_Content a:link,
-  .HomepageFloat #Form_Section .Email_Contact .Email_Content a:visited,
-  .HomepageFloat #Form_Section .Email_Contact .Email_Content a:hover {
-    text-decoration: none;
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact .Email_Content p {
-    font-size: 0.76rem;
-    font-weight: 400;
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact .Illustration_Holder {
-    width: 38%;
-    aspect-ratio: 1;
-    height: auto;
-    background: #f9f7f7;
-    position: relative;
-    border-radius: 50%;
-    padding: 8%;
-  }
-
-  .HomepageFloat #Form_Section .Email_Contact .Illustration_Holder img {
-    -o-object-fit: cover;
-      object-fit: cover;
-    width: 100%;
-    height: 100%;
-    -webkit-transform: translateX(-5%);
-            transform: translateX(-5%);
-    -webkit-filter: drop-shadow(18px 18px 32px #00000096);
-            filter: drop-shadow(18px 18px 32px #00000096);
-  }
-
-  .HomepageFloat footer {
-    background: #151515;
-    height: 20vh !important;
-    width: 100vw !important;
-    margin-bottom: 0 !important;
-  }
-
-  .HomepageFloat footer .Footer_Col {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    color: #ffffff;
-  }
-
-  .HomepageFloat footer .Footer_Col h2 {
-    font-size: 1.62vw;
-    margin-bottom: 3vh;
-  }
-
-  .HomepageFloat footer .Footer_Col small {
-    font-size: calc(min(0.86vw, 1rem));
-  }
-
-  .HomepageFloat footer #Col1 {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 4;
-    grid-column: 1/5;
-  }
-
-  .HomepageFloat footer #Col2 {
-    -ms-grid-column: 5;
-    -ms-grid-column-span: 4;
-    grid-column: 5/9;
-  }
-
-  .HomepageFloat footer #Col3 {
-    -ms-grid-column: 9;
-    -ms-grid-column-span: 3;
-    grid-column: 9/12;
-    text-align: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-
-  .HomePageFixed {
-    pointer-events: none;
-  }
-
-  .HomepageFloat .Section {
-    padding-left: 32px;
-  }
-
-  .HomepageFloat .Work,
-  .HomepageFloat .Work_Overlay {
     gap: 16px;
   }
-
+  .Tes_Img_Slider .Img_Slide_Holder .on_Active {
+    margin-right: 16px !important;
+  }
+  .Tes_Img_Slider .Tes_Controllers {
+    padding-left: 16px;
+  }
   .Header_Logo {
-    top: 32px;
+    top: 12px;
     width: 64px;
-    left: 32px;
+    left: 16px;
     right: 128px;
   }
-
   .Header_BG_Overlay::after {
-    max-width: calc((100vw - 336px) / 3);
+    max-width: calc((100vw - 320px) / 3);
   }
-
   .Header_BG_Overlay {
-    left: 32px;
+    left: 16px;
     right: 0;
     top: 24px;
     bottom: 7vh;
   }
-
-  .Tes_Img_Slider .Img_Slide_Holder .on_Active {
-    margin-right: 16px !important;
-  }
-
   #Form_Section form,
   #Form_Section .Email_Contact {
-    padding-left: 16px;
+    padding-left: 32px;
   }
+}
 
-  @media screen and (min-width: 768px) {
-    .HomepageFloat .Section {
-      padding-left: 16px;
-    }
-    .HomepageFloat .Work,
-    .HomepageFloat .Work_Overlay,
-    .HomepageFloat .About_Overlay {
-      gap: 16px;
-    }
-    .Tes_Img_Slider .Img_Slide_Holder .on_Active {
-      margin-right: 16px !important;
-    }
-    .Tes_Img_Slider .Tes_Controllers {
-      padding-left: 16px;
-    }
-    .Header_Logo {
-      top: 12px;
-      width: 64px;
-      left: 16px;
-      right: 128px;
-    }
-    .Header_BG_Overlay::after {
-      max-width: calc((100vw - 320px) / 3);
-    }
-    .Header_BG_Overlay {
-      left: 16px;
-      right: 0;
-      top: 24px;
-      bottom: 7vh;
-    }
-    #Form_Section form,
-    #Form_Section .Email_Contact {
-      padding-left: 32px;
-    }
+@media screen and (min-width: 960px) {
+  .HomepageFloat .Section {
+    padding-left: 48px;
   }
-
-  @media screen and (min-width: 960px) {
-    .HomepageFloat .Section {
-      padding-left: 48px;
-    }
-    .HomepageFloat .Work,
-    .HomepageFloat .Work_Overlay,
-    .HomepageFloat .About_Overlay {
-      gap: 32px;
-    }
-    .Tes_Img_Slider .Img_Slide_Holder .on_Active {
-      margin-right: 32px !important;
-    }
-    .Tes_Img_Slider .Tes_Controllers {
-      padding-left: 32px;
-    }
-    .Header_Logo {
-      top: 24px;
-      width: 78px;
-      left: 48px;
-      right: 128px;
-    }
-    .Header_BG_Overlay::after {
-      max-width: calc((100vw - 528px) / 3);
-    }
-    .Header_BG_Overlay {
-      left: 48px;
-      right: 0;
-      top: 48px;
-      bottom: 7vh;
-    }
-    #Form_Section form,
-    #Form_Section .Email_Contact {
-      padding-left: 64px;
-    }
+  .HomepageFloat .Work,
+  .HomepageFloat .Work_Overlay,
+  .HomepageFloat .About_Overlay {
+    gap: 32px;
   }
-
-  @media screen and (min-width: 1024px) {
-    .HomepageFloat .Section {
-      padding-left: 64px;
-    }
-    .HomepageFloat .Work,
-    .HomepageFloat .Work_Overlay,
-    .HomepageFloat .About_Overlay {
-      gap: 32px;
-    }
-    .Tes_Img_Slider .Img_Slide_Holder .on_Active {
-      margin-right: 32px !important;
-    }
-    .Tes_Img_Slider .Tes_Controllers {
-      padding-left: 32px;
-    }
-    .Header_Logo {
-      top: 24px;
-      width: 96px;
-      left: 64px;
-      right: 128px;
-    }
-    .Header_BG_Overlay::after {
-      max-width: calc((100vw - 544px) / 3);
-    }
-    .Header_BG_Overlay {
-      left: 64px;
-      right: 0;
-      top: 48px;
-      bottom: 7vh;
-    }
-    #Form_Section form,
-    #Form_Section .Email_Contact {
-      padding-left: 64px;
-    }
+  .Tes_Img_Slider .Img_Slide_Holder .on_Active {
+    margin-right: 32px !important;
   }
-
-  @media screen and (max-width: 1441px) {
-    .Tes_Content_Slider {
-      -ms-grid-column: 1 !important;
-      -ms-grid-column-span: 5 !important;
-      grid-column: 1/6 !important;
-    }
-    .HomepageFloat #Testimonial_Section .Tes_Img_Slider {
-      -ms-grid-column: 6;
-      -ms-grid-column-span: 7;
-      grid-column: 6/13;
-    }
-    .HomepageFloat #Testimonial_Section .Tes_Overlay::after {
-      -ms-grid-column: 2 !important;
-      -ms-grid-column-span: 8 !important;
-      grid-column: 2/10 !important;
-    }
-    .HomepageFloat #Testimonial_Section .Tes_Slider_El_Holder .Tes_Slider_El img {
-      width: 32% !important;
-    }
-    .HomepageFloat #Form_Section form,
-    .HomepageFloat #Form_Section .Email_Contact {
-      padding-left: 32px;
-    }
-    .HomepageFloat #Form_Section form {
-      -ms-grid-column: 1 !important;
-      -ms-grid-column-span: 6 !important;
-      grid-column: 1/7 !important;
-    }
-    .HomepageFloat #Form_Section .Email_Contact {
-      -ms-grid-column: 7 !important;
-      -ms-grid-column-span: 6 !important;
-      grid-column: 7/13 !important;
-    }
+  .Tes_Img_Slider .Tes_Controllers {
+    padding-left: 32px;
   }
-
-  @media screen and (min-width: 1728px) {
-    .HomepageFloat .Section {
-      padding-left: 64px;
-    }
-    .HomepageFloat .Work,
-    .HomepageFloat .Work_Overlay,
-    .HomepageFloat .About_Overlay {
-      gap: 42px;
-    }
-    .Tes_Img_Slider .Img_Slide_Holder .on_Active {
-      margin-right: 42px !important;
-    }
-    .Tes_Img_Slider .Tes_Controllers {
-      padding-left: 42px;
-    }
-    .Header_Logo {
-      top: 31.5px;
-      width: 112px;
-      left: 64px;
-      right: 128px;
-    }
-    .Header_BG_Overlay::after {
-      max-width: calc((100vw - 654px) / 3);
-    }
-    .Header_BG_Overlay {
-      left: 64px;
-      right: 0;
-      top: 63px;
-      bottom: 7vh;
-    }
-    #Form_Section form,
-    #Form_Section .Email_Contact {
-      padding-left: 84px;
-    }
-  }
-
-  @media screen and (min-width: 2200px) {
-    .HomepageFloat .Section {
-      padding-left: 64px;
-    }
-    .HomepageFloat .Work,
-    .HomepageFloat .Work_Overlay,
-    .HomepageFloat .About_Overlay {
-      gap: 48px;
-    }
-    .Tes_Img_Slider .Img_Slide_Holder .on_Active {
-      margin-right: 48px !important;
-    }
-    .Tes_Img_Slider .Tes_Controllers {
-      padding-left: 48px;
-    }
-    .Header_Logo {
-      top: 32px;
-      width: 128px;
-      left: 64px;
-      right: 128px;
-    }
-    .Header_BG_Overlay::after {
-      max-width: calc((100vw - 720px) / 3);
-    }
-    .Header_BG_Overlay {
-      left: 64px;
-      right: 0;
-      top: 72px;
-      bottom: 7vh;
-    }
-    #Form_Section form,
-    #Form_Section .Email_Contact {
-      padding-left: 96px;
-    }
-  }
-
-  .Mobile h1 {
-    font-size: 1.6rem;
-  }
-
-  .Mobile .Header_Logo {
-    top: 0;
-    left: 16px;
-    margin: unset;
+  .Header_Logo {
+    top: 24px;
     width: 78px;
-    height: 56px;
+    left: 48px;
+    right: 128px;
   }
-
-  .Mobile .Language_Switch {
-    height: 56px;
-    top: 0;
-    position: absolute;
-    right: 16px;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+  .Header_BG_Overlay::after {
+    max-width: calc((100vw - 528px) / 3);
   }
-
-  .Mobile .Stylized_Scroll_Bar {
-    width: 96px;
-    top: unset;
-    height: 50vh;
-    bottom: 32px;
-  }
-
-  .Mobile .Stylized_Scroll_Bar .ScrollBar_Track,
-  .Mobile .Stylized_Scroll_Bar .ScrollBar_Thumb {
-    display: none;
-  }
-
-  .Mobile .HomepageFloat #Header_Section {
-    width: 100vw;
-    padding-left: 16px;
-    padding-right: 16px;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    padding-top: 86px;
-    position: relative;
-  }
-
-  .Mobile .HomepageFloat #Header_Section .Header_BG_Overlay {
-    height: 100%;
-    left: 16px;
-    right: 16px;
-    top: 56px;
-    bottom: unset;
-  }
-
-  .Mobile .HomepageFloat #Header_Section .Header_CTA_Button {
-    margin-top: 0;
-  }
-
-  .Mobile .HomepageFloat #Header_Section .Header_Image {
-    margin-bottom: 5vh;
-  }
-
-  .Mobile .HomepageFloat #Header_Section .Header_Image p {
+  .Header_BG_Overlay {
+    left: 48px;
     right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
-    text-align: center;
+    top: 48px;
+    bottom: 7vh;
   }
+  #Form_Section form,
+  #Form_Section .Email_Contact {
+    padding-left: 64px;
+  }
+}
 
-  .Mobile .HomepageFloat #Header_Section .Header_Contents {
-    padding: 0;
-    max-width: unset;
-    height: auto;
+@media screen and (min-width: 1024px) {
+  .HomepageFloat .Section {
+    padding-left: 64px;
   }
+  .HomepageFloat .Work,
+  .HomepageFloat .Work_Overlay,
+  .HomepageFloat .About_Overlay {
+    gap: 32px;
+  }
+  .Tes_Img_Slider .Img_Slide_Holder .on_Active {
+    margin-right: 32px !important;
+  }
+  .Tes_Img_Slider .Tes_Controllers {
+    padding-left: 32px;
+  }
+  .Header_Logo {
+    top: 24px;
+    width: 96px;
+    left: 64px;
+    right: 128px;
+  }
+  .Header_BG_Overlay::after {
+    max-width: calc((100vw - 544px) / 3);
+  }
+  .Header_BG_Overlay {
+    left: 64px;
+    right: 0;
+    top: 48px;
+    bottom: 7vh;
+  }
+  #Form_Section form,
+  #Form_Section .Email_Contact {
+    padding-left: 64px;
+  }
+}
 
-  .Mobile .HomepageFloat #Header_Section .Header_Contents h1,
-  .Mobile .HomepageFloat #Header_Section .Header_Contents p {
-    width: auto;
-    max-width: 78%;
-    margin-bottom: 2vh;
+@media screen and (max-width: 1441px) {
+  .Tes_Content_Slider {
+    -ms-grid-column: 1 !important;
+    -ms-grid-column-span: 5 !important;
+    grid-column: 1/6 !important;
   }
-  /*# sourceMappingURL=App.css.map */
+  .HomepageFloat #Testimonial_Section .Tes_Img_Slider {
+    -ms-grid-column: 6;
+    -ms-grid-column-span: 7;
+    grid-column: 6/13;
+  }
+  .HomepageFloat #Testimonial_Section .Tes_Overlay::after {
+    -ms-grid-column: 2 !important;
+    -ms-grid-column-span: 8 !important;
+    grid-column: 2/10 !important;
+  }
+  .HomepageFloat #Testimonial_Section .Tes_Slider_El_Holder .Tes_Slider_El img {
+    width: 32% !important;
+  }
+  .HomepageFloat #Form_Section form,
+  .HomepageFloat #Form_Section .Email_Contact {
+    padding-left: 32px;
+  }
+  .HomepageFloat #Form_Section form {
+    -ms-grid-column: 1 !important;
+    -ms-grid-column-span: 6 !important;
+    grid-column: 1/7 !important;
+  }
+  .HomepageFloat #Form_Section .Email_Contact {
+    -ms-grid-column: 7 !important;
+    -ms-grid-column-span: 6 !important;
+    grid-column: 7/13 !important;
+  }
+}
+
+@media screen and (min-width: 1728px) {
+  .HomepageFloat .Section {
+    padding-left: 64px;
+  }
+  .HomepageFloat .Work,
+  .HomepageFloat .Work_Overlay,
+  .HomepageFloat .About_Overlay {
+    gap: 42px;
+  }
+  .Tes_Img_Slider .Img_Slide_Holder .on_Active {
+    margin-right: 42px !important;
+  }
+  .Tes_Img_Slider .Tes_Controllers {
+    padding-left: 42px;
+  }
+  .Header_Logo {
+    top: 31.5px;
+    width: 112px;
+    left: 64px;
+    right: 128px;
+  }
+  .Header_BG_Overlay::after {
+    max-width: calc((100vw - 654px) / 3);
+  }
+  .Header_BG_Overlay {
+    left: 64px;
+    right: 0;
+    top: 63px;
+    bottom: 7vh;
+  }
+  #Form_Section form,
+  #Form_Section .Email_Contact {
+    padding-left: 84px;
+  }
+}
+
+@media screen and (min-width: 2200px) {
+  .HomepageFloat .Section {
+    padding-left: 64px;
+  }
+  .HomepageFloat .Work,
+  .HomepageFloat .Work_Overlay,
+  .HomepageFloat .About_Overlay {
+    gap: 48px;
+  }
+  .Tes_Img_Slider .Img_Slide_Holder .on_Active {
+    margin-right: 48px !important;
+  }
+  .Tes_Img_Slider .Tes_Controllers {
+    padding-left: 48px;
+  }
+  .Header_Logo {
+    top: 32px;
+    width: 128px;
+    left: 64px;
+    right: 128px;
+  }
+  .Header_BG_Overlay::after {
+    max-width: calc((100vw - 720px) / 3);
+  }
+  .Header_BG_Overlay {
+    left: 64px;
+    right: 0;
+    top: 72px;
+    bottom: 7vh;
+  }
+  #Form_Section form,
+  #Form_Section .Email_Contact {
+    padding-left: 96px;
+  }
+}
+
+.Mobile h1 {
+  font-size: 1.6rem;
+}
+
+.Mobile .Header_Logo {
+  top: 0;
+  left: 16px;
+  margin: unset;
+  width: 78px;
+  height: 56px;
+}
+
+.Mobile .Language_Switch {
+  height: 56px;
+  top: 0;
+  position: absolute;
+  right: 16px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.Mobile .Stylized_Scroll_Bar {
+  width: 96px;
+  top: unset;
+  height: 50vh;
+  bottom: 32px;
+}
+
+.Mobile .Stylized_Scroll_Bar .ScrollBar_Track,
+.Mobile .Stylized_Scroll_Bar .ScrollBar_Thumb {
+  display: none;
+}
+
+.Mobile .HomepageFloat #Header_Section {
+  width: 100vw;
+  padding-left: 16px;
+  padding-right: 16px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-top: 86px;
+  position: relative;
+}
+
+.Mobile .HomepageFloat #Header_Section .Header_BG_Overlay {
+  height: 100%;
+  left: 16px;
+  right: 16px;
+  top: 56px;
+  bottom: unset;
+}
+
+.Mobile .HomepageFloat #Header_Section .Header_CTA_Button {
+  margin-top: 0;
+}
+
+.Mobile .HomepageFloat #Header_Section .Header_Image {
+  margin-bottom: 5vh;
+}
+
+.Mobile .HomepageFloat #Header_Section .Header_Image p {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  text-align: center;
+}
+
+.Mobile .HomepageFloat #Header_Section .Header_Contents {
+  padding: 0;
+  max-width: unset;
+  height: auto;
+}
+
+.Mobile .HomepageFloat #Header_Section .Header_Contents h1,
+.Mobile .HomepageFloat #Header_Section .Header_Contents p {
+  width: auto;
+  max-width: 78%;
+  margin-bottom: 2vh;
+}
+/*# sourceMappingURL=App.css.map */
