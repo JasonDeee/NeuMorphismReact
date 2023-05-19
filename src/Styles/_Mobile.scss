@@ -39,6 +39,10 @@ h1 {
   }
 }
 
+.Column_Grid {
+  grid-template-columns: repeat(6, 1fr);
+}
+
 .HomepageFloat {
   #Header_Section {
     width: 100vw;
@@ -85,6 +89,31 @@ h1 {
         width: auto;
         max-width: 78%;
         margin-bottom: 2vh;
+      }
+    }
+  }
+
+  #Works_Showreel_Section {
+    width: 100vw;
+    padding: 16px;
+    .Work_Overlay {
+      grid-template-columns: repeat(6, 1fr);
+    }
+    .Work_Overlay::after {
+      grid-column: 2/5;
+    }
+    .Work_Contents {
+      grid-column: 1/7;
+
+      .Top_Work {
+        grid-column: 1/7 !important;
+        grid-template-columns: repeat(6, 1fr);
+      }
+      #work2 {
+        grid-column: 1 / span 2;
+      }
+      #work3 {
+        grid-column: 3 / span 2;
       }
     }
   }

@@ -2434,6 +2434,11 @@ svg {
   display: none;
 }
 
+.Mobile .Column_Grid {
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+}
+
 .Mobile .HomepageFloat #Header_Section {
   width: 100vw;
   padding-left: 16px;
@@ -2482,5 +2487,47 @@ svg {
   width: auto;
   max-width: 78%;
   margin-bottom: 2vh;
+}
+
+.Mobile .HomepageFloat #Works_Showreel_Section {
+  width: 100vw;
+  padding: 16px;
+}
+
+.Mobile .HomepageFloat #Works_Showreel_Section .Work_Overlay {
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+}
+
+.Mobile .HomepageFloat #Works_Showreel_Section .Work_Overlay::after {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2/5;
+}
+
+.Mobile .HomepageFloat #Works_Showreel_Section .Work_Contents {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-column: 1/7;
+}
+
+.Mobile .HomepageFloat #Works_Showreel_Section .Work_Contents .Top_Work {
+  -ms-grid-column: 1 !important;
+  -ms-grid-column-span: 6 !important;
+  grid-column: 1/7 !important;
+  -ms-grid-columns: (1fr)[6];
+      grid-template-columns: repeat(6, 1fr);
+}
+
+.Mobile .HomepageFloat #Works_Showreel_Section .Work_Contents #work2 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+}
+
+.Mobile .HomepageFloat #Works_Showreel_Section .Work_Contents #work3 {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3 / span 2;
 }
 /*# sourceMappingURL=App.css.map */
