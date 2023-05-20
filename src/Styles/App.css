@@ -2494,15 +2494,27 @@ svg {
   padding: 16px;
 }
 
+.Mobile .HomepageFloat #Works_Showreel_Section h1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-column: 1/7;
+}
+
 .Mobile .HomepageFloat #Works_Showreel_Section .Work_Overlay {
   -ms-grid-columns: (1fr)[6];
       grid-template-columns: repeat(6, 1fr);
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-column: 1/7;
+  z-index: unset;
+  width: 100%;
+  padding: 0;
 }
 
 .Mobile .HomepageFloat #Works_Showreel_Section .Work_Overlay::after {
   -ms-grid-column: 2;
-  -ms-grid-column-span: 3;
-  grid-column: 2/5;
+  -ms-grid-column-span: 4;
+  grid-column: 2/6;
 }
 
 .Mobile .HomepageFloat #Works_Showreel_Section .Work_Contents {
@@ -2519,15 +2531,27 @@ svg {
       grid-template-columns: repeat(6, 1fr);
 }
 
+.Mobile .HomepageFloat #Works_Showreel_Section .Work_Contents .Top_Work .Work_Images {
+  -ms-grid-column: 1 !important;
+  -ms-grid-column-span: 6 !important;
+  grid-column: 1/7 !important;
+}
+
+.Mobile .HomepageFloat #Works_Showreel_Section .Work_Contents .Top_Work .Main_Work_Contents {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 6;
+  grid-column: 1/7;
+}
+
 .Mobile .HomepageFloat #Works_Showreel_Section .Work_Contents #work2 {
   -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1 / span 2;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / span 3;
 }
 
 .Mobile .HomepageFloat #Works_Showreel_Section .Work_Contents #work3 {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 2;
-  grid-column: 3 / span 2;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 3;
+  grid-column: 4 / span 3;
 }
 /*# sourceMappingURL=App.css.map */
