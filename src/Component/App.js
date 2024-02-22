@@ -37,7 +37,7 @@ function App() {
     window.scrollTo(0, 0);
   };
 
-  if (!isEdge && !isMobile) {
+  if (!isMobile) {
     FloaterClass.current = "Float_Active";
   }
 
